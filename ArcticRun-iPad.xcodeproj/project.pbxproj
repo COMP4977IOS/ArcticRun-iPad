@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8503FB851C640A1600531D5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FB841C640A1600531D5F /* AppDelegate.swift */; };
+		8503FB871C640A1600531D5F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FB861C640A1600531D5F /* FirstViewController.swift */; };
+		8503FB891C640A1600531D5F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FB881C640A1600531D5F /* SecondViewController.swift */; };
+		8503FB8C1C640A1600531D5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8503FB8A1C640A1600531D5F /* Main.storyboard */; };
+		8503FB8E1C640A1600531D5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8503FB8D1C640A1600531D5F /* Assets.xcassets */; };
+		8503FB911C640A1600531D5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8503FB8F1C640A1600531D5F /* LaunchScreen.storyboard */; };
+		8503FB9C1C640A1600531D5F /* ArcticRun_iPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FB9B1C640A1600531D5F /* ArcticRun_iPadTests.swift */; };
+		8503FBA71C640A1600531D5F /* ArcticRun_iPadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FBA61C640A1600531D5F /* ArcticRun_iPadUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8503FB981C640A1600531D5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8503FB791C640A1600531D5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8503FB801C640A1600531D5F;
+			remoteInfo = "ArcticRun-iPad";
+		};
+		8503FBA31C640A1600531D5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8503FB791C640A1600531D5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8503FB801C640A1600531D5F;
+			remoteInfo = "ArcticRun-iPad";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8503FB811C640A1600531D5F /* ArcticRun-iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ArcticRun-iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8503FB841C640A1600531D5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8503FB861C640A1600531D5F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		8503FB881C640A1600531D5F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		8503FB8B1C640A1600531D5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8503FB8D1C640A1600531D5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8503FB901C640A1600531D5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8503FB921C640A1600531D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8503FB971C640A1600531D5F /* ArcticRun-iPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ArcticRun-iPadTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8503FB9B1C640A1600531D5F /* ArcticRun_iPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcticRun_iPadTests.swift; sourceTree = "<group>"; };
+		8503FB9D1C640A1600531D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8503FBA21C640A1600531D5F /* ArcticRun-iPadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ArcticRun-iPadUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8503FBA61C640A1600531D5F /* ArcticRun_iPadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcticRun_iPadUITests.swift; sourceTree = "<group>"; };
+		8503FBA81C640A1600531D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8503FB7E1C640A1600531D5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8503FB941C640A1600531D5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8503FB9F1C640A1600531D5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8503FB781C640A1600531D5F = {
+			isa = PBXGroup;
+			children = (
+				8503FB831C640A1600531D5F /* ArcticRun-iPad */,
+				8503FB9A1C640A1600531D5F /* ArcticRun-iPadTests */,
+				8503FBA51C640A1600531D5F /* ArcticRun-iPadUITests */,
+				8503FB821C640A1600531D5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8503FB821C640A1600531D5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8503FB811C640A1600531D5F /* ArcticRun-iPad.app */,
+				8503FB971C640A1600531D5F /* ArcticRun-iPadTests.xctest */,
+				8503FBA21C640A1600531D5F /* ArcticRun-iPadUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8503FB831C640A1600531D5F /* ArcticRun-iPad */ = {
+			isa = PBXGroup;
+			children = (
+				8503FB841C640A1600531D5F /* AppDelegate.swift */,
+				8503FB861C640A1600531D5F /* FirstViewController.swift */,
+				8503FB881C640A1600531D5F /* SecondViewController.swift */,
+				8503FB8A1C640A1600531D5F /* Main.storyboard */,
+				8503FB8D1C640A1600531D5F /* Assets.xcassets */,
+				8503FB8F1C640A1600531D5F /* LaunchScreen.storyboard */,
+				8503FB921C640A1600531D5F /* Info.plist */,
+			);
+			path = "ArcticRun-iPad";
+			sourceTree = "<group>";
+		};
+		8503FB9A1C640A1600531D5F /* ArcticRun-iPadTests */ = {
+			isa = PBXGroup;
+			children = (
+				8503FB9B1C640A1600531D5F /* ArcticRun_iPadTests.swift */,
+				8503FB9D1C640A1600531D5F /* Info.plist */,
+			);
+			path = "ArcticRun-iPadTests";
+			sourceTree = "<group>";
+		};
+		8503FBA51C640A1600531D5F /* ArcticRun-iPadUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8503FBA61C640A1600531D5F /* ArcticRun_iPadUITests.swift */,
+				8503FBA81C640A1600531D5F /* Info.plist */,
+			);
+			path = "ArcticRun-iPadUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8503FB801C640A1600531D5F /* ArcticRun-iPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8503FBAB1C640A1600531D5F /* Build configuration list for PBXNativeTarget "ArcticRun-iPad" */;
+			buildPhases = (
+				8503FB7D1C640A1600531D5F /* Sources */,
+				8503FB7E1C640A1600531D5F /* Frameworks */,
+				8503FB7F1C640A1600531D5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ArcticRun-iPad";
+			productName = "ArcticRun-iPad";
+			productReference = 8503FB811C640A1600531D5F /* ArcticRun-iPad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8503FB961C640A1600531D5F /* ArcticRun-iPadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8503FBAE1C640A1600531D5F /* Build configuration list for PBXNativeTarget "ArcticRun-iPadTests" */;
+			buildPhases = (
+				8503FB931C640A1600531D5F /* Sources */,
+				8503FB941C640A1600531D5F /* Frameworks */,
+				8503FB951C640A1600531D5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8503FB991C640A1600531D5F /* PBXTargetDependency */,
+			);
+			name = "ArcticRun-iPadTests";
+			productName = "ArcticRun-iPadTests";
+			productReference = 8503FB971C640A1600531D5F /* ArcticRun-iPadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8503FBA11C640A1600531D5F /* ArcticRun-iPadUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8503FBB11C640A1600531D5F /* Build configuration list for PBXNativeTarget "ArcticRun-iPadUITests" */;
+			buildPhases = (
+				8503FB9E1C640A1600531D5F /* Sources */,
+				8503FB9F1C640A1600531D5F /* Frameworks */,
+				8503FBA01C640A1600531D5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8503FBA41C640A1600531D5F /* PBXTargetDependency */,
+			);
+			name = "ArcticRun-iPadUITests";
+			productName = "ArcticRun-iPadUITests";
+			productReference = 8503FBA21C640A1600531D5F /* ArcticRun-iPadUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8503FB791C640A1600531D5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "COMP 4977";
+				TargetAttributes = {
+					8503FB801C640A1600531D5F = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					8503FB961C640A1600531D5F = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 8503FB801C640A1600531D5F;
+					};
+					8503FBA11C640A1600531D5F = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 8503FB801C640A1600531D5F;
+					};
+				};
+			};
+			buildConfigurationList = 8503FB7C1C640A1600531D5F /* Build configuration list for PBXProject "ArcticRun-iPad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8503FB781C640A1600531D5F;
+			productRefGroup = 8503FB821C640A1600531D5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8503FB801C640A1600531D5F /* ArcticRun-iPad */,
+				8503FB961C640A1600531D5F /* ArcticRun-iPadTests */,
+				8503FBA11C640A1600531D5F /* ArcticRun-iPadUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8503FB7F1C640A1600531D5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8503FB911C640A1600531D5F /* LaunchScreen.storyboard in Resources */,
+				8503FB8E1C640A1600531D5F /* Assets.xcassets in Resources */,
+				8503FB8C1C640A1600531D5F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8503FB951C640A1600531D5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8503FBA01C640A1600531D5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8503FB7D1C640A1600531D5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8503FB891C640A1600531D5F /* SecondViewController.swift in Sources */,
+				8503FB851C640A1600531D5F /* AppDelegate.swift in Sources */,
+				8503FB871C640A1600531D5F /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8503FB931C640A1600531D5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8503FB9C1C640A1600531D5F /* ArcticRun_iPadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8503FB9E1C640A1600531D5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8503FBA71C640A1600531D5F /* ArcticRun_iPadUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8503FB991C640A1600531D5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8503FB801C640A1600531D5F /* ArcticRun-iPad */;
+			targetProxy = 8503FB981C640A1600531D5F /* PBXContainerItemProxy */;
+		};
+		8503FBA41C640A1600531D5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8503FB801C640A1600531D5F /* ArcticRun-iPad */;
+			targetProxy = 8503FBA31C640A1600531D5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8503FB8A1C640A1600531D5F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8503FB8B1C640A1600531D5F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8503FB8F1C640A1600531D5F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8503FB901C640A1600531D5F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8503FBA91C640A1600531D5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8503FBAA1C640A1600531D5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8503FBAC1C640A1600531D5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ArcticRun-iPad/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "comp4977.bcit.ca.ArcticRun-iPad";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8503FBAD1C640A1600531D5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ArcticRun-iPad/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "comp4977.bcit.ca.ArcticRun-iPad";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8503FBAF1C640A1600531D5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "ArcticRun-iPadTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "comp4977.bcit.ca.ArcticRun-iPadTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArcticRun-iPad.app/ArcticRun-iPad";
+			};
+			name = Debug;
+		};
+		8503FBB01C640A1600531D5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "ArcticRun-iPadTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "comp4977.bcit.ca.ArcticRun-iPadTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArcticRun-iPad.app/ArcticRun-iPad";
+			};
+			name = Release;
+		};
+		8503FBB21C640A1600531D5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "ArcticRun-iPadUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "comp4977.bcit.ca.ArcticRun-iPadUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "ArcticRun-iPad";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8503FBB31C640A1600531D5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "ArcticRun-iPadUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "comp4977.bcit.ca.ArcticRun-iPadUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "ArcticRun-iPad";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8503FB7C1C640A1600531D5F /* Build configuration list for PBXProject "ArcticRun-iPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8503FBA91C640A1600531D5F /* Debug */,
+				8503FBAA1C640A1600531D5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8503FBAB1C640A1600531D5F /* Build configuration list for PBXNativeTarget "ArcticRun-iPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8503FBAC1C640A1600531D5F /* Debug */,
+				8503FBAD1C640A1600531D5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8503FBAE1C640A1600531D5F /* Build configuration list for PBXNativeTarget "ArcticRun-iPadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8503FBAF1C640A1600531D5F /* Debug */,
+				8503FBB01C640A1600531D5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8503FBB11C640A1600531D5F /* Build configuration list for PBXNativeTarget "ArcticRun-iPadUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8503FBB21C640A1600531D5F /* Debug */,
+				8503FBB31C640A1600531D5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8503FB791C640A1600531D5F /* Project object */;
+}
