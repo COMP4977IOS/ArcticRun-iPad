@@ -15,6 +15,7 @@
 		8503FB911C640A1600531D5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8503FB8F1C640A1600531D5F /* LaunchScreen.storyboard */; };
 		8503FB9C1C640A1600531D5F /* ArcticRun_iPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FB9B1C640A1600531D5F /* ArcticRun_iPadTests.swift */; };
 		8503FBA71C640A1600531D5F /* ArcticRun_iPadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FBA61C640A1600531D5F /* ArcticRun_iPadUITests.swift */; };
+		8503FBEF1C642BA900531D5F /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FBEE1C642BA900531D5F /* Download.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8503FBA21C640A1600531D5F /* ArcticRun-iPadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ArcticRun-iPadUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8503FBA61C640A1600531D5F /* ArcticRun_iPadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcticRun_iPadUITests.swift; sourceTree = "<group>"; };
 		8503FBA81C640A1600531D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8503FBEE1C642BA900531D5F /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				8503FB8D1C640A1600531D5F /* Assets.xcassets */,
 				8503FB8F1C640A1600531D5F /* LaunchScreen.storyboard */,
 				8503FB921C640A1600531D5F /* Info.plist */,
+				8503FBEE1C642BA900531D5F /* Download.swift */,
 			);
 			path = "ArcticRun-iPad";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8503FBEF1C642BA900531D5F /* Download.swift in Sources */,
 				8503FB891C640A1600531D5F /* SecondViewController.swift in Sources */,
 				8503FB851C640A1600531D5F /* AppDelegate.swift in Sources */,
 				8503FB871C640A1600531D5F /* FirstViewController.swift in Sources */,
@@ -488,6 +492,7 @@
 				8503FBAD1C640A1600531D5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8503FBAE1C640A1600531D5F /* Build configuration list for PBXNativeTarget "ArcticRun-iPadTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				8503FBB01C640A1600531D5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8503FBB11C640A1600531D5F /* Build configuration list for PBXNativeTarget "ArcticRun-iPadUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				8503FBB31C640A1600531D5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
