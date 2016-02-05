@@ -226,6 +226,7 @@
 				TargetAttributes = {
 					8503FB801C640A1600531D5F = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = L9GR6R2227;
 					};
 					8503FB961C640A1600531D5F = {
 						CreatedOnToolsVersion = 7.2;
@@ -483,6 +484,7 @@
 			baseConfigurationReference = C6BC932190728787B19815AF /* Pods-ArcticRun-iPad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "ArcticRun-iPad/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "comp4977.bcit.ca.ArcticRun-iPad";
@@ -495,6 +497,7 @@
 			baseConfigurationReference = FCCA808D928DF685AE369D8F /* Pods-ArcticRun-iPad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "ArcticRun-iPad/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "comp4977.bcit.ca.ArcticRun-iPad";
