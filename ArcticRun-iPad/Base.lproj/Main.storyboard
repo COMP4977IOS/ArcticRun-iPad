@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--First-->
@@ -87,37 +88,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="195" y="279" width="210" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="192" y="329" width="216" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1m-F5-45P">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1m-F5-45P">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="2dg-EQ-Wsg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FY8-J1-ENC" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="102" width="560" height="441"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="FY8-J1-ENC" secondAttribute="bottom" constant="8" symbolic="YES" id="APv-aj-zAY"/>
+                            <constraint firstItem="FY8-J1-ENC" firstAttribute="top" secondItem="C1m-F5-45P" secondAttribute="bottom" constant="8" symbolic="YES" id="D8D-uf-dSz"/>
+                            <constraint firstItem="C1m-F5-45P" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="Fwr-Sq-KDp"/>
+                            <constraint firstItem="FY8-J1-ENC" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="Ss3-39-Dbg"/>
+                            <constraint firstAttribute="trailing" secondItem="C1m-F5-45P" secondAttribute="trailing" id="hko-Kk-kcN"/>
+                            <constraint firstItem="C1m-F5-45P" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="uaK-1I-6Ne"/>
+                            <constraint firstItem="C1m-F5-45P" firstAttribute="centerX" secondItem="FY8-J1-ENC" secondAttribute="centerX" id="woZ-lR-vsh"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="label" destination="C1m-F5-45P" id="cas-kr-fw1"/>
+                        <outlet property="lineChartView" destination="FY8-J1-ENC" id="cjK-Vd-GWH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
