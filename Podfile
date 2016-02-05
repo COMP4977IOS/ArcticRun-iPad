@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'ArcticRun-iPad' do
   pod 'Charts'
+  pod 'KDCircularProgress'
 end
 
 target 'ArcticRun-iPadTests' do
