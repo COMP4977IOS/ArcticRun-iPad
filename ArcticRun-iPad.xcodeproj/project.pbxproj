@@ -20,6 +20,8 @@
 		85684F571C6D90970006282F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85684F561C6D90970006282F /* CloudKit.framework */; };
 		85684F5F1C6D96320006282F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85684F5E1C6D96320006282F /* Character.swift */; };
 		85684F611C6DA4B00006282F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85684F601C6DA4B00006282F /* ThirdViewController.swift */; };
+		EE020F4A1C6E8AD300F5F74A /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE020F491C6E8AD300F5F74A /* TaskViewController.swift */; };
+		EE020F4C1C6E8AFB00F5F74A /* TaskListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		85684F5E1C6D96320006282F /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		85684F601C6DA4B00006282F /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		C6BC932190728787B19815AF /* Pods-ArcticRun-iPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcticRun-iPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArcticRun-iPad/Pods-ArcticRun-iPad.debug.xcconfig"; sourceTree = "<group>"; };
+		EE020F491C6E8AD300F5F74A /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListsViewController.swift; sourceTree = "<group>"; };
 		FCCA808D928DF685AE369D8F /* Pods-ArcticRun-iPad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcticRun-iPad.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArcticRun-iPad/Pods-ArcticRun-iPad.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +131,8 @@
 				8503FB8D1C640A1600531D5F /* Assets.xcassets */,
 				8503FB8F1C640A1600531D5F /* LaunchScreen.storyboard */,
 				8503FB921C640A1600531D5F /* Info.plist */,
+				EE020F491C6E8AD300F5F74A /* TaskViewController.swift */,
+				EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */,
 			);
 			path = "ArcticRun-iPad";
 			sourceTree = "<group>";
@@ -364,9 +370,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8503FBEF1C642BA900531D5F /* Download.swift in Sources */,
+				EE020F4C1C6E8AFB00F5F74A /* TaskListsViewController.swift in Sources */,
 				8503FB891C640A1600531D5F /* SecondViewController.swift in Sources */,
 				85684F5F1C6D96320006282F /* Character.swift in Sources */,
 				8503FB851C640A1600531D5F /* AppDelegate.swift in Sources */,
+				EE020F4A1C6E8AD300F5F74A /* TaskViewController.swift in Sources */,
 				85684F611C6DA4B00006282F /* ThirdViewController.swift in Sources */,
 				8503FB871C640A1600531D5F /* FirstViewController.swift in Sources */,
 			);
