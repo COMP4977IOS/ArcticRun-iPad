@@ -1,5 +1,5 @@
 //
-//  NetworkOperation.swift
+//  Download.swift
 //  ArcticRun-iPad
 //
 //  Created by Jacky Lui on 2016-02-04.
