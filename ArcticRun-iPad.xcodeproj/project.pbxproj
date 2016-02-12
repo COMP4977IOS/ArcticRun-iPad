@@ -17,6 +17,9 @@
 		8503FB9C1C640A1600531D5F /* ArcticRun_iPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FB9B1C640A1600531D5F /* ArcticRun_iPadTests.swift */; };
 		8503FBA71C640A1600531D5F /* ArcticRun_iPadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FBA61C640A1600531D5F /* ArcticRun_iPadUITests.swift */; };
 		8503FBEF1C642BA900531D5F /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FBEE1C642BA900531D5F /* Download.swift */; };
+		85684F571C6D90970006282F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85684F561C6D90970006282F /* CloudKit.framework */; };
+		85684F5F1C6D96320006282F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85684F5E1C6D96320006282F /* Character.swift */; };
+		85684F611C6DA4B00006282F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85684F601C6DA4B00006282F /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,10 @@
 		8503FBA61C640A1600531D5F /* ArcticRun_iPadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcticRun_iPadUITests.swift; sourceTree = "<group>"; };
 		8503FBA81C640A1600531D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8503FBEE1C642BA900531D5F /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		85684F551C6D902A0006282F /* ArcticRun-iPad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ArcticRun-iPad.entitlements"; sourceTree = "<group>"; };
+		85684F561C6D90970006282F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		85684F5E1C6D96320006282F /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		85684F601C6DA4B00006282F /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		C6BC932190728787B19815AF /* Pods-ArcticRun-iPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcticRun-iPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArcticRun-iPad/Pods-ArcticRun-iPad.debug.xcconfig"; sourceTree = "<group>"; };
 		FCCA808D928DF685AE369D8F /* Pods-ArcticRun-iPad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcticRun-iPad.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArcticRun-iPad/Pods-ArcticRun-iPad.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				219A3034497EB533C5D89923 /* Pods_ArcticRun_iPad.framework in Frameworks */,
+				85684F571C6D90970006282F /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,9 +116,12 @@
 		8503FB831C640A1600531D5F /* ArcticRun-iPad */ = {
 			isa = PBXGroup;
 			children = (
+				85684F581C6D952A0006282F /* Models */,
+				85684F551C6D902A0006282F /* ArcticRun-iPad.entitlements */,
 				8503FB841C640A1600531D5F /* AppDelegate.swift */,
 				8503FB861C640A1600531D5F /* FirstViewController.swift */,
 				8503FB881C640A1600531D5F /* SecondViewController.swift */,
+				85684F601C6DA4B00006282F /* ThirdViewController.swift */,
 				8503FBEE1C642BA900531D5F /* Download.swift */,
 				8503FB8A1C640A1600531D5F /* Main.storyboard */,
 				8503FB8D1C640A1600531D5F /* Assets.xcassets */,
@@ -138,9 +149,18 @@
 			path = "ArcticRun-iPadUITests";
 			sourceTree = "<group>";
 		};
+		85684F581C6D952A0006282F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85684F5E1C6D96320006282F /* Character.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		90112917590FA166D2E1C7D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				85684F561C6D90970006282F /* CloudKit.framework */,
 				7E1B555208D4D7796507ECF0 /* Pods_ArcticRun_iPad.framework */,
 			);
 			name = Frameworks;
@@ -227,6 +247,11 @@
 					8503FB801C640A1600531D5F = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = L9GR6R2227;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					8503FB961C640A1600531D5F = {
 						CreatedOnToolsVersion = 7.2;
@@ -340,7 +365,9 @@
 			files = (
 				8503FBEF1C642BA900531D5F /* Download.swift in Sources */,
 				8503FB891C640A1600531D5F /* SecondViewController.swift in Sources */,
+				85684F5F1C6D96320006282F /* Character.swift in Sources */,
 				8503FB851C640A1600531D5F /* AppDelegate.swift in Sources */,
+				85684F611C6DA4B00006282F /* ThirdViewController.swift in Sources */,
 				8503FB871C640A1600531D5F /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,11 +511,14 @@
 			baseConfigurationReference = C6BC932190728787B19815AF /* Pods-ArcticRun-iPad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ArcticRun-iPad/ArcticRun-iPad.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ArcticRun-iPad/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "comp4977.bcit.ca.ArcticRun-iPad";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.terratap.arcticrun-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -497,11 +527,14 @@
 			baseConfigurationReference = FCCA808D928DF685AE369D8F /* Pods-ArcticRun-iPad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ArcticRun-iPad/ArcticRun-iPad.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ArcticRun-iPad/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "comp4977.bcit.ca.ArcticRun-iPad";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.terratap.arcticrun-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
