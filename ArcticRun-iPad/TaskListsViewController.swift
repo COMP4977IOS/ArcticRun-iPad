@@ -12,6 +12,23 @@ import UIKit
 class TaskListsViewController : UITableViewController {
     let monthsDataSet = ["January", "February", "March", "April", "May", "June"]
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        //toggle menu bar
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
+
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
