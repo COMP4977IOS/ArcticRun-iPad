@@ -20,6 +20,7 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var txtRoleName: UITextField!
     @IBOutlet weak var txtRoleNumber: UITextField!
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     @IBAction func didRefresh(sender: AnyObject) {
         self.loadCloudData()
@@ -59,6 +60,15 @@ class ThirdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //toggle menu button
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
         db = CKContainer(identifier: "iCloud.com.terratap.arcticrun").publicCloudDatabase
         // Do any additional setup after loading the view.
         self.loadCloudData()

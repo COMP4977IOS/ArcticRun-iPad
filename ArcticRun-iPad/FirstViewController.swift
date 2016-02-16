@@ -13,6 +13,8 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var stepCount: UILabel!
     var progress: KDCircularProgress!
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,6 +35,13 @@ class FirstViewController: UIViewController {
 
         
         view.addSubview(progress)
+        
+        //toggle the menu bar
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
     //Button to animate progress bar
     @IBAction func showProgress(sender: UIButton) {
