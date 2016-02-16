@@ -13,6 +13,7 @@ class SecondViewController: UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var lineChartView: LineChartView!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     let months = ["Jan" , "Feb", "Mar", "Apr", "May", "June", "July", "August", "Sept", "Oct", "Nov", "Dec"]
     let calories = [1453.0,2352,5431,1442,5451,6486,1173,5678,9234,1345,9411,2212]
@@ -48,6 +49,13 @@ class SecondViewController: UIViewController, ChartViewDelegate {
         
         // Retrieve graph data
         lineChartView.data = self.getChartData(months, yData: calories)
+        
+        //toggle the menu bar
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
     
     /*
