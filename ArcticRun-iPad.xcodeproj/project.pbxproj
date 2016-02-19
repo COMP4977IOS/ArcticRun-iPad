@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		219A3034497EB533C5D89923 /* Pods_ArcticRun_iPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1B555208D4D7796507ECF0 /* Pods_ArcticRun_iPad.framework */; };
+		8191F59B1C75C08200879C3F /* SpriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8191F59A1C75C08100879C3F /* SpriteViewController.swift */; };
+		8191F59D1C75C3B000879C3F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8191F59C1C75C3B000879C3F /* GameScene.swift */; };
+		8191F59F1C75C5E100879C3F /* BearImages.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8191F59E1C75C5E100879C3F /* BearImages.atlas */; };
 		8503FB851C640A1600531D5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FB841C640A1600531D5F /* AppDelegate.swift */; };
 		8503FB871C640A1600531D5F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FB861C640A1600531D5F /* FirstViewController.swift */; };
 		8503FB891C640A1600531D5F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FB881C640A1600531D5F /* SecondViewController.swift */; };
@@ -47,6 +50,9 @@
 
 /* Begin PBXFileReference section */
 		7E1B555208D4D7796507ECF0 /* Pods_ArcticRun_iPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArcticRun_iPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8191F59A1C75C08100879C3F /* SpriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteViewController.swift; sourceTree = "<group>"; };
+		8191F59C1C75C3B000879C3F /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		8191F59E1C75C5E100879C3F /* BearImages.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = BearImages.atlas; sourceTree = "<group>"; };
 		8503FB811C640A1600531D5F /* ArcticRun-iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ArcticRun-iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8503FB841C640A1600531D5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8503FB861C640A1600531D5F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +139,9 @@
 				8ACC746B1C72AB9A008F96AF /* SWRevealViewController */,
 				85684F581C6D952A0006282F /* Models */,
 				85684F551C6D902A0006282F /* ArcticRun-iPad.entitlements */,
+				8191F59E1C75C5E100879C3F /* BearImages.atlas */,
+				8191F59A1C75C08100879C3F /* SpriteViewController.swift */,
+				8191F59C1C75C3B000879C3F /* GameScene.swift */,
 				8503FB841C640A1600531D5F /* AppDelegate.swift */,
 				8503FB861C640A1600531D5F /* FirstViewController.swift */,
 				8503FB881C640A1600531D5F /* SecondViewController.swift */,
@@ -320,6 +329,7 @@
 			files = (
 				8503FB911C640A1600531D5F /* LaunchScreen.storyboard in Resources */,
 				8ACC74731C72B017008F96AF /* Images.xcassets in Resources */,
+				8191F59F1C75C5E100879C3F /* BearImages.atlas in Resources */,
 				8503FB8E1C640A1600531D5F /* Assets.xcassets in Resources */,
 				8503FB8C1C640A1600531D5F /* Main.storyboard in Resources */,
 			);
@@ -402,9 +412,11 @@
 				85684F5F1C6D96320006282F /* Character.swift in Sources */,
 				8503FB851C640A1600531D5F /* AppDelegate.swift in Sources */,
 				8ACC746F1C72ABB8008F96AF /* SWRevealViewController.m in Sources */,
+				8191F59D1C75C3B000879C3F /* GameScene.swift in Sources */,
 				EE020F4A1C6E8AD300F5F74A /* TaskViewController.swift in Sources */,
 				85684F611C6DA4B00006282F /* ThirdViewController.swift in Sources */,
 				8503FB871C640A1600531D5F /* FirstViewController.swift in Sources */,
+				8191F59B1C75C08200879C3F /* SpriteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
