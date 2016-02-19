@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		065ACAA21C76D52800A4E358 /* PersonalGoals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 065ACAA11C76D52800A4E358 /* PersonalGoals.storyboard */; };
+		065ACAA41C76D53900A4E358 /* PersonalGoalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065ACAA31C76D53900A4E358 /* PersonalGoalsController.swift */; };
+		065ACAA61C76D75300A4E358 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065ACAA51C76D75300A4E358 /* GameKit.framework */; };
+		066D82851C76D87B00E44996 /* Social.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 066D82841C76D87B00E44996 /* Social.storyboard */; };
+		066D82871C76D88100E44996 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066D82861C76D88100E44996 /* SocialViewController.swift */; };
 		219A3034497EB533C5D89923 /* Pods_ArcticRun_iPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1B555208D4D7796507ECF0 /* Pods_ArcticRun_iPad.framework */; };
 		8191F59B1C75C08200879C3F /* SpriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8191F59A1C75C08100879C3F /* SpriteViewController.swift */; };
 		8191F59D1C75C3B000879C3F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8191F59C1C75C3B000879C3F /* GameScene.swift */; };
@@ -49,6 +54,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		065ACAA11C76D52800A4E358 /* PersonalGoals.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PersonalGoals.storyboard; sourceTree = "<group>"; };
+		065ACAA31C76D53900A4E358 /* PersonalGoalsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalGoalsController.swift; sourceTree = "<group>"; };
+		065ACAA51C76D75300A4E358 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		066D82841C76D87B00E44996 /* Social.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Social.storyboard; sourceTree = "<group>"; };
+		066D82861C76D88100E44996 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		7E1B555208D4D7796507ECF0 /* Pods_ArcticRun_iPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArcticRun_iPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8191F59A1C75C08100879C3F /* SpriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteViewController.swift; sourceTree = "<group>"; };
 		8191F59C1C75C3B000879C3F /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -89,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065ACAA61C76D75300A4E358 /* GameKit.framework in Frameworks */,
 				219A3034497EB533C5D89923 /* Pods_ArcticRun_iPad.framework in Frameworks */,
 				85684F571C6D90970006282F /* CloudKit.framework in Frameworks */,
 			);
@@ -143,11 +154,15 @@
 				8191F59A1C75C08100879C3F /* SpriteViewController.swift */,
 				8191F59C1C75C3B000879C3F /* GameScene.swift */,
 				8503FB841C640A1600531D5F /* AppDelegate.swift */,
+				066D82861C76D88100E44996 /* SocialViewController.swift */,
 				8503FB861C640A1600531D5F /* FirstViewController.swift */,
 				8503FB881C640A1600531D5F /* SecondViewController.swift */,
 				85684F601C6DA4B00006282F /* ThirdViewController.swift */,
 				8503FBEE1C642BA900531D5F /* Download.swift */,
 				8503FB8A1C640A1600531D5F /* Main.storyboard */,
+				066D82841C76D87B00E44996 /* Social.storyboard */,
+				065ACAA11C76D52800A4E358 /* PersonalGoals.storyboard */,
+				065ACAA31C76D53900A4E358 /* PersonalGoalsController.swift */,
 				8ACC74721C72B017008F96AF /* Images.xcassets */,
 				8503FB8D1C640A1600531D5F /* Assets.xcassets */,
 				8503FB8F1C640A1600531D5F /* LaunchScreen.storyboard */,
@@ -199,6 +214,7 @@
 		90112917590FA166D2E1C7D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				065ACAA51C76D75300A4E358 /* GameKit.framework */,
 				85684F561C6D90970006282F /* CloudKit.framework */,
 				7E1B555208D4D7796507ECF0 /* Pods_ArcticRun_iPad.framework */,
 			);
@@ -287,6 +303,9 @@
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = L9GR6R2227;
 						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
 							com.apple.iCloud = {
 								enabled = 1;
 							};
@@ -328,6 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8503FB911C640A1600531D5F /* LaunchScreen.storyboard in Resources */,
+				066D82851C76D87B00E44996 /* Social.storyboard in Resources */,
+				065ACAA21C76D52800A4E358 /* PersonalGoals.storyboard in Resources */,
 				8ACC74731C72B017008F96AF /* Images.xcassets in Resources */,
 				8191F59F1C75C5E100879C3F /* BearImages.atlas in Resources */,
 				8503FB8E1C640A1600531D5F /* Assets.xcassets in Resources */,
@@ -404,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				066D82871C76D88100E44996 /* SocialViewController.swift in Sources */,
 				8ACC74711C72ABD3008F96AF /* MenuController.swift in Sources */,
 				8503FBEF1C642BA900531D5F /* Download.swift in Sources */,
 				8ACC74751C72B904008F96AF /* SettingsViewController.swift in Sources */,
@@ -416,6 +438,7 @@
 				EE020F4A1C6E8AD300F5F74A /* TaskViewController.swift in Sources */,
 				85684F611C6DA4B00006282F /* ThirdViewController.swift in Sources */,
 				8503FB871C640A1600531D5F /* FirstViewController.swift in Sources */,
+				065ACAA41C76D53900A4E358 /* PersonalGoalsController.swift in Sources */,
 				8191F59B1C75C08200879C3F /* SpriteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
