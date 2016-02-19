@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vlH-wf-UKx">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Sprite View-->
+        <scene sceneID="nNS-IQ-h9t">
+            <objects>
+                <viewController id="tab-Dd-InZ" userLabel="Sprite View" customClass="SpriteViewController" customModule="ArcticRun_iPad" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZwJ-oq-nWb"/>
+                        <viewControllerLayoutGuide type="bottom" id="3DX-cH-Y7r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vde-TJ-asN" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sprite View" id="WkR-2j-SGD" userLabel="Sprite View">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="WTt-Co-mTO"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="WTt-Co-mTO" id="0Bo-9d-0YD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Rt-8S-Ton" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1452" y="1798"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="a9f-Du-CKq">
+            <objects>
+                <navigationController id="vlH-wf-UKx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="dU6-d7-6VS"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="beJ-wt-W7x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tab-Dd-InZ" kind="relationship" relationship="rootViewController" id="EAz-is-baX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iFI-vk-F6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1452" y="939"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menu" width="22" height="22"/>
+    </resources>
+</document>
