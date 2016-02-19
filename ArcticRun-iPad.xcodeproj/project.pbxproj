@@ -32,6 +32,13 @@
 		8ACC74711C72ABD3008F96AF /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC74701C72ABD3008F96AF /* MenuController.swift */; };
 		8ACC74731C72B017008F96AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC74721C72B017008F96AF /* Images.xcassets */; };
 		8ACC74751C72B904008F96AF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC74741C72B904008F96AF /* SettingsViewController.swift */; };
+		923F5F0C1C77853A0015A13B /* Sprite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F0A1C77853A0015A13B /* Sprite.storyboard */; };
+		923F5F0F1C77859B0015A13B /* Cloud.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F0E1C77859B0015A13B /* Cloud.storyboard */; };
+		923F5F121C7785E40015A13B /* TableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F101C7785E40015A13B /* TableView.storyboard */; };
+		923F5F141C7786390015A13B /* InfoGraph.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F131C7786390015A13B /* InfoGraph.storyboard */; };
+		923F5F161C7786800015A13B /* CircleProgress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F151C7786800015A13B /* CircleProgress.storyboard */; };
+		923F5F191C77879E0015A13B /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F171C77879E0015A13B /* HomeScreen.storyboard */; };
+		923F5F1B1C7787F60015A13B /* SettingsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F1A1C7787F60015A13B /* SettingsScreen.storyboard */; };
 		EE020F4A1C6E8AD300F5F74A /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE020F491C6E8AD300F5F74A /* TaskViewController.swift */; };
 		EE020F4C1C6E8AFB00F5F74A /* TaskListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -88,6 +95,13 @@
 		8ACC74701C72ABD3008F96AF /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		8ACC74721C72B017008F96AF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8ACC74741C72B904008F96AF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		923F5F0B1C77853A0015A13B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Sprite.storyboard; sourceTree = "<group>"; };
+		923F5F0E1C77859B0015A13B /* Cloud.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Cloud.storyboard; sourceTree = "<group>"; };
+		923F5F111C7785E40015A13B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TableView.storyboard; sourceTree = "<group>"; };
+		923F5F131C7786390015A13B /* InfoGraph.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InfoGraph.storyboard; sourceTree = "<group>"; };
+		923F5F151C7786800015A13B /* CircleProgress.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CircleProgress.storyboard; sourceTree = "<group>"; };
+		923F5F181C77879E0015A13B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeScreen.storyboard; sourceTree = "<group>"; };
+		923F5F1A1C7787F60015A13B /* SettingsScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsScreen.storyboard; sourceTree = "<group>"; };
 		C6BC932190728787B19815AF /* Pods-ArcticRun-iPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcticRun-iPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArcticRun-iPad/Pods-ArcticRun-iPad.debug.xcconfig"; sourceTree = "<group>"; };
 		EE020F491C6E8AD300F5F74A /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListsViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +161,7 @@
 		8503FB831C640A1600531D5F /* ArcticRun-iPad */ = {
 			isa = PBXGroup;
 			children = (
+				923F5F091C7784FE0015A13B /* Storyboards */,
 				8ACC746B1C72AB9A008F96AF /* SWRevealViewController */,
 				85684F581C6D952A0006282F /* Models */,
 				85684F551C6D902A0006282F /* ArcticRun-iPad.entitlements */,
@@ -159,13 +174,9 @@
 				8503FB881C640A1600531D5F /* SecondViewController.swift */,
 				85684F601C6DA4B00006282F /* ThirdViewController.swift */,
 				8503FBEE1C642BA900531D5F /* Download.swift */,
-				8503FB8A1C640A1600531D5F /* Main.storyboard */,
-				066D82841C76D87B00E44996 /* Social.storyboard */,
-				065ACAA11C76D52800A4E358 /* PersonalGoals.storyboard */,
 				065ACAA31C76D53900A4E358 /* PersonalGoalsController.swift */,
 				8ACC74721C72B017008F96AF /* Images.xcassets */,
 				8503FB8D1C640A1600531D5F /* Assets.xcassets */,
-				8503FB8F1C640A1600531D5F /* LaunchScreen.storyboard */,
 				8503FB921C640A1600531D5F /* Info.plist */,
 				EE020F491C6E8AD300F5F74A /* TaskViewController.swift */,
 				EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */,
@@ -219,6 +230,32 @@
 				7E1B555208D4D7796507ECF0 /* Pods_ArcticRun_iPad.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		923F5F091C7784FE0015A13B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				923F5F0D1C7785420015A13B /* HomeScreenViews */,
+				8503FB8A1C640A1600531D5F /* Main.storyboard */,
+				923F5F1A1C7787F60015A13B /* SettingsScreen.storyboard */,
+				923F5F171C77879E0015A13B /* HomeScreen.storyboard */,
+				8503FB8F1C640A1600531D5F /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		923F5F0D1C7785420015A13B /* HomeScreenViews */ = {
+			isa = PBXGroup;
+			children = (
+				923F5F151C7786800015A13B /* CircleProgress.storyboard */,
+				923F5F0E1C77859B0015A13B /* Cloud.storyboard */,
+				923F5F131C7786390015A13B /* InfoGraph.storyboard */,
+				923F5F101C7785E40015A13B /* TableView.storyboard */,
+				923F5F0A1C77853A0015A13B /* Sprite.storyboard */,
+				065ACAA11C76D52800A4E358 /* PersonalGoals.storyboard */,
+				066D82841C76D87B00E44996 /* Social.storyboard */,
+			);
+			name = HomeScreenViews;
 			sourceTree = "<group>";
 		};
 		E3192D3AF987B4E0D883DD65 /* Pods */ = {
@@ -346,13 +383,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923F5F141C7786390015A13B /* InfoGraph.storyboard in Resources */,
 				8503FB911C640A1600531D5F /* LaunchScreen.storyboard in Resources */,
 				066D82851C76D87B00E44996 /* Social.storyboard in Resources */,
+				923F5F121C7785E40015A13B /* TableView.storyboard in Resources */,
 				065ACAA21C76D52800A4E358 /* PersonalGoals.storyboard in Resources */,
 				8ACC74731C72B017008F96AF /* Images.xcassets in Resources */,
 				8191F59F1C75C5E100879C3F /* BearImages.atlas in Resources */,
 				8503FB8E1C640A1600531D5F /* Assets.xcassets in Resources */,
 				8503FB8C1C640A1600531D5F /* Main.storyboard in Resources */,
+				923F5F1B1C7787F60015A13B /* SettingsScreen.storyboard in Resources */,
+				923F5F0C1C77853A0015A13B /* Sprite.storyboard in Resources */,
+				923F5F191C77879E0015A13B /* HomeScreen.storyboard in Resources */,
+				923F5F0F1C77859B0015A13B /* Cloud.storyboard in Resources */,
+				923F5F161C7786800015A13B /* CircleProgress.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +533,30 @@
 				8503FB901C640A1600531D5F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		923F5F0A1C77853A0015A13B /* Sprite.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				923F5F0B1C77853A0015A13B /* Base */,
+			);
+			name = Sprite.storyboard;
+			sourceTree = "<group>";
+		};
+		923F5F101C7785E40015A13B /* TableView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				923F5F111C7785E40015A13B /* Base */,
+			);
+			name = TableView.storyboard;
+			sourceTree = "<group>";
+		};
+		923F5F171C77879E0015A13B /* HomeScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				923F5F181C77879E0015A13B /* Base */,
+			);
+			name = HomeScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

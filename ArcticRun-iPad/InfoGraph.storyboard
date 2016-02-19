@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8Sy-cF-ISA">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Second View-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="ArcticRun_iPad" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1m-F5-45P">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="2dg-EQ-Wsg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FY8-J1-ENC" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="102" width="560" height="441"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="FY8-J1-ENC" secondAttribute="bottom" constant="8" symbolic="YES" id="APv-aj-zAY"/>
+                            <constraint firstItem="FY8-J1-ENC" firstAttribute="top" secondItem="C1m-F5-45P" secondAttribute="bottom" constant="8" symbolic="YES" id="D8D-uf-dSz"/>
+                            <constraint firstItem="C1m-F5-45P" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="Fwr-Sq-KDp"/>
+                            <constraint firstItem="FY8-J1-ENC" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="Ss3-39-Dbg"/>
+                            <constraint firstAttribute="trailing" secondItem="C1m-F5-45P" secondAttribute="trailing" id="hko-Kk-kcN"/>
+                            <constraint firstItem="C1m-F5-45P" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="uaK-1I-6Ne"/>
+                            <constraint firstItem="C1m-F5-45P" firstAttribute="centerX" secondItem="FY8-J1-ENC" secondAttribute="centerX" id="woZ-lR-vsh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Second View" id="bsz-0p-f0D">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="UNs-VD-4Hz"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="label" destination="C1m-F5-45P" id="cas-kr-fw1"/>
+                        <outlet property="lineChartView" destination="FY8-J1-ENC" id="cjK-Vd-GWH"/>
+                        <outlet property="menuButton" destination="UNs-VD-4Hz" id="cIl-Mp-eKN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1617" y="161"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="m6k-9C-jf3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Sy-cF-ISA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hTt-er-8jE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="J3t-ar-FWN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dxc-C9-qlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="161"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menu" width="22" height="22"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>

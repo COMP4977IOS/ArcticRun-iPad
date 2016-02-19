@@ -20,12 +20,68 @@
                     </view>
                     <connections>
                         <segue destination="v0E-bO-vEl" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="2Xv-yw-dwE"/>
-                        <segue destination="Pu7-Vv-hOs" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="PE2-H5-iTv"/>
+                        <segue destination="49e-Tb-3d3" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="PE2-H5-iTv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A47-WK-rDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1549" y="-202"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="OHr-WB-atv" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="EZc-TW-fMl" kind="relationship" relationship="viewControllers" id="d7z-6Y-daU"/>
+                        <segue destination="sml-yU-SiU" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="daa-KS-9rc" kind="relationship" relationship="viewControllers" id="u90-eF-lPh"/>
+                        <segue destination="Bvd-ih-Sd1" kind="relationship" relationship="viewControllers" id="rD6-BI-Wgb"/>
+                        <segue destination="x39-UY-v9F" kind="relationship" relationship="viewControllers" id="YSF-7u-Z04"/>
+                        <segue destination="rzb-yc-NWP" kind="relationship" relationship="viewControllers" id="8K2-hX-FEZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="250"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="gRa-dz-WnG">
+            <objects>
+                <viewController id="b9H-8X-euO" customClass="SettingsViewController" customModule="ArcticRun_iPad" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m7K-m9-hF7"/>
+                        <viewControllerLayoutGuide type="bottom" id="9wK-Ji-ugM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Z2-pw-DGp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Testing Menu Bar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhL-kp-tgv">
+                                <rect key="frame" x="188" y="257" width="216" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="yFE-53-eE5">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="3nK-6o-4jh"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="3nK-6o-4jh" id="JNB-Qe-2d8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ih1-yk-07i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="-615"/>
         </scene>
         <!--Menu Controller-->
         <scene sceneID="aWQ-NK-yTQ">
@@ -76,7 +132,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="Pu7-Vv-hOs" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="60M-Bu-o7Q"/>
+                                            <segue destination="49e-Tb-3d3" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="60M-Bu-o7Q"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tWB-wu-Rqh">
@@ -99,7 +155,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="StS-IV-nU8" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="cT0-ud-qST"/>
+                                            <segue destination="rF2-Rv-ppx" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="cT0-ud-qST"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="S8A-6b-8wy">
@@ -135,29 +191,102 @@
             </objects>
             <point key="canvasLocation" x="-754" y="-615"/>
         </scene>
-        <!--HomeScreen-->
-        <scene sceneID="S5F-G4-Emx">
+        <!--Social-->
+        <scene sceneID="dfB-vY-7ej">
             <objects>
-                <viewControllerPlaceholder storyboardName="HomeScreen" id="Pu7-Vv-hOs" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iNx-J5-tF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="Social" storyboardName="Social" id="rzb-yc-NWP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="md3-ES-8I2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCP-OJ-Kzv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-784" y="258"/>
+            <point key="canvasLocation" x="486.5" y="-42"/>
         </scene>
-        <!--SettingsScreen-->
-        <scene sceneID="1KL-Ah-afC">
+        <!--PersonalGoals-->
+        <scene sceneID="xZl-tr-fv0">
             <objects>
-                <viewControllerPlaceholder storyboardName="SettingsScreen" id="StS-IV-nU8" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TA5-iL-bex" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="PersonalGoals" storyboardName="PersonalGoals" bundleIdentifier="com.terratap.arcticrun" id="x39-UY-v9F" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="quO-al-Pnk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mDK-R7-FaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618.5" y="137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mE7-8N-zDH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rF2-Rv-ppx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kiX-ta-CBj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="b9H-8X-euO" kind="relationship" relationship="rootViewController" id="A30-10-LgH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7C2-JG-a4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="-615"/>
+        </scene>
+        <!--Sprite-->
+        <scene sceneID="XJG-uA-38r">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Sprite" id="Bvd-ih-Sd1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="33G-dw-MG2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6W8-8k-sj5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-245.5" y="766"/>
+        </scene>
+        <!--Cloud-->
+        <scene sceneID="kuh-2j-ZCt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Cloud" id="EZc-TW-fMl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="N6n-fz-WK6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jdC-ki-mNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="766"/>
+        </scene>
+        <!--TableView-->
+        <scene sceneID="9lQ-1w-fjj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TableView" id="daa-KS-9rc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Xyd-PM-H57"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XcM-Ji-GBV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273" y="766"/>
+        </scene>
+        <!--InfoGraph-->
+        <scene sceneID="w09-Pe-IzO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InfoGraph" id="sml-yU-SiU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="gVo-6M-hZH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5d-e5-WOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486.5" y="515"/>
+        </scene>
+        <!--CircleProgress-->
+        <scene sceneID="RYZ-nA-r5Z">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CircleProgress" id="OHr-WB-atv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ADs-cg-tAR"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AAr-k3-VIS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620" y="366"/>
         </scene>
     </scenes>
     <resources>
         <image name="map" width="1024" height="1024"/>
+        <image name="menu" width="22" height="22"/>
         <image name="news" width="1024" height="1024"/>
         <image name="photo" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PE2-H5-iTv"/>
+        <segue reference="60M-Bu-o7Q"/>
     </inferredMetricsTieBreakers>
 </document>
