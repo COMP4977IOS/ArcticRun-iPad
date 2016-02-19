@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qeG-82-fSF">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ArcticRun_iPad" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ElY-7m-mI1">
+                                <rect key="frame" x="96" y="166" width="402" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtJ-aT-Xrp">
+                                <rect key="frame" x="96" y="137" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QW4-Ph-Q9Z">
+                                <rect key="frame" x="96" y="367" width="402" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Calories Burned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5b-Zk-lrH">
+                                <rect key="frame" x="96" y="338" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ayw-Uj-tZy">
+                                <rect key="frame" x="96" y="233" width="402" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Kilometers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsY-sZ-16P">
+                                <rect key="frame" x="96" y="204" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S07-LK-y8d">
+                                <rect key="frame" x="96" y="300" width="402" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JkS-zk-jVj">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Daily Goals" id="Xbr-Ym-yqZ">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="quG-rI-ne7">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PuO-Hp-6jz">
+                                                <rect key="frame" x="546" y="7" width="34" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveToCloud:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uzK-Xy-EhG"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iye-rc-Mvd">
+                                <rect key="frame" x="96" y="271" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ElY-7m-mI1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2es-PC-9bb"/>
+                            <constraint firstItem="ElY-7m-mI1" firstAttribute="leading" secondItem="PtJ-aT-Xrp" secondAttribute="leading" id="4kQ-4B-rWb"/>
+                            <constraint firstItem="ayw-Uj-tZy" firstAttribute="leading" secondItem="S07-LK-y8d" secondAttribute="leading" id="670-4O-0tD"/>
+                            <constraint firstItem="Iye-rc-Mvd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EgR-sw-Lme"/>
+                            <constraint firstItem="ElY-7m-mI1" firstAttribute="leading" secondItem="ayw-Uj-tZy" secondAttribute="leading" id="HxW-zn-sxg"/>
+                            <constraint firstItem="JkS-zk-jVj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jgv-pL-uCg"/>
+                            <constraint firstItem="ElY-7m-mI1" firstAttribute="trailing" secondItem="ayw-Uj-tZy" secondAttribute="trailing" id="JhK-pN-psE"/>
+                            <constraint firstItem="S07-LK-y8d" firstAttribute="leading" secondItem="QW4-Ph-Q9Z" secondAttribute="leading" id="LHy-sc-ox6"/>
+                            <constraint firstItem="ayw-Uj-tZy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O4d-WF-scx"/>
+                            <constraint firstItem="JkS-zk-jVj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Q27-xB-LK0"/>
+                            <constraint firstItem="QW4-Ph-Q9Z" firstAttribute="leading" secondItem="H5b-Zk-lrH" secondAttribute="leading" id="RON-jQ-sro"/>
+                            <constraint firstItem="ayw-Uj-tZy" firstAttribute="trailing" secondItem="S07-LK-y8d" secondAttribute="trailing" id="SL1-pb-bmJ"/>
+                            <constraint firstItem="ayw-Uj-tZy" firstAttribute="leading" secondItem="UsY-sZ-16P" secondAttribute="leading" id="Skj-Bd-9it"/>
+                            <constraint firstItem="S07-LK-y8d" firstAttribute="leading" secondItem="Iye-rc-Mvd" secondAttribute="leading" id="V13-bT-MGK"/>
+                            <constraint firstItem="QW4-Ph-Q9Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f08-Dy-Z7z"/>
+                            <constraint firstItem="UsY-sZ-16P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jn8-T2-Nob"/>
+                            <constraint firstItem="S07-LK-y8d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nZd-wF-75p"/>
+                            <constraint firstItem="S07-LK-y8d" firstAttribute="trailing" secondItem="QW4-Ph-Q9Z" secondAttribute="trailing" id="pcl-53-G9y"/>
+                            <constraint firstItem="H5b-Zk-lrH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vEt-6y-i2T"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xe7-gV-jMo"/>
+                    <connections>
+                        <outlet property="caloriesBurnedField" destination="QW4-Ph-Q9Z" id="2pF-U4-etf"/>
+                        <outlet property="kilometersField" destination="ayw-Uj-tZy" id="ZYF-NR-KLo"/>
+                        <outlet property="minutesField" destination="S07-LK-y8d" id="anC-3g-rpl"/>
+                        <outlet property="stepsField" destination="ElY-7m-mI1" id="Z3c-sZ-hvX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cXU-Ai-nZV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qeG-82-fSF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZG9-PW-DlU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SU2-HP-99b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m14-2I-24n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176" y="429"/>
+        </scene>
+    </scenes>
+</document>
