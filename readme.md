@@ -6,11 +6,13 @@ Arctic Run is a fitness game for iOS. Developed by Students at BCIT.
 ### Project Files
 To merge Xcode project files (pbxproj):
 - Install mergepbx, Either using the install script [here](https://github.com/simonwagner/mergepbx) or with homebrew:
-  ```markdown
+
+  ```
   brew install mergepbx
   ```
 - Configure your global git config so it's aware of the tool
-  ```markdown
+
+  ```
   #driver for merging Xcode project files
   [merge "mergepbx"]
   name = Xcode project files merger
