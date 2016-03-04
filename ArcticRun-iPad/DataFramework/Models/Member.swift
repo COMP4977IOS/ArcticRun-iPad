@@ -15,15 +15,17 @@ public class Member: Object {
     private dynamic var _firstName:String!
     private dynamic var _lastName:String!
     private dynamic var _item:Item!
+    private dyanmic var _status:String!
     
     public let stat = List<Stat>()
     
-    convenience init(crew: Crew, firstName:String, lastName:String, item:Item) {
+    convenience init(crew: Crew, firstName:String, lastName:String, item:Item, status:String) {
         self.init()
         self._crew = crew
         self._firstName = firstName
         self._lastName = lastName
         self._item = item
+        self._status = status
     }
     
     public var crew:Crew {
@@ -59,6 +61,15 @@ public class Member: Object {
         }
         set {
             self._item = newValue
+        }
+    }
+    
+    public var status:String {
+        get {
+            return self._status
+        }
+        set {
+            self._status = newValue
         }
     }
     
