@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DcY-8z-W3H">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Social-->
+        <scene sceneID="IJL-n2-eHV">
+            <objects>
+                <viewController id="ROZ-im-OUa" customClass="SocialViewController" customModule="ArcticRun_iPad" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gQY-TL-Q12"/>
+                        <viewControllerLayoutGuide type="bottom" id="jRt-nB-meN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ld7-Yz-Cmc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2I-o2-ckF">
+                                <rect key="frame" x="227" y="285" width="146" height="30"/>
+                                <state key="normal" title="Log into GameCenter"/>
+                                <connections>
+                                    <action selector="authenticateLocalPlayer:" destination="ROZ-im-OUa" eventType="touchUpInside" id="Lrs-U9-as6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c2I-o2-ckF" firstAttribute="centerY" secondItem="ld7-Yz-Cmc" secondAttribute="centerY" id="OiS-8e-HuQ"/>
+                            <constraint firstItem="c2I-o2-ckF" firstAttribute="centerX" secondItem="ld7-Yz-Cmc" secondAttribute="centerX" id="fl0-b9-nnf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Social" id="hav-bu-f5l" userLabel="Social"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mqp-9z-bIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="795" y="1070"/>
+        </scene>
+        <!--Social-->
+        <scene sceneID="fxn-cB-Jt1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DcY-8z-W3H" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Social" image="first" id="xOV-kS-Lu8"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bqi-FE-7zJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ROZ-im-OUa" kind="relationship" relationship="rootViewController" id="Cw3-ho-ibO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FrD-q0-hqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="1070"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+    </resources>
+</document>

@@ -17,6 +17,7 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                print("Hello")
         // Do any additional setup after loading the view, typically from a nib.
         
         progress = KDCircularProgress(frame: CGRect(x:0,y:0, width:200, height:200))
