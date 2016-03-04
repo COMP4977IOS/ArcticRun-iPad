@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
@@ -48,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="618.5" y="137"/>
         </scene>
-        <!--Sprite-->
+        <!--World-->
         <scene sceneID="XJG-uA-38r">
             <objects>
-                <viewControllerPlaceholder storyboardName="Sprite" id="Bvd-ih-Sd1" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="World" id="Bvd-ih-Sd1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="33G-dw-MG2"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6W8-8k-sj5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -78,20 +79,20 @@
             </objects>
             <point key="canvasLocation" x="273" y="766"/>
         </scene>
-        <!--InfoGraph-->
+        <!--Fitness-->
         <scene sceneID="w09-Pe-IzO">
             <objects>
-                <viewControllerPlaceholder storyboardName="InfoGraph" id="sml-yU-SiU" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Fitness" id="sml-yU-SiU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="gVo-6M-hZH"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5d-e5-WOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="486.5" y="515"/>
         </scene>
-        <!--CircleProgress-->
+        <!--Overview-->
         <scene sceneID="RYZ-nA-r5Z">
             <objects>
-                <viewControllerPlaceholder storyboardName="CircleProgress" id="OHr-WB-atv" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Overview" id="OHr-WB-atv" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ADs-cg-tAR"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAr-k3-VIS" userLabel="First Responder" sceneMemberID="firstResponder"/>

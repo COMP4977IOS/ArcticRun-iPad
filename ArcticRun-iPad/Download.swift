@@ -28,8 +28,8 @@ class Download{
                 
                 if(httpResponse.statusCode == 200){
                     do {
-                        let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! [AnyObject]
-                        completion(jsonResult[0]["key"] as? String)
+                        //let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! [AnyObject]
+                        //completion(jsonResult[0]["key"] as? String)
                         
                     } catch let error {
                         print("JSON Serialization failed. Error: \(error)")
