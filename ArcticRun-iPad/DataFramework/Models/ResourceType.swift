@@ -12,10 +12,12 @@ import RealmSwift
 public class ResourceType: Object {
     
     private dynamic var _name:String!
+    private dynamic var _image:String!
     
     convenience init(name:String) {
         self.init()
         self._name = name
+        self._image = image
     }
     
     public var name:String {
@@ -24,6 +26,15 @@ public class ResourceType: Object {
         }
         set {
             self._name = newValue
+        }
+    }
+    
+    public var image:String {
+        get {
+            return self._image
+        }
+        set {
+            self._image = newValue
         }
     }
     

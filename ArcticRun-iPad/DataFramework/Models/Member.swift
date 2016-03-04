@@ -15,7 +15,7 @@ public class Member: Object {
     private dynamic var _firstName:String!
     private dynamic var _lastName:String!
     private dynamic var _item:Item!
-    private dyanmic var _status:String!
+    private dynamic var _status:String!
     
     public let stat = List<Stat>()
     

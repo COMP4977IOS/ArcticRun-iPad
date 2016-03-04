@@ -40,12 +40,12 @@ public class Diary: Object {
         }
     }
     
-    public var text:NSDate {
+    public var text:String {
         get {
-            return self.text
+            return self._text
         }
         set {
-            self.text = newValue
+            self._text = newValue
         }
     }
     

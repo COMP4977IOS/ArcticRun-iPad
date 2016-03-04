@@ -32,7 +32,7 @@ class FirstViewController: UIViewController {
         progress.angle = 1
         progress.setColors(UIColor.cyanColor())
 
-    
+        
 
         
         view.addSubview(progress)
