@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Social View Controller-->
+        <!--Social-->
         <scene sceneID="IJL-n2-eHV">
             <objects>
                 <viewController id="ROZ-im-OUa" customClass="SocialViewController" customModule="ArcticRun_iPad" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                             <constraint firstItem="c2I-o2-ckF" firstAttribute="centerX" secondItem="ld7-Yz-Cmc" secondAttribute="centerX" id="fl0-b9-nnf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hav-bu-f5l"/>
+                    <navigationItem key="navigationItem" title="Social" id="hav-bu-f5l" userLabel="Social"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mqp-9z-bIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

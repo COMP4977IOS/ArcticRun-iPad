@@ -41,13 +41,19 @@
 		9224A50E1C895DC50041B39B /* ResourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A50D1C895DC50041B39B /* ResourceType.swift */; };
 		9224A5101C895DDC0041B39B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A50F1C895DDC0041B39B /* Resource.swift */; };
 		923F5F0C1C77853A0015A13B /* Sprite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F0A1C77853A0015A13B /* Sprite.storyboard */; };
+		8B5993EC1C8965E0006E7AA2 /* CrewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5993EB1C8965E0006E7AA2 /* CrewViewController.swift */; };
+		8B5993EE1C8965F4006E7AA2 /* AchievementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5993ED1C8965F4006E7AA2 /* AchievementViewController.swift */; };
+		8B5993F51C896809006E7AA2 /* Achievements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B5993F41C896809006E7AA2 /* Achievements.storyboard */; };
+		8B5993F71C896856006E7AA2 /* Crew.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B5993F61C896856006E7AA2 /* Crew.storyboard */; };
+		923F5F0C1C77853A0015A13B /* World.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F0A1C77853A0015A13B /* World.storyboard */; };
 		923F5F0F1C77859B0015A13B /* Cloud.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F0E1C77859B0015A13B /* Cloud.storyboard */; };
 		923F5F121C7785E40015A13B /* TableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F101C7785E40015A13B /* TableView.storyboard */; };
-		923F5F141C7786390015A13B /* InfoGraph.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F131C7786390015A13B /* InfoGraph.storyboard */; };
-		923F5F161C7786800015A13B /* CircleProgress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F151C7786800015A13B /* CircleProgress.storyboard */; };
+		923F5F141C7786390015A13B /* Fitness.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F131C7786390015A13B /* Fitness.storyboard */; };
+		923F5F161C7786800015A13B /* Overview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F151C7786800015A13B /* Overview.storyboard */; };
 		923F5F191C77879E0015A13B /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F171C77879E0015A13B /* HomeScreen.storyboard */; };
 		923F5F1B1C7787F60015A13B /* SettingsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F1A1C7787F60015A13B /* SettingsScreen.storyboard */; };
 		92C50F081C894A7D000AB12A /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C50F071C894A7D000AB12A /* Crew.swift */; };
+		923F5F1B1C7787F60015A13B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F1A1C7787F60015A13B /* Settings.storyboard */; };
 		EE020F4A1C6E8AD300F5F74A /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE020F491C6E8AD300F5F74A /* TaskViewController.swift */; };
 		EE020F4C1C6E8AFB00F5F74A /* TaskListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -113,13 +119,19 @@
 		9224A50D1C895DC50041B39B /* ResourceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourceType.swift; path = DataFramework/Models/ResourceType.swift; sourceTree = "<group>"; };
 		9224A50F1C895DDC0041B39B /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = DataFramework/Models/Resource.swift; sourceTree = "<group>"; };
 		923F5F0B1C77853A0015A13B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Sprite.storyboard; sourceTree = "<group>"; };
+		8B5993EB1C8965E0006E7AA2 /* CrewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewViewController.swift; sourceTree = "<group>"; };
+		8B5993ED1C8965F4006E7AA2 /* AchievementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementViewController.swift; sourceTree = "<group>"; };
+		8B5993F41C896809006E7AA2 /* Achievements.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Achievements.storyboard; sourceTree = "<group>"; };
+		8B5993F61C896856006E7AA2 /* Crew.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Crew.storyboard; sourceTree = "<group>"; };
+		923F5F0B1C77853A0015A13B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/World.storyboard; sourceTree = "<group>"; };
 		923F5F0E1C77859B0015A13B /* Cloud.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Cloud.storyboard; sourceTree = "<group>"; };
 		923F5F111C7785E40015A13B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TableView.storyboard; sourceTree = "<group>"; };
-		923F5F131C7786390015A13B /* InfoGraph.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InfoGraph.storyboard; sourceTree = "<group>"; };
-		923F5F151C7786800015A13B /* CircleProgress.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CircleProgress.storyboard; sourceTree = "<group>"; };
+		923F5F131C7786390015A13B /* Fitness.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fitness.storyboard; sourceTree = "<group>"; };
+		923F5F151C7786800015A13B /* Overview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Overview.storyboard; sourceTree = "<group>"; };
 		923F5F181C77879E0015A13B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeScreen.storyboard; sourceTree = "<group>"; };
 		923F5F1A1C7787F60015A13B /* SettingsScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsScreen.storyboard; sourceTree = "<group>"; };
 		92C50F071C894A7D000AB12A /* Crew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Crew.swift; path = DataFramework/Models/Crew.swift; sourceTree = "<group>"; };
+		923F5F1A1C7787F60015A13B /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		C6BC932190728787B19815AF /* Pods-ArcticRun-iPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcticRun-iPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArcticRun-iPad/Pods-ArcticRun-iPad.debug.xcconfig"; sourceTree = "<group>"; };
 		EE020F491C6E8AD300F5F74A /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListsViewController.swift; sourceTree = "<group>"; };
@@ -183,9 +195,13 @@
 				923F5F091C7784FE0015A13B /* Storyboards */,
 				8ACC746B1C72AB9A008F96AF /* SWRevealViewController */,
 				85684F551C6D902A0006282F /* ArcticRun-iPad.entitlements */,
+				85684F581C6D952A0006282F /* Models */,
 				8191F59E1C75C5E100879C3F /* BearImages.atlas */,
+				85684F551C6D902A0006282F /* ArcticRun-iPad.entitlements */,
 				8191F59A1C75C08100879C3F /* SpriteViewController.swift */,
 				9224A50B1C895D1F0041B39B /* Character.swift */,
+				8B5993EB1C8965E0006E7AA2 /* CrewViewController.swift */,
+				8B5993ED1C8965F4006E7AA2 /* AchievementViewController.swift */,
 				8191F59C1C75C3B000879C3F /* GameScene.swift */,
 				8503FB841C640A1600531D5F /* AppDelegate.swift */,
 				066D82861C76D88100E44996 /* SocialViewController.swift */,
@@ -233,6 +249,20 @@
 			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
+		8BA746611C8954BE00E5915F /* SideBarViews */ = {
+			isa = PBXGroup;
+			children = (
+				923F5F151C7786800015A13B /* Overview.storyboard */,
+				923F5F0A1C77853A0015A13B /* World.storyboard */,
+				8B5993F61C896856006E7AA2 /* Crew.storyboard */,
+				923F5F131C7786390015A13B /* Fitness.storyboard */,
+				066D82841C76D87B00E44996 /* Social.storyboard */,
+				8B5993F41C896809006E7AA2 /* Achievements.storyboard */,
+				923F5F1A1C7787F60015A13B /* Settings.storyboard */,
+			);
+			name = SideBarViews;
+			sourceTree = "<group>";
+		};
 		90112917590FA166D2E1C7D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,27 +276,23 @@
 		923F5F091C7784FE0015A13B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				923F5F0D1C7785420015A13B /* HomeScreenViews */,
+				8BA746611C8954BE00E5915F /* SideBarViews */,
+				923F5F0D1C7785420015A13B /* Old Stuff */,
 				8503FB8A1C640A1600531D5F /* Main.storyboard */,
-				923F5F1A1C7787F60015A13B /* SettingsScreen.storyboard */,
 				923F5F171C77879E0015A13B /* HomeScreen.storyboard */,
 				8503FB8F1C640A1600531D5F /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
-		923F5F0D1C7785420015A13B /* HomeScreenViews */ = {
+		923F5F0D1C7785420015A13B /* Old Stuff */ = {
 			isa = PBXGroup;
 			children = (
-				923F5F151C7786800015A13B /* CircleProgress.storyboard */,
 				923F5F0E1C77859B0015A13B /* Cloud.storyboard */,
-				923F5F131C7786390015A13B /* InfoGraph.storyboard */,
 				923F5F101C7785E40015A13B /* TableView.storyboard */,
-				923F5F0A1C77853A0015A13B /* Sprite.storyboard */,
 				065ACAA11C76D52800A4E358 /* PersonalGoals.storyboard */,
-				066D82841C76D87B00E44996 /* Social.storyboard */,
 			);
-			name = HomeScreenViews;
+			name = "Old Stuff";
 			sourceTree = "<group>";
 		};
 		92C50F031C894A5A000AB12A /* DataFramework */ = {
@@ -418,7 +444,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				923F5F141C7786390015A13B /* InfoGraph.storyboard in Resources */,
+				923F5F141C7786390015A13B /* Fitness.storyboard in Resources */,
+				8B5993F51C896809006E7AA2 /* Achievements.storyboard in Resources */,
 				8503FB911C640A1600531D5F /* LaunchScreen.storyboard in Resources */,
 				066D82851C76D87B00E44996 /* Social.storyboard in Resources */,
 				923F5F121C7785E40015A13B /* TableView.storyboard in Resources */,
@@ -427,11 +454,12 @@
 				8191F59F1C75C5E100879C3F /* BearImages.atlas in Resources */,
 				8503FB8E1C640A1600531D5F /* Assets.xcassets in Resources */,
 				8503FB8C1C640A1600531D5F /* Main.storyboard in Resources */,
-				923F5F1B1C7787F60015A13B /* SettingsScreen.storyboard in Resources */,
-				923F5F0C1C77853A0015A13B /* Sprite.storyboard in Resources */,
+				923F5F1B1C7787F60015A13B /* Settings.storyboard in Resources */,
+				8B5993F71C896856006E7AA2 /* Crew.storyboard in Resources */,
+				923F5F0C1C77853A0015A13B /* World.storyboard in Resources */,
 				923F5F191C77879E0015A13B /* HomeScreen.storyboard in Resources */,
 				923F5F0F1C77859B0015A13B /* Cloud.storyboard in Resources */,
-				923F5F161C7786800015A13B /* CircleProgress.storyboard in Resources */,
+				923F5F161C7786800015A13B /* Overview.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,8 +538,10 @@
 				9224A5061C895B120041B39B /* ItemType.swift in Sources */,
 				8503FBEF1C642BA900531D5F /* Download.swift in Sources */,
 				9224A5081C895B4C0041B39B /* StatType.swift in Sources */,
+				8B5993EC1C8965E0006E7AA2 /* CrewViewController.swift in Sources */,
 				8ACC74751C72B904008F96AF /* SettingsViewController.swift in Sources */,
 				EE020F4C1C6E8AFB00F5F74A /* TaskListsViewController.swift in Sources */,
+				8B5993EE1C8965F4006E7AA2 /* AchievementViewController.swift in Sources */,
 				8503FB891C640A1600531D5F /* SecondViewController.swift in Sources */,
 				9224A5101C895DDC0041B39B /* Resource.swift in Sources */,
 				92C50F081C894A7D000AB12A /* Crew.swift in Sources */,
@@ -579,12 +609,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		923F5F0A1C77853A0015A13B /* Sprite.storyboard */ = {
+		923F5F0A1C77853A0015A13B /* World.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				923F5F0B1C77853A0015A13B /* Base */,
 			);
-			name = Sprite.storyboard;
+			name = World.storyboard;
 			sourceTree = "<group>";
 		};
 		923F5F101C7785E40015A13B /* TableView.storyboard */ = {
@@ -705,6 +735,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ArcticRun-iPad/ArcticRun-iPad-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -723,6 +754,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ArcticRun-iPad/ArcticRun-iPad-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
