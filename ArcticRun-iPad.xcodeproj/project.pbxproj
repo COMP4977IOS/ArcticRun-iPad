@@ -26,12 +26,20 @@
 		8503FBA71C640A1600531D5F /* ArcticRun_iPadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FBA61C640A1600531D5F /* ArcticRun_iPadUITests.swift */; };
 		8503FBEF1C642BA900531D5F /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FBEE1C642BA900531D5F /* Download.swift */; };
 		85684F571C6D90970006282F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85684F561C6D90970006282F /* CloudKit.framework */; };
-		85684F5F1C6D96320006282F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85684F5E1C6D96320006282F /* Character.swift */; };
 		85684F611C6DA4B00006282F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85684F601C6DA4B00006282F /* ThirdViewController.swift */; };
 		8ACC746F1C72ABB8008F96AF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC746E1C72ABB8008F96AF /* SWRevealViewController.m */; };
 		8ACC74711C72ABD3008F96AF /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC74701C72ABD3008F96AF /* MenuController.swift */; };
 		8ACC74731C72B017008F96AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC74721C72B017008F96AF /* Images.xcassets */; };
 		8ACC74751C72B904008F96AF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC74741C72B904008F96AF /* SettingsViewController.swift */; };
+		9224A5001C89502C0041B39B /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A4FF1C89502C0041B39B /* Diary.swift */; };
+		9224A5021C8957330041B39B /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A5011C8957330041B39B /* Member.swift */; };
+		9224A5041C8958A20041B39B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A5031C8958A20041B39B /* Item.swift */; };
+		9224A5061C895B120041B39B /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A5051C895B120041B39B /* ItemType.swift */; };
+		9224A5081C895B4C0041B39B /* StatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A5071C895B4C0041B39B /* StatType.swift */; };
+		9224A50A1C895B970041B39B /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A5091C895B970041B39B /* Stat.swift */; };
+		9224A50C1C895D1F0041B39B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A50B1C895D1F0041B39B /* Character.swift */; };
+		9224A50E1C895DC50041B39B /* ResourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A50D1C895DC50041B39B /* ResourceType.swift */; };
+		9224A5101C895DDC0041B39B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A50F1C895DDC0041B39B /* Resource.swift */; };
 		923F5F0C1C77853A0015A13B /* Sprite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F0A1C77853A0015A13B /* Sprite.storyboard */; };
 		923F5F0F1C77859B0015A13B /* Cloud.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F0E1C77859B0015A13B /* Cloud.storyboard */; };
 		923F5F121C7785E40015A13B /* TableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F101C7785E40015A13B /* TableView.storyboard */; };
@@ -39,6 +47,7 @@
 		923F5F161C7786800015A13B /* CircleProgress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F151C7786800015A13B /* CircleProgress.storyboard */; };
 		923F5F191C77879E0015A13B /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F171C77879E0015A13B /* HomeScreen.storyboard */; };
 		923F5F1B1C7787F60015A13B /* SettingsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F1A1C7787F60015A13B /* SettingsScreen.storyboard */; };
+		92C50F081C894A7D000AB12A /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C50F071C894A7D000AB12A /* Crew.swift */; };
 		EE020F4A1C6E8AD300F5F74A /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE020F491C6E8AD300F5F74A /* TaskViewController.swift */; };
 		EE020F4C1C6E8AFB00F5F74A /* TaskListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -87,7 +96,6 @@
 		8503FBEE1C642BA900531D5F /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
 		85684F551C6D902A0006282F /* ArcticRun-iPad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ArcticRun-iPad.entitlements"; sourceTree = "<group>"; };
 		85684F561C6D90970006282F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		85684F5E1C6D96320006282F /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		85684F601C6DA4B00006282F /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		8ACC746C1C72ABB7008F96AF /* ArcticRun-iPad-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ArcticRun-iPad-Bridging-Header.h"; sourceTree = "<group>"; };
 		8ACC746D1C72ABB8008F96AF /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -95,6 +103,15 @@
 		8ACC74701C72ABD3008F96AF /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		8ACC74721C72B017008F96AF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8ACC74741C72B904008F96AF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9224A4FF1C89502C0041B39B /* Diary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Diary.swift; path = DataFramework/Models/Diary.swift; sourceTree = "<group>"; };
+		9224A5011C8957330041B39B /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Member.swift; path = DataFramework/Models/Member.swift; sourceTree = "<group>"; };
+		9224A5031C8958A20041B39B /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = DataFramework/Models/Item.swift; sourceTree = "<group>"; };
+		9224A5051C895B120041B39B /* ItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemType.swift; path = DataFramework/Models/ItemType.swift; sourceTree = "<group>"; };
+		9224A5071C895B4C0041B39B /* StatType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatType.swift; path = DataFramework/Models/StatType.swift; sourceTree = "<group>"; };
+		9224A5091C895B970041B39B /* Stat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stat.swift; path = DataFramework/Models/Stat.swift; sourceTree = "<group>"; };
+		9224A50B1C895D1F0041B39B /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		9224A50D1C895DC50041B39B /* ResourceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourceType.swift; path = DataFramework/Models/ResourceType.swift; sourceTree = "<group>"; };
+		9224A50F1C895DDC0041B39B /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = DataFramework/Models/Resource.swift; sourceTree = "<group>"; };
 		923F5F0B1C77853A0015A13B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Sprite.storyboard; sourceTree = "<group>"; };
 		923F5F0E1C77859B0015A13B /* Cloud.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Cloud.storyboard; sourceTree = "<group>"; };
 		923F5F111C7785E40015A13B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TableView.storyboard; sourceTree = "<group>"; };
@@ -102,6 +119,7 @@
 		923F5F151C7786800015A13B /* CircleProgress.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CircleProgress.storyboard; sourceTree = "<group>"; };
 		923F5F181C77879E0015A13B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeScreen.storyboard; sourceTree = "<group>"; };
 		923F5F1A1C7787F60015A13B /* SettingsScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsScreen.storyboard; sourceTree = "<group>"; };
+		92C50F071C894A7D000AB12A /* Crew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Crew.swift; path = DataFramework/Models/Crew.swift; sourceTree = "<group>"; };
 		C6BC932190728787B19815AF /* Pods-ArcticRun-iPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcticRun-iPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArcticRun-iPad/Pods-ArcticRun-iPad.debug.xcconfig"; sourceTree = "<group>"; };
 		EE020F491C6E8AD300F5F74A /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListsViewController.swift; sourceTree = "<group>"; };
@@ -161,12 +179,13 @@
 		8503FB831C640A1600531D5F /* ArcticRun-iPad */ = {
 			isa = PBXGroup;
 			children = (
+				92C50F031C894A5A000AB12A /* DataFramework */,
 				923F5F091C7784FE0015A13B /* Storyboards */,
 				8ACC746B1C72AB9A008F96AF /* SWRevealViewController */,
-				85684F581C6D952A0006282F /* Models */,
 				85684F551C6D902A0006282F /* ArcticRun-iPad.entitlements */,
 				8191F59E1C75C5E100879C3F /* BearImages.atlas */,
 				8191F59A1C75C08100879C3F /* SpriteViewController.swift */,
+				9224A50B1C895D1F0041B39B /* Character.swift */,
 				8191F59C1C75C3B000879C3F /* GameScene.swift */,
 				8503FB841C640A1600531D5F /* AppDelegate.swift */,
 				066D82861C76D88100E44996 /* SocialViewController.swift */,
@@ -202,14 +221,6 @@
 				8503FBA81C640A1600531D5F /* Info.plist */,
 			);
 			path = "ArcticRun-iPadUITests";
-			sourceTree = "<group>";
-		};
-		85684F581C6D952A0006282F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				85684F5E1C6D96320006282F /* Character.swift */,
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 		8ACC746B1C72AB9A008F96AF /* SWRevealViewController */ = {
@@ -256,6 +267,30 @@
 				066D82841C76D87B00E44996 /* Social.storyboard */,
 			);
 			name = HomeScreenViews;
+			sourceTree = "<group>";
+		};
+		92C50F031C894A5A000AB12A /* DataFramework */ = {
+			isa = PBXGroup;
+			children = (
+				92C50F041C894A62000AB12A /* Models */,
+			);
+			name = DataFramework;
+			sourceTree = "<group>";
+		};
+		92C50F041C894A62000AB12A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92C50F071C894A7D000AB12A /* Crew.swift */,
+				9224A4FF1C89502C0041B39B /* Diary.swift */,
+				9224A5011C8957330041B39B /* Member.swift */,
+				9224A5031C8958A20041B39B /* Item.swift */,
+				9224A5051C895B120041B39B /* ItemType.swift */,
+				9224A5091C895B970041B39B /* Stat.swift */,
+				9224A5071C895B4C0041B39B /* StatType.swift */,
+				9224A50F1C895DDC0041B39B /* Resource.swift */,
+				9224A50D1C895DC50041B39B /* ResourceType.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		E3192D3AF987B4E0D883DD65 /* Pods */ = {
@@ -471,16 +506,25 @@
 			files = (
 				066D82871C76D88100E44996 /* SocialViewController.swift in Sources */,
 				8ACC74711C72ABD3008F96AF /* MenuController.swift in Sources */,
+				9224A50E1C895DC50041B39B /* ResourceType.swift in Sources */,
+				9224A5061C895B120041B39B /* ItemType.swift in Sources */,
 				8503FBEF1C642BA900531D5F /* Download.swift in Sources */,
+				9224A5081C895B4C0041B39B /* StatType.swift in Sources */,
 				8ACC74751C72B904008F96AF /* SettingsViewController.swift in Sources */,
 				EE020F4C1C6E8AFB00F5F74A /* TaskListsViewController.swift in Sources */,
 				8503FB891C640A1600531D5F /* SecondViewController.swift in Sources */,
-				85684F5F1C6D96320006282F /* Character.swift in Sources */,
+				9224A5101C895DDC0041B39B /* Resource.swift in Sources */,
+				92C50F081C894A7D000AB12A /* Crew.swift in Sources */,
 				8503FB851C640A1600531D5F /* AppDelegate.swift in Sources */,
 				8ACC746F1C72ABB8008F96AF /* SWRevealViewController.m in Sources */,
 				8191F59D1C75C3B000879C3F /* GameScene.swift in Sources */,
+				9224A5001C89502C0041B39B /* Diary.swift in Sources */,
+				9224A50C1C895D1F0041B39B /* Character.swift in Sources */,
 				EE020F4A1C6E8AD300F5F74A /* TaskViewController.swift in Sources */,
 				85684F611C6DA4B00006282F /* ThirdViewController.swift in Sources */,
+				9224A50A1C895B970041B39B /* Stat.swift in Sources */,
+				9224A5021C8957330041B39B /* Member.swift in Sources */,
+				9224A5041C8958A20041B39B /* Item.swift in Sources */,
 				8503FB871C640A1600531D5F /* FirstViewController.swift in Sources */,
 				065ACAA41C76D53900A4E358 /* PersonalGoalsController.swift in Sources */,
 				8191F59B1C75C08200879C3F /* SpriteViewController.swift in Sources */,
