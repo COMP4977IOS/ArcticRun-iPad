@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZYg-sO-nJK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZYg-sO-nJK">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Achievements-->
         <scene sceneID="Muu-UN-Hid">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FuN-0t-Yik" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="H3B-05-VGD" customClass="AchievementViewController" customModule="ArcticRun_iPad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6l2-gX-r8y"/>
@@ -19,15 +18,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Achievements" id="lCO-Kr-0Ok" userLabel="Achievements"/>
+                    <navigationItem key="navigationItem" title="Achievements" id="lCO-Kr-0Ok" userLabel="Achievements">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="dbF-2D-D0z"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="dbF-2D-D0z" id="0DA-pD-nKh"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FuN-0t-Yik" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="267" y="-1706"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HZs-nV-vTt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pzz-8U-M91" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZYg-sO-nJK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JCg-rM-b5d">
@@ -39,8 +43,12 @@
                         <segue destination="H3B-05-VGD" kind="relationship" relationship="rootViewController" id="4RZ-xD-ipt"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pzz-8U-M91" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-545" y="-1706"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="22" height="22"/>
+    </resources>
 </document>
