@@ -8,7 +8,7 @@
         <!--Overview-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="ArcticRun_iPad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="OverviewViewController" customModule="ArcticRun_iPad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -66,11 +66,8 @@
                             <constraint firstItem="929-kO-3IP" firstAttribute="centerX" secondItem="A5M-7J-77L" secondAttribute="centerX" constant="-0.5" id="xm1-No-pf8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Overview" id="CkC-yK-3it">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="srb-2C-3ID"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Overview" id="CkC-yK-3it"/>
                     <connections>
-                        <outlet property="menuButton" destination="srb-2C-3ID" id="lw4-X1-XoE"/>
                         <outlet property="stepCount" destination="9Qh-pc-n3X" id="LbV-J6-LL9"/>
                     </connections>
                 </viewController>
@@ -101,6 +98,5 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
-        <image name="menu" width="22" height="22"/>
     </resources>
 </document>

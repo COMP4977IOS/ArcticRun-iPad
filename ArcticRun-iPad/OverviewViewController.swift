@@ -8,7 +8,7 @@
 
 import UIKit
 import KDCircularProgress
-class FirstViewController: UIViewController {
+class OverviewViewController: UIViewController {
     
     @IBOutlet weak var stepCount: UILabel!
     var progress: KDCircularProgress!
@@ -39,9 +39,7 @@ class FirstViewController: UIViewController {
         
         //toggle the menu bar
         if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.revealViewController().revealToggleAnimated(true)
         }
     }
     //Button to animate progress bar

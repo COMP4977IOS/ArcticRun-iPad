@@ -8,7 +8,7 @@
         <!--Sprite View-->
         <scene sceneID="nNS-IQ-h9t">
             <objects>
-                <viewController id="tab-Dd-InZ" userLabel="Sprite View" customClass="SpriteViewController" customModule="ArcticRun_iPad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tab-Dd-InZ" userLabel="Sprite View" customClass="WorldViewController" customModule="ArcticRun_iPad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZwJ-oq-nWb"/>
                         <viewControllerLayoutGuide type="bottom" id="3DX-cH-Y7r"/>
@@ -18,12 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sprite View" id="WkR-2j-SGD" userLabel="Sprite View">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="WTt-Co-mTO"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="menuButton" destination="WTt-Co-mTO" id="0Bo-9d-0YD"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="World" id="WkR-2j-SGD" userLabel="Sprite View"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Rt-8S-Ton" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,7 +43,4 @@
             <point key="canvasLocation" x="-1452" y="939"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="menu" width="22" height="22"/>
-    </resources>
 </document>
