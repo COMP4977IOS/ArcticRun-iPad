@@ -13,6 +13,10 @@
 		066D82851C76D87B00E44996 /* Social.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 066D82841C76D87B00E44996 /* Social.storyboard */; };
 		066D82871C76D88100E44996 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066D82861C76D88100E44996 /* SocialViewController.swift */; };
 		219A3034497EB533C5D89923 /* Pods_ArcticRun_iPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1B555208D4D7796507ECF0 /* Pods_ArcticRun_iPad.framework */; };
+		2B12DC131C8A49F700F0E64B /* crew_member1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B12DC121C8A49F700F0E64B /* crew_member1.jpg */; };
+		2B78BB231C8A615700E33B41 /* 1297063_orig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B78BB201C8A615700E33B41 /* 1297063_orig.jpg */; };
+		2B78BB241C8A615700E33B41 /* 6180089_orig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B78BB211C8A615700E33B41 /* 6180089_orig.jpg */; };
+		2B78BB251C8A615700E33B41 /* 9143924_orig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B78BB221C8A615700E33B41 /* 9143924_orig.jpg */; };
 		8191F59B1C75C08200879C3F /* SpriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8191F59A1C75C08100879C3F /* SpriteViewController.swift */; };
 		8191F59D1C75C3B000879C3F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8191F59C1C75C3B000879C3F /* GameScene.swift */; };
 		8191F59F1C75C5E100879C3F /* BearImages.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8191F59E1C75C5E100879C3F /* BearImages.atlas */; };
@@ -82,6 +86,10 @@
 		065ACAA51C76D75300A4E358 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		066D82841C76D87B00E44996 /* Social.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Social.storyboard; sourceTree = "<group>"; };
 		066D82861C76D88100E44996 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		2B12DC121C8A49F700F0E64B /* crew_member1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = crew_member1.jpg; path = Images.xcassets/crew_member1.jpg; sourceTree = "<group>"; };
+		2B78BB201C8A615700E33B41 /* 1297063_orig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1297063_orig.jpg; path = Images.xcassets/1297063_orig.jpg; sourceTree = "<group>"; };
+		2B78BB211C8A615700E33B41 /* 6180089_orig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 6180089_orig.jpg; path = Images.xcassets/6180089_orig.jpg; sourceTree = "<group>"; };
+		2B78BB221C8A615700E33B41 /* 9143924_orig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 9143924_orig.jpg; path = Images.xcassets/9143924_orig.jpg; sourceTree = "<group>"; };
 		7E1B555208D4D7796507ECF0 /* Pods_ArcticRun_iPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArcticRun_iPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8191F59A1C75C08100879C3F /* SpriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteViewController.swift; sourceTree = "<group>"; };
 		8191F59C1C75C3B000879C3F /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -211,6 +219,10 @@
 				8503FBEE1C642BA900531D5F /* Download.swift */,
 				065ACAA31C76D53900A4E358 /* PersonalGoalsController.swift */,
 				8ACC74721C72B017008F96AF /* Images.xcassets */,
+				2B78BB201C8A615700E33B41 /* 1297063_orig.jpg */,
+				2B78BB211C8A615700E33B41 /* 6180089_orig.jpg */,
+				2B78BB221C8A615700E33B41 /* 9143924_orig.jpg */,
+				2B12DC121C8A49F700F0E64B /* crew_member1.jpg */,
 				8503FB8D1C640A1600531D5F /* Assets.xcassets */,
 				8503FB921C640A1600531D5F /* Info.plist */,
 				EE020F491C6E8AD300F5F74A /* TaskViewController.swift */,
@@ -449,16 +461,20 @@
 			files = (
 				923F5F141C7786390015A13B /* Fitness.storyboard in Resources */,
 				8B5993F51C896809006E7AA2 /* Achievements.storyboard in Resources */,
+				2B78BB241C8A615700E33B41 /* 6180089_orig.jpg in Resources */,
 				8503FB911C640A1600531D5F /* LaunchScreen.storyboard in Resources */,
 				066D82851C76D87B00E44996 /* Social.storyboard in Resources */,
 				923F5F121C7785E40015A13B /* TableView.storyboard in Resources */,
 				065ACAA21C76D52800A4E358 /* PersonalGoals.storyboard in Resources */,
 				8ACC74731C72B017008F96AF /* Images.xcassets in Resources */,
+				2B78BB231C8A615700E33B41 /* 1297063_orig.jpg in Resources */,
 				8191F59F1C75C5E100879C3F /* BearImages.atlas in Resources */,
 				8503FB8E1C640A1600531D5F /* Assets.xcassets in Resources */,
 				8503FB8C1C640A1600531D5F /* Main.storyboard in Resources */,
 				923F5F1B1C7787F60015A13B /* Settings.storyboard in Resources */,
+				2B12DC131C8A49F700F0E64B /* crew_member1.jpg in Resources */,
 				8B5993F71C896856006E7AA2 /* Crew.storyboard in Resources */,
+				2B78BB251C8A615700E33B41 /* 9143924_orig.jpg in Resources */,
 				923F5F0C1C77853A0015A13B /* World.storyboard in Resources */,
 				923F5F191C77879E0015A13B /* HomeScreen.storyboard in Resources */,
 				923F5F0F1C77859B0015A13B /* Cloud.storyboard in Resources */,
