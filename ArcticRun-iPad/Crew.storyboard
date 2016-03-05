@@ -143,6 +143,10 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPadPro"/>
                     <connections>
+                        <outlet property="crewMember1" destination="iFM-ny-5Hr" id="MlV-Hi-oRs"/>
+                        <outlet property="crewMember2" destination="fHk-7m-4zI" id="vJo-Qi-L1G"/>
+                        <outlet property="crewMember3" destination="Jtm-uZ-jzD" id="icW-OO-kdO"/>
+                        <outlet property="crewMember4" destination="80a-2p-jRz" id="koT-IH-cqr"/>
                         <outlet property="menuButton" destination="CXh-Xk-PPi" id="qAP-b7-XHH"/>
                     </connections>
                 </viewController>

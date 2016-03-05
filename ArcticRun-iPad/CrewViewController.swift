@@ -11,6 +11,11 @@ import UIKit
 class CrewViewController: UIViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    @IBOutlet weak var crewMember1: UIStackView!
+    @IBOutlet weak var crewMember2: UIStackView!
+    @IBOutlet weak var crewMember3: UIStackView!
+    @IBOutlet weak var crewMember4: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,6 +25,18 @@ class CrewViewController: UIViewController {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
+        
+        // add gesture handlers to each crew member stack view
+        crewMember1.userInteractionEnabled=true
+        crewMember1.addGestureRecognizer(tapGesture)
+        crewMember2.userInteractionEnabled=true
+        crewMember2.addGestureRecognizer(tapGesture)
+        crewMember3.userInteractionEnabled=true
+        crewMember3.addGestureRecognizer(tapGesture)
+        crewMember4.userInteractionEnabled=true
+        crewMember4.addGestureRecognizer(tapGesture)
 
         // Do any additional setup after loading the view.
     }
@@ -29,7 +46,12 @@ class CrewViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    // handle the function of tapping a member
+    func handleTap(sender:UITapGestureRecognizer){
+        // make this actually go to details storyboard
+        print("tap")
+    }
+    
     /*
     // MARK: - Navigation
 
