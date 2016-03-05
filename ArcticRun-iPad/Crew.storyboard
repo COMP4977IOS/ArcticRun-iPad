@@ -137,13 +137,14 @@
                             <constraint firstItem="Exh-t0-6ax" firstAttribute="top" secondItem="tmj-hb-yAc" secondAttribute="bottom" constant="26" id="c8I-1m-R83"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Crew" id="EFI-jR-x8a" userLabel="Crew">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="CXh-Xk-PPi"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Crew" id="EFI-jR-x8a" userLabel="Crew"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPadPro"/>
                     <connections>
-                        <outlet property="menuButton" destination="CXh-Xk-PPi" id="qAP-b7-XHH"/>
+                        <outlet property="crewMember1" destination="iFM-ny-5Hr" id="MlV-Hi-oRs"/>
+                        <outlet property="crewMember2" destination="fHk-7m-4zI" id="vJo-Qi-L1G"/>
+                        <outlet property="crewMember3" destination="Jtm-uZ-jzD" id="icW-OO-kdO"/>
+                        <outlet property="crewMember4" destination="80a-2p-jRz" id="koT-IH-cqr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFM-4a-YYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -174,6 +175,5 @@
         <image name="6180089_orig.jpg" width="500" height="500"/>
         <image name="9143924_orig.jpg" width="500" height="500"/>
         <image name="crew_member1.jpg" width="500" height="500"/>
-        <image name="menu" width="22" height="22"/>
     </resources>
 </document>
