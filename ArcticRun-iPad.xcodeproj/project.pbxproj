@@ -31,6 +31,7 @@
 		8503FBEF1C642BA900531D5F /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FBEE1C642BA900531D5F /* Download.swift */; };
 		85684F571C6D90970006282F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85684F561C6D90970006282F /* CloudKit.framework */; };
 		85684F611C6DA4B00006282F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85684F601C6DA4B00006282F /* ThirdViewController.swift */; };
+		8AA981961C927EC00017F615 /* CrewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA981951C927EC00017F615 /* CrewDetailViewController.swift */; };
 		8ACC746F1C72ABB8008F96AF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC746E1C72ABB8008F96AF /* SWRevealViewController.m */; };
 		8ACC74711C72ABD3008F96AF /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC74701C72ABD3008F96AF /* MenuController.swift */; };
 		8ACC74731C72B017008F96AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC74721C72B017008F96AF /* Images.xcassets */; };
@@ -116,6 +117,7 @@
 		85684F551C6D902A0006282F /* ArcticRun-iPad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ArcticRun-iPad.entitlements"; sourceTree = "<group>"; };
 		85684F561C6D90970006282F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		85684F601C6DA4B00006282F /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		8AA981951C927EC00017F615 /* CrewDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewDetailViewController.swift; sourceTree = "<group>"; };
 		8ACC746C1C72ABB7008F96AF /* ArcticRun-iPad-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ArcticRun-iPad-Bridging-Header.h"; sourceTree = "<group>"; };
 		8ACC746D1C72ABB8008F96AF /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		8ACC746E1C72ABB8008F96AF /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */,
 				8ACC74701C72ABD3008F96AF /* MenuController.swift */,
 				8ACC74741C72B904008F96AF /* SettingsViewController.swift */,
+				8AA981951C927EC00017F615 /* CrewDetailViewController.swift */,
 			);
 			path = "ArcticRun-iPad";
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				EE020F4A1C6E8AD300F5F74A /* TaskViewController.swift in Sources */,
 				85684F611C6DA4B00006282F /* ThirdViewController.swift in Sources */,
 				9224A50A1C895B970041B39B /* Stat.swift in Sources */,
+				8AA981961C927EC00017F615 /* CrewDetailViewController.swift in Sources */,
 				9224A5021C8957330041B39B /* Member.swift in Sources */,
 				923C4B2A1C8A3A610000B8C8 /* Workout.swift in Sources */,
 				9224A5041C8958A20041B39B /* Item.swift in Sources */,
