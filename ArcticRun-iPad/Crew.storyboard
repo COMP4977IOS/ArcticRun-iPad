@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sew-At-l8Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sew-At-l8Y">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -141,15 +141,106 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPadPro"/>
                     <connections>
+                        <outlet property="crewImage1" destination="jKK-jR-ZXk" id="Tqp-RO-8ng"/>
+                        <outlet property="crewImg2" destination="vyR-JP-dd3" id="B4E-9o-9sd"/>
+                        <outlet property="crewImg3" destination="hkR-h6-zTw" id="Aae-YB-Q2T"/>
+                        <outlet property="crewImg4" destination="bij-6P-aAc" id="9Ne-z4-IzQ"/>
                         <outlet property="crewMember1" destination="iFM-ny-5Hr" id="MlV-Hi-oRs"/>
                         <outlet property="crewMember2" destination="fHk-7m-4zI" id="vJo-Qi-L1G"/>
                         <outlet property="crewMember3" destination="Jtm-uZ-jzD" id="icW-OO-kdO"/>
                         <outlet property="crewMember4" destination="80a-2p-jRz" id="koT-IH-cqr"/>
+                        <outlet property="crewName1" destination="g9E-6z-TdE" id="5qn-4G-EhK"/>
+                        <outlet property="crewName2" destination="sEd-xK-SmN" id="dgw-aN-bC9"/>
+                        <outlet property="crewName3" destination="2vJ-S4-9hZ" id="69k-T3-Y7B"/>
+                        <outlet property="crewName4" destination="TH2-KN-6Ah" id="oOT-y6-sVO"/>
+                        <outlet property="crewProg1" destination="YvV-y0-cTK" id="pn6-K0-wp3"/>
+                        <outlet property="crewProg2" destination="vii-m5-iJn" id="aGM-kw-rp0"/>
+                        <outlet property="crewProg3" destination="2Mf-tl-ajg" id="Z4U-2L-Ny2"/>
+                        <outlet property="crewProg4" destination="JET-UR-x5O" id="X3r-Ol-lKS"/>
+                        <segue destination="0H0-f0-JeJ" kind="show" identifier="showDetail4" id="1OB-a3-9qa"/>
+                        <segue destination="0H0-f0-JeJ" kind="show" identifier="showDetail3" id="ZSB-Qy-Cw5"/>
+                        <segue destination="0H0-f0-JeJ" kind="show" identifier="showDetail2" id="i1D-gA-5hx"/>
+                        <segue destination="0H0-f0-JeJ" kind="show" identifier="showDetail1" id="xo1-tW-wgT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFM-4a-YYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228" y="-2053"/>
+            <point key="canvasLocation" x="620" y="-2001"/>
+        </scene>
+        <!--Crew Detail View Controller-->
+        <scene sceneID="gcs-gz-Pyb">
+            <objects>
+                <viewController id="hBb-0s-qfZ" customClass="CrewDetailViewController" customModule="ArcticRun_iPad" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lqF-Ax-yoa"/>
+                        <viewControllerLayoutGuide type="bottom" id="zGg-1h-1Z8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3jh-cT-cwc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="acF-Sf-xWW">
+                                <rect key="frame" x="483" y="185" width="401" height="457"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bd4-lx-Nqx">
+                                <rect key="frame" x="584" y="661" width="198" height="2"/>
+                                <color key="tintColor" red="1" green="0.017636596171801577" blue="0.030231392934202628" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Crew Member Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIh-js-RKd">
+                                <rect key="frame" x="516" y="145" width="334" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Strength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8u-UO-cIr">
+                                <rect key="frame" x="493" y="706" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stamina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZQ-4P-7U7">
+                                <rect key="frame" x="493" y="754" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thirst" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zId-jR-84a">
+                                <rect key="frame" x="493" y="851" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Morale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xey-ks-DPH">
+                                <rect key="frame" x="493" y="900" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hunger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTU-cL-SAo">
+                                <rect key="frame" x="493" y="803" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z3L-03-usf">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="mWN-A4-VZp">
+                            <connections>
+                                <segue destination="epr-Us-rMB" kind="show" id="3Jf-UE-FKt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="crewImg" destination="acF-Sf-xWW" id="Pkw-JD-Xd4"/>
+                        <outlet property="crewName" destination="ZIh-js-RKd" id="S2C-sG-agP"/>
+                        <outlet property="crewProg" destination="Bd4-lx-Nqx" id="9kR-3L-BTN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhh-3E-1hD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1980" y="-717"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LDt-Jm-ObD">
@@ -169,6 +260,24 @@
             </objects>
             <point key="canvasLocation" x="-584" y="-2053"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OAQ-xS-nAc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0H0-f0-JeJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mZ2-xd-OL6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hBb-0s-qfZ" kind="relationship" relationship="rootViewController" id="d8M-ZL-Viy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hce-G8-SLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="392" y="-687"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1297063_orig.jpg" width="500" height="500"/>
@@ -176,4 +285,8 @@
         <image name="9143924_orig.jpg" width="500" height="500"/>
         <image name="crew_member1.jpg" width="500" height="500"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xo1-tW-wgT"/>
+        <segue reference="3Jf-UE-FKt"/>
+    </inferredMetricsTieBreakers>
 </document>
