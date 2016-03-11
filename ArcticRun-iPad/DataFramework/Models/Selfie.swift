@@ -7,45 +7,55 @@
 //
 
 import Foundation
-import RealmSwift
+//import RealmSwift
+import CloudKit
 
-public class Selfie: Object {
+public class Selfie {
 
-    private dynamic var _date:NSDate!
-    private dynamic var _image:String!
-    private dynamic var _user:User!
+    public var date:NSDate!
+    public var image:CKAsset!
+    public var user:CKReference!
     
-    convenience init(date:NSDate, image:String, user:User) {
+    convenience init(date:NSDate, image:CKAsset, userID: String) {
         self.init()
-        self._date = date
-        self._image = image
-        self._user = user
+        self.date = date
+        self.image = image
+        
+        let userRecord:CKRecordID = CKRecordID(recordName: userID)
+        self.user = CKReference(recordID: userRecord, action: CKReferenceAction.DeleteSelf)
     }
     
-    public var date:NSDate {
-        get {
-            return self._date
-        }
-        set {
-            self._date = newValue
-        }
-    }
-    
-    public var image:String {
-        get {
-            return self._image
-        }
-        set {
-            self._image = newValue
+    func save() -> Void{
+        let db:CKDatabase = CKContainer(identifier: "iCloud.com.terratap.arcticrun").publicCloudDatabase
+        
+        //recordType is the name of the table
+        let record:CKRecord = CKRecord(recordType: "Selfie")
+        record.setObject(self.date, forKey: "date")
+        record.setObject(self.image, forKey: "image")
+        record.setObject(self.user, forKey: "users")
+        
+        db.saveRecord(record) { (record:CKRecord?, error:NSError?) -> Void in
+            if error == nil{
+                print("record saved")
+            }
         }
     }
     
-    public var user:User {
-        get {
-            return self._user
-        }
-        set {
-            self._user = newValue
+    public static func loadAll() -> Void{
+        let db:CKDatabase = CKContainer(identifier: "iCloud.com.terratap.arcticrun").publicCloudDatabase
+        
+        let predicate:NSPredicate = NSPredicate(value: true)
+        
+        let query:CKQuery = CKQuery(recordType: "Selfie", predicate: predicate)
+        
+        db.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) -> Void in
+            
+            if error != nil || records == nil {
+                return //found errors
+            }
+            
+            print(records)
+            
         }
     }
     

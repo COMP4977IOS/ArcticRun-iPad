@@ -15,6 +15,11 @@ class SocialViewController: UIViewController, GKGameCenterControllerDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //toggle the menu bar
+        if self.revealViewController() != nil {
+            self.revealViewController().revealToggleAnimated(true)
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -55,11 +55,8 @@
                             <constraint firstItem="I6g-Le-Pne" firstAttribute="bottom" secondItem="eya-Ej-iJw" secondAttribute="bottom" id="zEB-Fk-cXX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Overview" id="CkC-yK-3it">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="srb-2C-3ID"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Overview" id="CkC-yK-3it"/>
                     <connections>
-                        <outlet property="menuButton" destination="srb-2C-3ID" id="lw4-X1-XoE"/>
                         <outlet property="stepCount" destination="9Qh-pc-n3X" id="LbV-J6-LL9"/>
                     </connections>
                 </viewController>
@@ -90,6 +87,5 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
-        <image name="menu" width="22" height="22"/>
     </resources>
 </document>

@@ -12,7 +12,7 @@ import RealmSwift
 public class Resource: Object {
     
     private dynamic var _amount:Int = 0
-    private dynamic var _crew:Crew!
+    private var _crew:Crew!
     private dynamic var _type:ResourceType!
     
     convenience init(amount:Int, crew:Crew, type:ResourceType) {
