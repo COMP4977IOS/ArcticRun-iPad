@@ -18,7 +18,7 @@
 		8191F59D1C75C3B000879C3F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8191F59C1C75C3B000879C3F /* GameScene.swift */; };
 		8191F59F1C75C5E100879C3F /* BearImages.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8191F59E1C75C5E100879C3F /* BearImages.atlas */; };
 		8503FB851C640A1600531D5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FB841C640A1600531D5F /* AppDelegate.swift */; };
-		8503FB871C640A1600531D5F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FB861C640A1600531D5F /* FirstViewController.swift */; };
+		8503FB871C640A1600531D5F /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FB861C640A1600531D5F /* OverviewViewController.swift */; };
 		8503FB891C640A1600531D5F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FB881C640A1600531D5F /* SecondViewController.swift */; };
 		8503FB8C1C640A1600531D5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8503FB8A1C640A1600531D5F /* Main.storyboard */; };
 		8503FB8E1C640A1600531D5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8503FB8D1C640A1600531D5F /* Assets.xcassets */; };
@@ -90,7 +90,7 @@
 		8191F59E1C75C5E100879C3F /* BearImages.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = BearImages.atlas; sourceTree = "<group>"; };
 		8503FB811C640A1600531D5F /* ArcticRun-iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ArcticRun-iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8503FB841C640A1600531D5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8503FB861C640A1600531D5F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		8503FB861C640A1600531D5F /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		8503FB881C640A1600531D5F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		8503FB8B1C640A1600531D5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8503FB8D1C640A1600531D5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 				8191F59C1C75C3B000879C3F /* GameScene.swift */,
 				8503FB841C640A1600531D5F /* AppDelegate.swift */,
 				066D82861C76D88100E44996 /* SocialViewController.swift */,
-				8503FB861C640A1600531D5F /* FirstViewController.swift */,
+				8503FB861C640A1600531D5F /* OverviewViewController.swift */,
 				8503FB881C640A1600531D5F /* SecondViewController.swift */,
 				85684F601C6DA4B00006282F /* ThirdViewController.swift */,
 				8503FBEE1C642BA900531D5F /* Download.swift */,
@@ -564,7 +564,7 @@
 				9224A5021C8957330041B39B /* Member.swift in Sources */,
 				923C4B2A1C8A3A610000B8C8 /* Workout.swift in Sources */,
 				9224A5041C8958A20041B39B /* Item.swift in Sources */,
-				8503FB871C640A1600531D5F /* FirstViewController.swift in Sources */,
+				8503FB871C640A1600531D5F /* OverviewViewController.swift in Sources */,
 				923C4B2C1C8A3D640000B8C8 /* Selfie.swift in Sources */,
 				065ACAA41C76D53900A4E358 /* PersonalGoalsController.swift in Sources */,
 				8191F59B1C75C08200879C3F /* SpriteViewController.swift in Sources */,

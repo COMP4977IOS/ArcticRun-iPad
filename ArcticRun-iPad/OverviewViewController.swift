@@ -8,7 +8,8 @@
 
 import UIKit
 import KDCircularProgress
-class FirstViewController: UIViewController {
+import GameKit
+class OverviewViewController: UIViewController, GKGameCenterControllerDelegate {
     
     @IBOutlet weak var stepCount: UILabel!
     var progress: KDCircularProgress!
@@ -17,7 +18,6 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                print("Hello")
         // Do any additional setup after loading the view, typically from a nib.
         
         progress = KDCircularProgress(frame: CGRect(x:0,y:0, width:200, height:200))
@@ -31,9 +31,6 @@ class FirstViewController: UIViewController {
         progress.glowMode = .NoGlow
         progress.angle = 1
         progress.setColors(UIColor.cyanColor())
-
-        
-
         
         view.addSubview(progress)
         
@@ -42,6 +39,18 @@ class FirstViewController: UIViewController {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
+        // Load gamecenter stuff
+        let localPlayer = GKLocalPlayer()
+        
+        localPlayer.authenticateHandler = {(viewController, error) -> Void in
+            if (viewController != nil) {
+                self.presentViewController(viewController!, animated: true, completion: nil)
+            } else {
+                print((GKLocalPlayer().authenticated))
+            }
+            
         }
     }
     //Button to animate progress bar
@@ -59,7 +68,16 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController) {
+        
+        //code to dismiss your gameCenterViewController
+        
+        // for example:
+        
+        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
 
 }
 
