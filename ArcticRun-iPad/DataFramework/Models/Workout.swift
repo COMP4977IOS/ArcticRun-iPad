@@ -7,90 +7,74 @@
 //
 
 import Foundation
-import RealmSwift
+//import RealmSwift
 import CoreLocation
+import CloudKit
 
-public class Workout: Object {
+public class Workout {
     
-    private dynamic var _caloriesBurned:Int = 0
-    private dynamic var _distance:Double = 0
-    private dynamic var _fastestSpeed:Double = 0
-    private dynamic var _startTime:NSDate!
-    private dynamic var _endTime:NSDate!
-    private dynamic var _startLocation:CLLocation!
-    private dynamic var _endLocation:CLLocation!
+    public var caloriesBurned:Int = 0
+    public var distance:Double = 0
+    public var fastestSpeed:Double = 0
+    public var startDate:NSDate!
+    public var endDate:NSDate!
+    public var startLocation:CLLocation!
+    public var endLocation:CLLocation!
+    public var steps:Int = 0
+    public var user:CKReference!
     
-    convenience init(caloriesBurned:Int, distance:Double, fastestSpeed:Double, startTime:NSDate, endTime:NSDate, startLocation:CLLocation, endLocation:CLLocation) {
+    convenience init(caloriesBurned:Int, distance:Double, fastestSpeed:Double, startDate:NSDate, endDate:NSDate, startLocation:CLLocation, endLocation:CLLocation, steps: Int, userID: String) {
         self.init()
-        self._caloriesBurned = caloriesBurned
-        self._distance = distance
-        self._fastestSpeed = fastestSpeed
-        self._startTime = startTime
-        self._endTime = endTime
-        self._startLocation = startLocation
-        self._endLocation = endLocation
+        self.caloriesBurned = caloriesBurned
+        self.distance = distance
+        self.fastestSpeed = fastestSpeed
+        self.startDate = startDate
+        self.endDate = endDate
+        self.startLocation = startLocation
+        self.endLocation = endLocation
+        self.steps = steps
+        
+        let userRecord:CKRecordID = CKRecordID(recordName: userID)
+        self.user = CKReference(recordID: userRecord, action: CKReferenceAction.DeleteSelf)
     }
     
-    public var caloriesBurned:Int {
-        get {
-            return self._caloriesBurned
-        }
-        set {
-            self._caloriesBurned = newValue
-        }
-    }
-    
-    public var distance:Double {
-        get {
-            return self._distance
-        }
-        set {
-            self._distance = newValue
-        }
-    }
-    
-    public var fastestSpeed:Double {
-        get {
-            return self._fastestSpeed
-        }
-        set {
-            self._fastestSpeed = newValue
-        }
-    }
-    
-    public var startTime:NSDate {
-        get {
-            return self._startTime
-        }
-        set {
-            self._startTime = newValue
+    func save() -> Void{
+        let db:CKDatabase = CKContainer(identifier: "iCloud.com.terratap.arcticrun").publicCloudDatabase
+        
+        //recordType is the name of the table
+        let record:CKRecord = CKRecord(recordType: "Workout")
+        record.setObject(self.caloriesBurned, forKey: "caloriesBurned")
+        record.setObject(self.distance, forKey: "distance")
+        record.setObject(self.fastestSpeed, forKey: "fastestSpeed")
+        record.setObject(self.startDate, forKey: "startDate")
+        record.setObject(self.endDate, forKey: "endDate")
+        record.setObject(self.startDate, forKey: "startDate")
+        record.setObject(self.startLocation, forKey: "startLocation")
+        record.setObject(self.endLocation, forKey: "endLocation")
+        record.setObject(self.steps, forKey: "steps")
+        
+        db.saveRecord(record) { (record:CKRecord?, error:NSError?) -> Void in
+            if error == nil{
+                print("record saved")
+            }
         }
     }
     
-    public var endTime:NSDate {
-        get {
-            return self._endTime
-        }
-        set {
-            self._endTime = newValue
-        }
-    }
-    
-    public var startLocation:CLLocation {
-        get {
-            return self._startLocation
-        }
-        set {
-            self._startLocation = newValue
-        }
-    }
-    
-    public var endLocation:CLLocation {
-        get {
-            return self._endLocation
-        }
-        set {
-            self._endLocation = newValue
+    public static func loadAll() -> Void{
+        let db:CKDatabase = CKContainer(identifier: "iCloud.com.terratap.arcticrun").publicCloudDatabase
+        
+        let predicate:NSPredicate = NSPredicate(value: true)
+        
+        let query:CKQuery = CKQuery(recordType: "Workout", predicate: predicate)
+        
+        db.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) -> Void in
+            
+            if error != nil || records == nil {
+                return //found errors
+            }
+            
+            print(records)
+            
         }
     }
     
