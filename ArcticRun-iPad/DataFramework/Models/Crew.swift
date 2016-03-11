@@ -7,15 +7,15 @@
 //
 
 import Foundation
-import RealmSwift
+//import RealmSwift
 import CloudKit
 
-public class Crew: Object {
+public class Crew {
     
-    public dynamic var name:String!
+    public var name:String!
     public var user: CKReference!
-    public let members = List<Member>()
-    public let resources = List<Resource>()
+    public let members:[CKReference] = []
+    public let resources:[CKReference] = []
     
     convenience init(name: String, userID: String) {
         self.init()
@@ -33,6 +33,8 @@ public class Crew: Object {
         let record:CKRecord = CKRecord(recordType: "Crew")
         record.setObject(self.name, forKey: "crewName")
         record.setObject(self.user, forKey: "users")
+        record.setObject(self.members, forKey: "member")
+        record.setObject(self.resources, forKey: "resource")
         
         db.saveRecord(record) { (record:CKRecord?, error:NSError?) -> Void in
             if error == nil{
@@ -41,7 +43,7 @@ public class Crew: Object {
         }
     }
     
-    func load() -> Void{
+    public static func loadAll() -> Void{
         let db:CKDatabase = CKContainer(identifier: "iCloud.com.terratap.arcticrun").publicCloudDatabase
         
         let predicate:NSPredicate = NSPredicate(value: true)
