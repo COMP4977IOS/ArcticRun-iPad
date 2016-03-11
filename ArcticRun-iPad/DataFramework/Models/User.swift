@@ -16,7 +16,7 @@ public class User: Object {
     private dynamic var _firstName:String!
     private dynamic var _lastName:String!
     private dynamic var _gameLevel:Int = 0
-    private dynamic var _workout:Workout!
+    private var _workout:Workout!
     
     convenience init(caloriePoints:Int, challengeId:Int, firstName:String, lastName:String, gameLevel:Int, workout:Workout) {
         self.init()
