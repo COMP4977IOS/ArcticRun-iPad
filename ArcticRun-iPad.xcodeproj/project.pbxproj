@@ -31,6 +31,7 @@
 		8503FBEF1C642BA900531D5F /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503FBEE1C642BA900531D5F /* Download.swift */; };
 		85684F571C6D90970006282F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85684F561C6D90970006282F /* CloudKit.framework */; };
 		85684F611C6DA4B00006282F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85684F601C6DA4B00006282F /* ThirdViewController.swift */; };
+		8AA981961C927EC00017F615 /* CrewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA981951C927EC00017F615 /* CrewDetailViewController.swift */; };
 		8ACC746F1C72ABB8008F96AF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC746E1C72ABB8008F96AF /* SWRevealViewController.m */; };
 		8ACC74711C72ABD3008F96AF /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC74701C72ABD3008F96AF /* MenuController.swift */; };
 		8ACC74731C72B017008F96AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ACC74721C72B017008F96AF /* Images.xcassets */; };
@@ -61,6 +62,10 @@
 		92C50F081C894A7D000AB12A /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C50F071C894A7D000AB12A /* Crew.swift */; };
 		EE020F4A1C6E8AD300F5F74A /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE020F491C6E8AD300F5F74A /* TaskViewController.swift */; };
 		EE020F4C1C6E8AFB00F5F74A /* TaskListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */; };
+		EE47C4051C8F400900734675 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47C4041C8F400900734675 /* UserProtocol.swift */; };
+		EE47C4071C8F40BE00734675 /* WorkoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47C4061C8F40BE00734675 /* WorkoutProtocol.swift */; };
+		EE47C40A1C8F415400734675 /* ItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47C4091C8F415400734675 /* ItemProtocol.swift */; };
+		EE47C40C1C8F424800734675 /* StatsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47C40B1C8F424800734675 /* StatsProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +117,7 @@
 		85684F551C6D902A0006282F /* ArcticRun-iPad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ArcticRun-iPad.entitlements"; sourceTree = "<group>"; };
 		85684F561C6D90970006282F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		85684F601C6DA4B00006282F /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		8AA981951C927EC00017F615 /* CrewDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrewDetailViewController.swift; sourceTree = "<group>"; };
 		8ACC746C1C72ABB7008F96AF /* ArcticRun-iPad-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ArcticRun-iPad-Bridging-Header.h"; sourceTree = "<group>"; };
 		8ACC746D1C72ABB8008F96AF /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		8ACC746E1C72ABB8008F96AF /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -145,6 +151,10 @@
 		C6BC932190728787B19815AF /* Pods-ArcticRun-iPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcticRun-iPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArcticRun-iPad/Pods-ArcticRun-iPad.debug.xcconfig"; sourceTree = "<group>"; };
 		EE020F491C6E8AD300F5F74A /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListsViewController.swift; sourceTree = "<group>"; };
+		EE47C4041C8F400900734675 /* UserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
+		EE47C4061C8F40BE00734675 /* WorkoutProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutProtocol.swift; sourceTree = "<group>"; };
+		EE47C4091C8F415400734675 /* ItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemProtocol.swift; sourceTree = "<group>"; };
+		EE47C40B1C8F424800734675 /* StatsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsProtocol.swift; sourceTree = "<group>"; };
 		FCCA808D928DF685AE369D8F /* Pods-ArcticRun-iPad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcticRun-iPad.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArcticRun-iPad/Pods-ArcticRun-iPad.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,6 +211,7 @@
 		8503FB831C640A1600531D5F /* ArcticRun-iPad */ = {
 			isa = PBXGroup;
 			children = (
+				EE47C4081C8F412200734675 /* Protocols */,
 				92C50F031C894A5A000AB12A /* DataFramework */,
 				923F5F091C7784FE0015A13B /* Storyboards */,
 				8ACC746B1C72AB9A008F96AF /* SWRevealViewController */,
@@ -229,6 +240,7 @@
 				EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */,
 				8ACC74701C72ABD3008F96AF /* MenuController.swift */,
 				8ACC74741C72B904008F96AF /* SettingsViewController.swift */,
+				8AA981951C927EC00017F615 /* CrewDetailViewController.swift */,
 			);
 			path = "ArcticRun-iPad";
 			sourceTree = "<group>";
@@ -341,6 +353,17 @@
 				FCCA808D928DF685AE369D8F /* Pods-ArcticRun-iPad.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE47C4081C8F412200734675 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EE47C4041C8F400900734675 /* UserProtocol.swift */,
+				EE47C4061C8F40BE00734675 /* WorkoutProtocol.swift */,
+				EE47C4091C8F415400734675 /* ItemProtocol.swift */,
+				EE47C40B1C8F424800734675 /* StatsProtocol.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				066D82871C76D88100E44996 /* SocialViewController.swift in Sources */,
+				EE47C4071C8F40BE00734675 /* WorkoutProtocol.swift in Sources */,
 				8ACC74711C72ABD3008F96AF /* MenuController.swift in Sources */,
 				9224A50E1C895DC50041B39B /* ResourceType.swift in Sources */,
 				9224A5061C895B120041B39B /* ItemType.swift in Sources */,
@@ -559,20 +583,24 @@
 				923C4B271C8A399E0000B8C8 /* User.swift in Sources */,
 				9224A5081C895B4C0041B39B /* StatType.swift in Sources */,
 				8B5993EC1C8965E0006E7AA2 /* CrewViewController.swift in Sources */,
+				EE47C4051C8F400900734675 /* UserProtocol.swift in Sources */,
 				8ACC74751C72B904008F96AF /* SettingsViewController.swift in Sources */,
 				EE020F4C1C6E8AFB00F5F74A /* TaskListsViewController.swift in Sources */,
 				8B5993EE1C8965F4006E7AA2 /* AchievementViewController.swift in Sources */,
 				8503FB891C640A1600531D5F /* SecondViewController.swift in Sources */,
+				EE47C40A1C8F415400734675 /* ItemProtocol.swift in Sources */,
 				9224A5101C895DDC0041B39B /* Resource.swift in Sources */,
 				92C50F081C894A7D000AB12A /* Crew.swift in Sources */,
 				8503FB851C640A1600531D5F /* AppDelegate.swift in Sources */,
 				8ACC746F1C72ABB8008F96AF /* SWRevealViewController.m in Sources */,
+				EE47C40C1C8F424800734675 /* StatsProtocol.swift in Sources */,
 				8191F59D1C75C3B000879C3F /* GameScene.swift in Sources */,
 				9224A5001C89502C0041B39B /* Diary.swift in Sources */,
 				9224A50C1C895D1F0041B39B /* Character.swift in Sources */,
 				EE020F4A1C6E8AD300F5F74A /* TaskViewController.swift in Sources */,
 				85684F611C6DA4B00006282F /* ThirdViewController.swift in Sources */,
 				9224A50A1C895B970041B39B /* Stat.swift in Sources */,
+				8AA981961C927EC00017F615 /* CrewDetailViewController.swift in Sources */,
 				9224A5021C8957330041B39B /* Member.swift in Sources */,
 				923C4B2A1C8A3A610000B8C8 /* Workout.swift in Sources */,
 				9224A5041C8958A20041B39B /* Item.swift in Sources */,

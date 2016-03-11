@@ -11,7 +11,7 @@ import RealmSwift
 
 public class Member: Object {
     
-    private dynamic var _crew:Crew!
+    private var _crew:Crew!
     private dynamic var _firstName:String!
     private dynamic var _lastName:String!
     private dynamic var _item:Item!
