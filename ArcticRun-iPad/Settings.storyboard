@@ -26,7 +26,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="yFE-53-eE5"/>
+                    <navigationItem key="navigationItem" title="Settings" id="yFE-53-eE5">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="ZJk-cn-xvt"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="ZJk-cn-xvt" id="MMO-a7-P1x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ih1-yk-07i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,4 +56,7 @@
             <point key="canvasLocation" x="20" y="-615"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="22" height="22"/>
+    </resources>
 </document>

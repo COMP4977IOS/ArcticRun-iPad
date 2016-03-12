@@ -39,9 +39,10 @@ class CrewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //toggle the menu bar
         if self.revealViewController() != nil {
-            self.revealViewController().revealToggleAnimated(true)
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
         //create tap gesture for each of the views
