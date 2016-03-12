@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sew-At-l8Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sew-At-l8Y">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -137,7 +137,9 @@
                             <constraint firstItem="Exh-t0-6ax" firstAttribute="top" secondItem="tmj-hb-yAc" secondAttribute="bottom" constant="26" id="c8I-1m-R83"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Crew" id="EFI-jR-x8a" userLabel="Crew"/>
+                    <navigationItem key="navigationItem" title="Crew" id="EFI-jR-x8a" userLabel="Crew">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="CD5-wU-iTO"/>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPadPro"/>
                     <connections>
@@ -157,6 +159,7 @@
                         <outlet property="crewProg2" destination="vii-m5-iJn" id="aGM-kw-rp0"/>
                         <outlet property="crewProg3" destination="2Mf-tl-ajg" id="Z4U-2L-Ny2"/>
                         <outlet property="crewProg4" destination="JET-UR-x5O" id="X3r-Ol-lKS"/>
+                        <outlet property="menuButton" destination="CD5-wU-iTO" id="GKf-NQ-uvZ"/>
                         <segue destination="0H0-f0-JeJ" kind="show" identifier="showDetail4" id="1OB-a3-9qa"/>
                         <segue destination="0H0-f0-JeJ" kind="show" identifier="showDetail3" id="ZSB-Qy-Cw5"/>
                         <segue destination="0H0-f0-JeJ" kind="show" identifier="showDetail2" id="i1D-gA-5hx"/>
@@ -284,6 +287,7 @@
         <image name="6180089_orig.jpg" width="500" height="500"/>
         <image name="9143924_orig.jpg" width="500" height="500"/>
         <image name="crew_member1.jpg" width="500" height="500"/>
+        <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xo1-tW-wgT"/>

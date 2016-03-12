@@ -18,7 +18,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Achievements" id="lCO-Kr-0Ok" userLabel="Achievements"/>
+                    <navigationItem key="navigationItem" title="Achievements" id="lCO-Kr-0Ok" userLabel="Achievements">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="kVW-Sp-Ayr"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="kVW-Sp-Ayr" id="PSg-fY-QI5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FuN-0t-Yik" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,4 +48,7 @@
             <point key="canvasLocation" x="-545" y="-1706"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="22" height="22"/>
+    </resources>
 </document>
