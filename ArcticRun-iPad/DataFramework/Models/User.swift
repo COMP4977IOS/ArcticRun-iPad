@@ -62,4 +62,9 @@ public class User {
         return self.record!
     }
     
+    func getCrew() -> Crew? {
+        let crew: Crew = Crew(userRecord: self.record!)
+        return crew
+    }
+    
 }
