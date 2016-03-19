@@ -10,29 +10,24 @@ import Foundation
 import CloudKit
 
 public class Crew {
+    static let publicDB:CKDatabase = CKContainer.defaultContainer().publicCloudDatabase
     
-    let publicDB:CKDatabase = CKContainer.defaultContainer().publicCloudDatabase
-    
-    var user: CKReference?  //reference to the user of this crew       //TODO get rid of this
     var record:CKRecord?    //a record of this instance
-    var isReady:Bool = false
     
-    init(userRecord: CKRecord) {
-        self.user = CKReference(record: userRecord, action: CKReferenceAction.DeleteSelf)   //set a reference to user
+    init(crewRecord: CKRecord) {
+        self.record = crewRecord
+    }
+    
+    init(caloriesPoints: Int, challengeID: Int, gameLevel: Int, members: [CKReference], name: String, resources:[CKReference], user: CKReference){
+        self.record = CKRecord(recordType: "Crew")
         
-        let predicate:NSPredicate = NSPredicate(format: "user == %@", self.user!)   //get all crews under the referenced user
-        let query:CKQuery = CKQuery(recordType: "Crew", predicate: predicate)
-        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]   //sort by desc
-        
-        //perform query
-        publicDB.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) -> Void in
-            if(error != nil || records == nil){
-                return  //nothing
-            }
-            
-            self.record = records![0]
-            self.isReady = true     //crew ready
-        }
+        self.record?.setObject(caloriesPoints, forKey: "caloriePoints")
+        self.record?.setObject(challengeID, forKey: "challengeID")
+        self.record?.setObject(gameLevel, forKey: "gameLevel")
+        self.record?.setObject(members, forKey: "member")
+        self.record?.setObject(name, forKey: "name")
+        self.record?.setObject(resources, forKey: "resource")
+        self.record?.setObject(user, forKey: "user")
     }
     
     func getCaloriePoints() -> Int {
@@ -63,8 +58,8 @@ public class Crew {
         return self.record?.objectForKey("member") as! [CKReference]
     }
     
-    func setMemberReferences(references: [CKReference]) -> Void {
-        self.record?.setObject(references, forKey: "member")
+    func setMemberReferences(members: [CKReference]) -> Void {
+        self.record?.setObject(members, forKey: "member")
     }
     
     func getName() -> String {
@@ -79,39 +74,63 @@ public class Crew {
         return self.record?.objectForKey("resource") as! [CKReference]
     }
     
-    func setResourceReferences(references: [CKReference]) -> Void {
-        self.record?.setObject(references, forKey: "resource")
+    func setResourceReferences(resources: [CKReference]) -> Void {
+        self.record?.setObject(resources, forKey: "resource")
     }
     
-    func getUserReference() -> CKReference {
-        return self.record?.objectForKey("user") as! CKReference
+    func getUser() -> CKReference? {
+        return record?.objectForKey("user") as? CKReference
     }
     
-    func setUserReference(reference: CKReference) -> Void {
-        self.record?.setObject(reference, forKey: "user")
-    }
-    
-    func getWorkoutReferences() -> [CKReference] {
-        return self.record?.objectForKey("workout") as! [CKReference]
-    }
-    
-    func setWorkoutReferences(references: [CKReference]) -> Void {
-        self.record?.setObject(references, forKey: "workout")
+    func setUser(user: CKReference) -> Void {
+        self.record?.setObject(user, forKey: "user")
     }
     
     func save() -> Void{
-        publicDB.saveRecord(self.record!) { (record: CKRecord?, error:NSError?) -> Void in
+        Crew.publicDB.saveRecord(self.record!) { (record: CKRecord?, error:NSError?) -> Void in
             if error == nil {
                 print("record saved")
             }
         }
     }
     
-    static func getAll(completionHandler: ([CKRecord]?, NSError?) -> Void ) -> Void{
-        let db:CKDatabase = CKContainer(identifier: "iCloud.com.terratap.arcticrun").publicCloudDatabase
+    static func getCrew(userRecord: CKRecord, onComplete:([Crew]) -> Void) -> Void{
+        let predicate:NSPredicate = NSPredicate(format: "user == %@", userRecord)   //get all crews under the referenced user
+        let query:CKQuery = CKQuery(recordType: "Crew", predicate: predicate)
+        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]   //sort by desc
+        
+        //perform query
+        publicDB.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) -> Void in
+            if(error != nil || records == nil){
+                return  //nothing
+            }
+            
+            var crews:[Crew] = []
+            for var i = 0; i < records?.count; i++ {
+                let crew:Crew = Crew(crewRecord: records![i])
+                crews.append(crew)
+            }
+            
+            onComplete(crews)
+        }
+    }
+
+    static func getAllCrews(onComplete:([Crew]) -> Void) -> Void{
         let predicate:NSPredicate = NSPredicate(value: true)
         let query:CKQuery = CKQuery(recordType: "Crew", predicate: predicate)
         
-        db.performQuery(query, inZoneWithID: nil, completionHandler: completionHandler)
+        Crew.publicDB.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error:NSError?) -> Void in
+            if error != nil || records == nil {
+                return //found errors
+            }
+            
+            var crews:[Crew] = []
+            for var i = 0; i < records?.count; i++ {
+                let crew:Crew = Crew(crewRecord: records![i])
+                crews.append(crew)
+            }
+            
+            onComplete(crews)
+        }
     }
 }
