@@ -7,79 +7,64 @@
 //
 
 import Foundation
-import RealmSwift
+import CloudKit
 
-public class User: Object {
+public class User {
     
-    private dynamic var _caloriePoints:Int = 0
-    private dynamic var _challengeId:Int = 0
-    private dynamic var _firstName:String!
-    private dynamic var _lastName:String!
-    private dynamic var _gameLevel:Int = 0
-    private var _workout:Workout!
+    let container:CKContainer = CKContainer.defaultContainer()
+    let privateDB:CKDatabase = CKContainer.defaultContainer().privateCloudDatabase
     
-    convenience init(caloriePoints:Int, challengeId:Int, firstName:String, lastName:String, gameLevel:Int, workout:Workout) {
-        self.init()
-        self._caloriePoints = caloriePoints
-        self._challengeId = challengeId
-        self._firstName = firstName
-        self._lastName = lastName
-        self._gameLevel = gameLevel
-        self._workout = workout
-    }
+    var firstName:String?
+    var lastName:String?
+    var record:CKRecord?
+    var isReady:Bool = false
     
-    public var caloriePoints:Int {
-        get {
-            return self._caloriePoints
-        }
-        set {
-            self._caloriePoints = newValue
-        }
-    }
-    
-    public var challengeId:Int {
-        get {
-            return self._challengeId
-        }
-        set {
-            self._challengeId = newValue
+    init() {
+        self.container.fetchUserRecordIDWithCompletionHandler { (recordID:CKRecordID?, error: NSError?) -> Void in
+            if error == nil && recordID != nil {
+                
+                //set first and last name
+                self.container.discoverUserInfoWithUserRecordID(recordID!, completionHandler: { (userInfo: CKDiscoveredUserInfo?, error: NSError?) -> Void in
+                    if error == nil && userInfo != nil {
+                        self.firstName = userInfo?.displayContact?.givenName
+                        self.lastName = userInfo?.displayContact?.familyName
+                    }
+                })
+                
+                //set record
+                self.privateDB.fetchRecordWithID(recordID!, completionHandler: { (record: CKRecord?, error: NSError?) -> Void in
+                    if error == nil && record != nil {
+                        self.record = record
+                        self.isReady = true
+                    }
+                })
+            }
         }
     }
     
-    public var firstName:String {
-        get {
-            return self._firstName
-        }
-        set {
-            self._firstName = newValue
-        }
+    func getFirstName() -> String? {
+        return self.firstName
     }
     
-    public var lastName:String {
-        get {
-            return self._lastName
-        }
-        set {
-            self._lastName = newValue
-        }
+    func getLastName() -> String? {
+        return self.lastName!
     }
     
-    public var gameLevel:Int {
-        get {
-            return self._gameLevel
-        }
-        set {
-            self._gameLevel = newValue
-        }
+    func getRecordID() -> String? {
+        return (self.record?.recordID.recordName)!
     }
     
-    public var workout:Workout {
-        get {
-            return self._workout
-        }
-        set {
-            self._workout = newValue
-        }
+    func getCKRecordID() -> CKRecordID? {
+        return (self.record?.recordID)!
+    }
+    
+    func getRecord() -> CKRecord? {
+        return self.record!
+    }
+    
+    func getCrew() -> Crew? {
+        let crew: Crew = Crew(userRecord: self.record!)
+        return crew
     }
     
 }
