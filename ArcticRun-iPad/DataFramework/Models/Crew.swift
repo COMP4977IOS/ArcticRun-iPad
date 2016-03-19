@@ -13,7 +13,7 @@ public class Crew {
     
     let publicDB:CKDatabase = CKContainer.defaultContainer().publicCloudDatabase
     
-    var user: CKReference?  //reference to the user of this crew
+    var user: CKReference?  //reference to the user of this crew       //TODO get rid of this
     var record:CKRecord?    //a record of this instance
     var isReady:Bool = false
     
@@ -107,25 +107,11 @@ public class Crew {
         }
     }
     
-    public static func loadAll() -> [CKRecord]{
+    static func getAll(completionHandler: ([CKRecord]?, NSError?) -> Void ) -> Void{
         let db:CKDatabase = CKContainer(identifier: "iCloud.com.terratap.arcticrun").publicCloudDatabase
-        
         let predicate:NSPredicate = NSPredicate(value: true)
-        
         let query:CKQuery = CKQuery(recordType: "Crew", predicate: predicate)
         
-        db.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) -> Void in
-            
-            if error != nil || records == nil {
-                return //found errors
-            }
-            
-            print(records)
-            return records!
-            
-
-            
-        }
+        db.performQuery(query, inZoneWithID: nil, completionHandler: completionHandler)
     }
-
 }
