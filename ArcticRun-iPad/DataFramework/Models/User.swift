@@ -10,15 +10,15 @@ import Foundation
 import CloudKit
 
 public class User {
-    
     let container:CKContainer = CKContainer.defaultContainer()
     let privateDB:CKDatabase = CKContainer.defaultContainer().privateCloudDatabase
     
     var firstName:String?
     var lastName:String?
     var record:CKRecord?
-    var isReady:Bool = false
+    var isReady:Bool = false    //TODO: is this even needed?
     
+    //TODO: Add a closure
     init() {
         self.container.fetchUserRecordIDWithCompletionHandler { (recordID:CKRecordID?, error: NSError?) -> Void in
             if error == nil && recordID != nil {
