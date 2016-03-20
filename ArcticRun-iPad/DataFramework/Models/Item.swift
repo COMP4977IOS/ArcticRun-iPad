@@ -18,13 +18,13 @@ public class Item{
         self.record = itemRecord
     }
     
-    //TODO: Define some contants for stat types
-    init(amount:Int, member:CKReference, statType: String){
+    //TODO: Define some contants for item types
+    init(amount:Int, member:CKReference, itemType: String){
         self.record = CKRecord(recordType: "Item")
         
         self.record!.setObject(amount, forKey: "amount")
         self.record!.setObject(member, forKey: "member")
-        self.record!.setObject(statType, forKey: "statType")
+        self.record!.setObject(itemType, forKey: "itemType")
     }
     
     func getAmount() -> Int? {
@@ -43,12 +43,12 @@ public class Item{
         self.record?.setObject(member, forKey: "member")
     }
     
-    func getStatType() -> String? {
-        return self.record?.objectForKey("statType") as? String
+    func getItemType() -> String? {
+        return self.record?.objectForKey("itemType") as? String
     }
     
-    func setStatType(statType: String) -> Void {
-        self.record?.setObject(statType, forKey: "statType")
+    func setItemType(itemType: String) -> Void {
+        self.record?.setObject(itemType, forKey: "itemType")
     }
     
     static func getItems(memberRecord: CKRecord, onComplete: ([Item]) -> Void) -> Void {
