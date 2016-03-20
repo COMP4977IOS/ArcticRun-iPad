@@ -30,48 +30,54 @@ public class Crew {
         self.record?.setObject(user, forKey: "user")
     }
     
-    func getCaloriePoints() -> Int {
-        return self.record?.objectForKey("caloriePoints") as! Int
+    func getCaloriePoints() -> Int? {
+        return self.record?.objectForKey("caloriePoints") as? Int
     }
     
     func setCaloriePoints(caloriesPoints:Int) -> Void {
         self.record?.setObject(caloriesPoints, forKey: "caloriePoints")
     }
     
-    func getChallengeID() -> Int {
-        return self.record?.objectForKey("challengeID") as! Int
+    func getChallengeID() -> Int? {
+        return self.record?.objectForKey("challengeID") as? Int
     }
     
     func setChallengeID(challengeID: Int) -> Void {
         self.record?.setObject(challengeID, forKey: "challengeID")
     }
     
-    func getGameLevel() -> Int {
-        return self.record?.objectForKey("gameLevel") as! Int
+    func getGameLevel() -> Int? {
+        return self.record?.objectForKey("gameLevel") as? Int
     }
     
     func setGameLevel(gameLevel: Int) -> Void {
         self.record?.setObject(gameLevel, forKey: "gameLevel")
     }
     
-    func getMemberReferences() -> [CKReference] {
-        return self.record?.objectForKey("member") as! [CKReference]
+    //TODO func getMembers() -> [Member]
+    //TODO func setMembers(members:[Member]) -> Void
+    //TODO func addMember(member:Member) -> Void
+    //TODO func addMembers(members:[Member]) -> Void
+    //TODO static func addMember(crew:Crew, member:Member) -> Void
+    
+    func getMemberReferences() -> [CKReference]? {
+        return self.record?.objectForKey("member") as? [CKReference]
     }
     
     func setMemberReferences(members: [CKReference]) -> Void {
         self.record?.setObject(members, forKey: "member")
     }
     
-    func getName() -> String {
-        return self.record?.objectForKey("name") as! String
+    func getName() -> String? {
+        return self.record?.objectForKey("name") as? String
     }
     
     func setName(name: String) -> Void {
         self.record?.setObject(name, forKey: "name")
     }
     
-    func getResourceReferences() -> [CKReference] {
-        return self.record?.objectForKey("resource") as! [CKReference]
+    func getResourceReferences() -> [CKReference]? {
+        return self.record?.objectForKey("resource") as? [CKReference]
     }
     
     func setResourceReferences(resources: [CKReference]) -> Void {

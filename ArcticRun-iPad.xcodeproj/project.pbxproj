@@ -43,11 +43,8 @@
 		9224A5001C89502C0041B39B /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A4FF1C89502C0041B39B /* Diary.swift */; };
 		9224A5021C8957330041B39B /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A5011C8957330041B39B /* Member.swift */; };
 		9224A5041C8958A20041B39B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A5031C8958A20041B39B /* Item.swift */; };
-		9224A5061C895B120041B39B /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A5051C895B120041B39B /* ItemType.swift */; };
-		9224A5081C895B4C0041B39B /* StatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A5071C895B4C0041B39B /* StatType.swift */; };
 		9224A50A1C895B970041B39B /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A5091C895B970041B39B /* Stat.swift */; };
 		9224A50C1C895D1F0041B39B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A50B1C895D1F0041B39B /* Character.swift */; };
-		9224A50E1C895DC50041B39B /* ResourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A50D1C895DC50041B39B /* ResourceType.swift */; };
 		9224A5101C895DDC0041B39B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224A50F1C895DDC0041B39B /* Resource.swift */; };
 		923C4B271C8A399E0000B8C8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C4B261C8A399E0000B8C8 /* User.swift */; };
 		923C4B2A1C8A3A610000B8C8 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C4B291C8A3A610000B8C8 /* Workout.swift */; };
@@ -131,11 +128,8 @@
 		9224A4FF1C89502C0041B39B /* Diary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Diary.swift; path = DataFramework/Models/Diary.swift; sourceTree = "<group>"; };
 		9224A5011C8957330041B39B /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Member.swift; path = DataFramework/Models/Member.swift; sourceTree = "<group>"; };
 		9224A5031C8958A20041B39B /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = DataFramework/Models/Item.swift; sourceTree = "<group>"; };
-		9224A5051C895B120041B39B /* ItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemType.swift; path = DataFramework/Models/ItemType.swift; sourceTree = "<group>"; };
-		9224A5071C895B4C0041B39B /* StatType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatType.swift; path = DataFramework/Models/StatType.swift; sourceTree = "<group>"; };
 		9224A5091C895B970041B39B /* Stat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stat.swift; path = DataFramework/Models/Stat.swift; sourceTree = "<group>"; };
 		9224A50B1C895D1F0041B39B /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		9224A50D1C895DC50041B39B /* ResourceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourceType.swift; path = DataFramework/Models/ResourceType.swift; sourceTree = "<group>"; };
 		9224A50F1C895DDC0041B39B /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = DataFramework/Models/Resource.swift; sourceTree = "<group>"; };
 		923C4B261C8A399E0000B8C8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = DataFramework/Models/User.swift; sourceTree = "<group>"; };
 		923C4B291C8A3A610000B8C8 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Workout.swift; path = DataFramework/Models/Workout.swift; sourceTree = "<group>"; };
@@ -334,11 +328,8 @@
 				9224A4FF1C89502C0041B39B /* Diary.swift */,
 				9224A5011C8957330041B39B /* Member.swift */,
 				9224A5031C8958A20041B39B /* Item.swift */,
-				9224A5051C895B120041B39B /* ItemType.swift */,
 				9224A5091C895B970041B39B /* Stat.swift */,
-				9224A5071C895B4C0041B39B /* StatType.swift */,
 				9224A50F1C895DDC0041B39B /* Resource.swift */,
-				9224A50D1C895DC50041B39B /* ResourceType.swift */,
 				923C4B261C8A399E0000B8C8 /* User.swift */,
 				923C4B291C8A3A610000B8C8 /* Workout.swift */,
 				923C4B2B1C8A3D640000B8C8 /* Selfie.swift */,
@@ -577,11 +568,8 @@
 				066D82871C76D88100E44996 /* SocialViewController.swift in Sources */,
 				EE47C4071C8F40BE00734675 /* WorkoutProtocol.swift in Sources */,
 				8ACC74711C72ABD3008F96AF /* MenuController.swift in Sources */,
-				9224A50E1C895DC50041B39B /* ResourceType.swift in Sources */,
-				9224A5061C895B120041B39B /* ItemType.swift in Sources */,
 				8503FBEF1C642BA900531D5F /* Download.swift in Sources */,
 				923C4B271C8A399E0000B8C8 /* User.swift in Sources */,
-				9224A5081C895B4C0041B39B /* StatType.swift in Sources */,
 				8B5993EC1C8965E0006E7AA2 /* CrewViewController.swift in Sources */,
 				EE47C4051C8F400900734675 /* UserProtocol.swift in Sources */,
 				8ACC74751C72B904008F96AF /* SettingsViewController.swift in Sources */,

@@ -139,7 +139,7 @@ public class Workout {
         let predicate:NSPredicate = NSPredicate(value: true)
         let query:CKQuery = CKQuery(recordType: "Workout", predicate: predicate)
         
-        Workout.publicDB.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) -> Void in
+        self.publicDB.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) -> Void in
             if error != nil || records == nil {
                 return //found errors
             }

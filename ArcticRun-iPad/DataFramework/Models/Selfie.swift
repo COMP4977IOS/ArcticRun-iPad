@@ -9,8 +9,9 @@
 import Foundation
 import CloudKit
 
+//TODO: Create some static constants
 public class Selfie {
-    static let publicDB:CKDatabase = CKContainer.defaultContainer().publicCloudDatabase
+    static let publicDB:CKDatabase = CKContainer.defaultContainer().publicCloudDatabase     //TODO: This needs to be in some base class/interface
     
     var record:CKRecord?
     
@@ -42,8 +43,8 @@ public class Selfie {
         self.record?.setObject(image, forKey: "image")
     }
     
-    func getUser() -> CKReference {
-        return record?.objectForKey("user") as! CKReference
+    func getUser() -> CKReference? {
+        return record?.objectForKey("user") as? CKReference
     }
     
     func setUser(user: CKReference) -> Void {
@@ -58,6 +59,7 @@ public class Selfie {
         }
     }
     
+    //TODO: try to make getXYZ and getAllXYZ to be generic functions for all similar classes
     static func getSelfies(userRecord: CKRecord, onComplete: ([Selfie]) -> Void) -> Void {
         let predicate:NSPredicate = NSPredicate(format: "user == %@", userRecord)
         let query:CKQuery = CKQuery(recordType: "Selfie", predicate: predicate)
@@ -78,11 +80,11 @@ public class Selfie {
         }
     }
     
-    public static func getAllSelfies(onComplete: ([Selfie]) -> Void) -> Void{
+    static func getAllSelfies(onComplete: ([Selfie]) -> Void) -> Void{
         let predicate:NSPredicate = NSPredicate(value: true)
         let query:CKQuery = CKQuery(recordType: "Selfie", predicate: predicate)
         
-        Selfie.publicDB.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) -> Void in
+        self.publicDB.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) -> Void in
             if error != nil || records == nil {
                 return //found errors
             }
