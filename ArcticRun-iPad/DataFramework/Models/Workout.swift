@@ -12,8 +12,7 @@ import CloudKit
 
 //TODO: refactor some constants out of this
 public class Workout {
-
-    static let publicDB:CKDatabase = CKContainer.defaultContainer().publicCloudDatabase
+    static let publicDB:CKDatabase = CKContainer.defaultContainer().publicCloudDatabase //TODO: put this in an abstract base class?
     
     var record:CKRecord?
     
@@ -22,7 +21,6 @@ public class Workout {
     }
 
     init(caloriesBurned:Int, distance:Double, endDate:NSDate, fastestSpeed:Double, endLocation:CLLocation, startDate:NSDate, startLocation:CLLocation, steps: Int, user: CKReference) {
-        
         self.record = CKRecord(recordType: "Workout")
         
         self.record!.setObject(caloriesBurned, forKey: "caloriesBurned")
@@ -36,76 +34,76 @@ public class Workout {
         self.record!.setObject(user, forKey: "user")
     }
     
-    func getCaloriesBurned() -> Double {
-        return record?.objectForKey("caloriesBurned") as! Double
+    func getCaloriesBurned() -> Double? {
+        return record?.objectForKey("caloriesBurned") as? Double
     }
     
     func setCaloriesBurned(caloriesBurned: Int) -> Void {
-        self.record?.setValue(caloriesBurned, forKey: "caloriesBurned")
+        self.record?.setObject(caloriesBurned, forKey: "caloriesBurned")
     }
     
-    func getDistance() -> Double {
-        return record?.objectForKey("distance") as! Double
+    func getDistance() -> Double? {
+        return record?.objectForKey("distance") as? Double
     }
     
     func setDistance(distance: Double) -> Void {
-        self.record?.setValue(distance, forKey: "distance")
+        self.record?.setObject(distance, forKey: "distance")
     }
     
-    func getEndDate() -> NSDate {
-        return record?.objectForKey("endDate") as! NSDate
+    func getEndDate() -> NSDate? {
+        return record?.objectForKey("endDate") as? NSDate
     }
     
     func setEndDate(endDate: NSDate) -> Void {
-        self.record?.setValue(endDate, forKey: "endDate")
+        self.record?.setObject(endDate, forKey: "endDate")
     }
     
-    func getEndLocation() -> CLLocation {
-        return record?.objectForKey("endLocation") as! CLLocation
+    func getEndLocation() -> CLLocation? {
+        return record?.objectForKey("endLocation") as? CLLocation
     }
     
     func setEndLocation(endLocation:CLLocation) -> Void {
-        self.record?.setValue(endLocation, forKey: "endLocation")
+        self.record?.setObject(endLocation, forKey: "endLocation")
     }
     
-    func getFastestSpeed() -> Double {
-        return record?.objectForKey("fastestSpeed") as! Double
+    func getFastestSpeed() -> Double? {
+        return record?.objectForKey("fastestSpeed") as? Double
     }
     
     func setFastestSpeed(fastestSpeed: Double) -> Void{
-        self.record?.setValue(fastestSpeed, forKey: "fastestSpeed")
+        self.record?.setObject(fastestSpeed, forKey: "fastestSpeed")
     }
     
-    func getStartDate() -> NSDate {
-        return record?.objectForKey("startDate") as! NSDate
+    func getStartDate() -> NSDate? {
+        return record?.objectForKey("startDate") as? NSDate
     }
     
     func setStartDate(startDate: NSDate) -> Void {
-        self.record?.setValue(startDate, forKey: "startDate")
+        self.record?.setObject(startDate, forKey: "startDate")
     }
     
-    func getStartLocation() -> CLLocation {
-        return record?.objectForKey("startLocation") as! CLLocation
+    func getStartLocation() -> CLLocation? {
+        return record?.objectForKey("startLocation") as? CLLocation
     }
     
     func setStartLocation(startLocation: CLLocation) -> Void {
-        self.record?.setValue(startLocation, forKey: "startLocation")
+        self.record?.setObject(startLocation, forKey: "startLocation")
     }
     
-    func getSteps() -> Int {
-        return record?.objectForKey("steps") as! Int
+    func getSteps() -> Int? {
+        return record?.objectForKey("steps") as? Int
     }
     
     func setSteps(steps:Int) -> Void {
-        self.record?.setValue(steps, forKey: "steps")
+        self.record?.setObject(steps, forKey: "steps")
     }
     
-    func getUser() -> CKReference {
-        return record?.objectForKey("user") as! CKReference
+    func getUser() -> CKReference? {
+        return record?.objectForKey("user") as? CKReference
     }
     
     func setUser(user: CKReference) -> Void {
-        self.record?.setValue(user, forKey: "user")
+        self.record?.setObject(user, forKey: "user")
     }
     
     func save() -> Void{
@@ -137,7 +135,7 @@ public class Workout {
         }
     }
     
-    public static func getAllWorkouts(onComplete:([Workout])-> Void) -> Void{
+    static func getAllWorkouts(onComplete:([Workout]) -> Void) -> Void {
         let predicate:NSPredicate = NSPredicate(value: true)
         let query:CKQuery = CKQuery(recordType: "Workout", predicate: predicate)
         

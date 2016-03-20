@@ -7,56 +7,93 @@
 //
 
 import Foundation
-//import RealmSwift
 import CloudKit
 
 public class Selfie {
-
-    public var date:NSDate!
-    public var image:CKAsset!
-    public var user:CKReference!
+    static let publicDB:CKDatabase = CKContainer.defaultContainer().publicCloudDatabase
     
-    convenience init(date:NSDate, image:CKAsset, userID: String) {
-        self.init()
-        self.date = date
-        self.image = image
+    var record:CKRecord?
+    
+    init(selfieRecord: CKRecord){
+        self.record = selfieRecord
+    }
+    
+    init(date:NSDate, image:CKAsset, user:CKReference) {
+        self.record = CKRecord(recordType: "Selfie")
         
-        let userRecord:CKRecordID = CKRecordID(recordName: userID)
-        self.user = CKReference(recordID: userRecord, action: CKReferenceAction.DeleteSelf)
+        self.record!.setObject(date, forKey: "date")
+        self.record!.setObject(image, forKey: "image")
+        self.record!.setObject(user, forKey: "user")
+    }
+    
+    func getDate() -> NSDate? {
+        return self.record?.objectForKey("date") as? NSDate
+    }
+    
+    func setDate(date:NSDate) -> Void{
+        self.record?.setObject(date, forKey: "date")
+    }
+    
+    func getImage() -> CKAsset? {
+        return self.record?.objectForKey("image") as? CKAsset
+    }
+    
+    func setImage(image:CKAsset) -> Void {
+        self.record?.setObject(image, forKey: "image")
+    }
+    
+    func getUser() -> CKReference {
+        return record?.objectForKey("user") as! CKReference
+    }
+    
+    func setUser(user: CKReference) -> Void {
+        self.record?.setObject(user, forKey: "user")
     }
     
     func save() -> Void{
-        let db:CKDatabase = CKContainer(identifier: "iCloud.com.terratap.arcticrun").publicCloudDatabase
-        
-        //recordType is the name of the table
-        let record:CKRecord = CKRecord(recordType: "Selfie")
-        record.setObject(self.date, forKey: "date")
-        record.setObject(self.image, forKey: "image")
-        record.setObject(self.user, forKey: "users")
-        
-        db.saveRecord(record) { (record:CKRecord?, error:NSError?) -> Void in
-            if error == nil{
+        Selfie.publicDB.saveRecord(self.record!) { (record: CKRecord?, error: NSError?) -> Void in
+            if error == nil {
                 print("record saved")
             }
         }
     }
     
-    public static func loadAll() -> Void{
-        let db:CKDatabase = CKContainer(identifier: "iCloud.com.terratap.arcticrun").publicCloudDatabase
+    static func getSelfies(userRecord: CKRecord, onComplete: ([Selfie]) -> Void) -> Void {
+        let predicate:NSPredicate = NSPredicate(format: "user == %@", userRecord)
+        let query:CKQuery = CKQuery(recordType: "Selfie", predicate: predicate)
+        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
         
+        self.publicDB.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) -> Void in
+            if error != nil || records == nil {
+                return  //nothing
+            }
+            
+            var selfies:[Selfie] = []
+            for var i = 0; i < records?.count; i++ {
+                let selfie:Selfie = Selfie(selfieRecord: records![i])
+                selfies.append(selfie)
+            }
+            
+            onComplete(selfies)
+        }
+    }
+    
+    public static func getAllSelfies(onComplete: ([Selfie]) -> Void) -> Void{
         let predicate:NSPredicate = NSPredicate(value: true)
-        
         let query:CKQuery = CKQuery(recordType: "Selfie", predicate: predicate)
         
-        db.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) -> Void in
-            
+        Selfie.publicDB.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) -> Void in
             if error != nil || records == nil {
                 return //found errors
             }
             
-            print(records)
+            var selfies:[Selfie] = []
+            for var i = 0; i < records?.count; i++ {
+                let selfie:Selfie = Selfie(selfieRecord: records![i])
+                selfies.append(selfie)
+            }
             
+            onComplete(selfies)
         }
     }
-    
 }
