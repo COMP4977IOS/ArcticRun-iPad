@@ -7,75 +7,150 @@
 //
 
 import Foundation
-//import RealmSwift
 import CoreLocation
 import CloudKit
 
+//TODO: refactor some constants out of this
 public class Workout {
+    static let publicDB:CKDatabase = CKContainer.defaultContainer().publicCloudDatabase //TODO: put this in an abstract base class?
     
-    public var caloriesBurned:Int = 0
-    public var distance:Double = 0
-    public var fastestSpeed:Double = 0
-    public var startDate:NSDate!
-    public var endDate:NSDate!
-    public var startLocation:CLLocation!
-    public var endLocation:CLLocation!
-    public var steps:Int = 0
-    public var user:CKReference!
+    var record:CKRecord?
     
-    convenience init(caloriesBurned:Int, distance:Double, fastestSpeed:Double, startDate:NSDate, endDate:NSDate, startLocation:CLLocation, endLocation:CLLocation, steps: Int, userID: String) {
-        self.init()
-        self.caloriesBurned = caloriesBurned
-        self.distance = distance
-        self.fastestSpeed = fastestSpeed
-        self.startDate = startDate
-        self.endDate = endDate
-        self.startLocation = startLocation
-        self.endLocation = endLocation
-        self.steps = steps
+    init(workoutRecord: CKRecord){
+        self.record = workoutRecord
+    }
+
+    init(caloriesBurned:Int, distance:Double, endDate:NSDate, fastestSpeed:Double, endLocation:CLLocation, startDate:NSDate, startLocation:CLLocation, steps: Int, user: CKReference) {
+        self.record = CKRecord(recordType: "Workout")
         
-        let userRecord:CKRecordID = CKRecordID(recordName: userID)
-        self.user = CKReference(recordID: userRecord, action: CKReferenceAction.DeleteSelf)
+        self.record!.setObject(caloriesBurned, forKey: "caloriesBurned")
+        self.record!.setObject(distance, forKey: "distance")
+        self.record!.setObject(endDate, forKey: "endDate")
+        self.record!.setObject(endLocation, forKey: "endLocation")
+        self.record!.setObject(fastestSpeed, forKey: "fastestSpeed")
+        self.record!.setObject(startDate, forKey: "startDate")
+        self.record!.setObject(startLocation, forKey: "startLocation")
+        self.record!.setObject(steps, forKey: "steps")
+        self.record!.setObject(user, forKey: "user")
+    }
+    
+    func getCaloriesBurned() -> Double? {
+        return record?.objectForKey("caloriesBurned") as? Double
+    }
+    
+    func setCaloriesBurned(caloriesBurned: Int) -> Void {
+        self.record?.setObject(caloriesBurned, forKey: "caloriesBurned")
+    }
+    
+    func getDistance() -> Double? {
+        return record?.objectForKey("distance") as? Double
+    }
+    
+    func setDistance(distance: Double) -> Void {
+        self.record?.setObject(distance, forKey: "distance")
+    }
+    
+    func getEndDate() -> NSDate? {
+        return record?.objectForKey("endDate") as? NSDate
+    }
+    
+    func setEndDate(endDate: NSDate) -> Void {
+        self.record?.setObject(endDate, forKey: "endDate")
+    }
+    
+    func getEndLocation() -> CLLocation? {
+        return record?.objectForKey("endLocation") as? CLLocation
+    }
+    
+    func setEndLocation(endLocation:CLLocation) -> Void {
+        self.record?.setObject(endLocation, forKey: "endLocation")
+    }
+    
+    func getFastestSpeed() -> Double? {
+        return record?.objectForKey("fastestSpeed") as? Double
+    }
+    
+    func setFastestSpeed(fastestSpeed: Double) -> Void{
+        self.record?.setObject(fastestSpeed, forKey: "fastestSpeed")
+    }
+    
+    func getStartDate() -> NSDate? {
+        return record?.objectForKey("startDate") as? NSDate
+    }
+    
+    func setStartDate(startDate: NSDate) -> Void {
+        self.record?.setObject(startDate, forKey: "startDate")
+    }
+    
+    func getStartLocation() -> CLLocation? {
+        return record?.objectForKey("startLocation") as? CLLocation
+    }
+    
+    func setStartLocation(startLocation: CLLocation) -> Void {
+        self.record?.setObject(startLocation, forKey: "startLocation")
+    }
+    
+    func getSteps() -> Int? {
+        return record?.objectForKey("steps") as? Int
+    }
+    
+    func setSteps(steps:Int) -> Void {
+        self.record?.setObject(steps, forKey: "steps")
+    }
+    
+    func getUser() -> CKReference? {
+        return record?.objectForKey("user") as? CKReference
+    }
+    
+    func setUser(user: CKReference) -> Void {
+        self.record?.setObject(user, forKey: "user")
     }
     
     func save() -> Void{
-        let db:CKDatabase = CKContainer(identifier: "iCloud.com.terratap.arcticrun").publicCloudDatabase
-        
-        //recordType is the name of the table
-        let record:CKRecord = CKRecord(recordType: "Workout")
-        record.setObject(self.caloriesBurned, forKey: "caloriesBurned")
-        record.setObject(self.distance, forKey: "distance")
-        record.setObject(self.fastestSpeed, forKey: "fastestSpeed")
-        record.setObject(self.startDate, forKey: "startDate")
-        record.setObject(self.endDate, forKey: "endDate")
-        record.setObject(self.startDate, forKey: "startDate")
-        record.setObject(self.startLocation, forKey: "startLocation")
-        record.setObject(self.endLocation, forKey: "endLocation")
-        record.setObject(self.steps, forKey: "steps")
-        
-        db.saveRecord(record) { (record:CKRecord?, error:NSError?) -> Void in
-            if error == nil{
+        Workout.publicDB.saveRecord(self.record!) { (record: CKRecord?, error: NSError?) -> Void in
+            if error == nil {
                 print("record saved")
             }
         }
     }
     
-    public static func loadAll() -> Void{
-        let db:CKDatabase = CKContainer(identifier: "iCloud.com.terratap.arcticrun").publicCloudDatabase
+    //onComplete: closure for cool stuff
+    static func getWorkouts(userRecord: CKRecord, onComplete: ([Workout]) -> Void) -> Void {
+        let predicate:NSPredicate = NSPredicate(format: "user == %@", userRecord)
+        let query:CKQuery = CKQuery(recordType: "Workout", predicate: predicate)
+        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
         
+        self.publicDB.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) -> Void in
+            if error != nil || records == nil {
+                return  //nothing
+            }
+            
+            var workouts:[Workout] = []
+            for var i = 0; i < records?.count; i++ {
+                let workout:Workout = Workout(workoutRecord: records![i])
+                workouts.append(workout)
+            }
+
+            onComplete(workouts)
+        }
+    }
+    
+    static func getAllWorkouts(onComplete:([Workout]) -> Void) -> Void {
         let predicate:NSPredicate = NSPredicate(value: true)
-        
         let query:CKQuery = CKQuery(recordType: "Workout", predicate: predicate)
         
-        db.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) -> Void in
-            
+        self.publicDB.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) -> Void in
             if error != nil || records == nil {
                 return //found errors
             }
             
-            print(records)
+            var workouts:[Workout] = []
+            for var i = 0; i < records?.count; i++ {
+                let workout:Workout = Workout(workoutRecord: records![i])
+                workouts.append(workout)
+            }
             
+            onComplete(workouts)
         }
     }
-    
 }
