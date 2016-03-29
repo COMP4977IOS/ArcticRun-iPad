@@ -9,7 +9,11 @@
 import UIKit
 import KDCircularProgress
 import GameKit
+import CloudKit
+
 class OverviewViewController: UIViewController, GKGameCenterControllerDelegate {
+    static var dirty = true
+    var goals = [Goal]()
     
     @IBOutlet weak var stepCount: UILabel!
     var progress: KDCircularProgress!
@@ -52,6 +56,23 @@ class OverviewViewController: UIViewController, GKGameCenterControllerDelegate {
             
         }
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if OverviewViewController.dirty {
+            grabCloudKitData()
+            print("grabbing cloud kit goals")
+        }
+    }
+    
+    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController) {
+        //code to dismiss your gameCenterViewController
+        // for example:
+        
+        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     //Button to animate progress bar
     @IBAction func showProgress(sender: UIButton) {
         let value:Int! = Int(stepCount.text!)
@@ -63,20 +84,47 @@ class OverviewViewController: UIViewController, GKGameCenterControllerDelegate {
             }
         }
     }
+    
+    func grabCloudKitData() {
+        let pred = NSPredicate(value: true)
+        let sort = NSSortDescriptor(key: "creationDate", ascending: false)
+        let query = CKQuery(recordType: "Goal", predicate: pred)
+        query.sortDescriptors = [sort]
+        
+        let operation = CKQueryOperation(query: query)
+        operation.desiredKeys = ["caloriesBurnedDaily", "distanceKilometersDaily", "minutesDaily", "stepsDaily"]
+        operation.resultsLimit = 50
+        
+        var newGoals = [Goal]()
+        
+        operation.recordFetchedBlock = { (record) in
+            let goal = Goal()
+            goal.recordID = record.recordID
+            goal.calories = record["caloriesBurnedDaily"] as! Double
+            goal.distance = record["distanceKilometersDaily"] as! Double
+            goal.minutes = record["minutesDaily"] as! Double
+            goal.steps = record["stepsDaily"] as! Double
+            newGoals.append(goal)
+        }
+        
+        operation.queryCompletionBlock = { [unowned self] (cursor, error) in
+            dispatch_async(dispatch_get_main_queue()) {
+                if error == nil {
+                    OverviewViewController.dirty = false
+                    self.goals = newGoals
+                } else {
+                    let ac = UIAlertController(title: "Fetch failed", message: "There was a problem fetching the data from cloudkit; please try again: \(error!.localizedDescription)", preferredStyle: .Alert)
+                    ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    self.presentViewController(ac, animated: true, completion: nil)
+                }
+            }
+        }
+        CKContainer.defaultContainer().publicCloudDatabase.addOperation(operation)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController) {
-        
-        //code to dismiss your gameCenterViewController
-        
-        // for example:
-        
-        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
-        
-    }
-
 }
 
