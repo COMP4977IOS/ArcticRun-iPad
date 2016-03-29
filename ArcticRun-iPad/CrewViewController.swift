@@ -36,6 +36,42 @@ class CrewViewController: UIViewController {
     @IBOutlet weak var crewImg4: UIImageView!
     @IBOutlet weak var crewProg4: UIProgressView!
     
+    // UI components for items
+    @IBOutlet weak var beetroot_soup: UIImageView!
+    @IBOutlet weak var bread: UIImageView!
+    @IBOutlet weak var fish: UIImageView!
+    @IBOutlet weak var cooked_chicken: UIImageView!
+    @IBOutlet weak var cooked_fish: UIImageView!
+    @IBOutlet weak var cooked_porkchop: UIImageView!
+    @IBOutlet weak var mushroom_stew: UIImageView!
+    @IBOutlet weak var hat: UIImageView!
+    @IBOutlet weak var leather_boots: UIImageView!
+    @IBOutlet weak var leather_pants: UIImageView!
+    @IBOutlet weak var leather_chestplate: UIImageView!
+    @IBOutlet weak var leather_helmet: UIImageView!
+    @IBOutlet weak var coat: UIImageView!
+    @IBOutlet weak var iron_pickaxe: UIImageView!
+    
+    // money
+    @IBOutlet weak var bank: UILabel!
+    private var money: Int32 = 0;
+    
+    // item prices
+    private let PRICE_BEETROOT_SOUP = 1000;
+    private let PRICE_BREAD = 1000;
+    private let PRICE_FISH = 1000;
+    private let PRICE_COOKED_CHICKEN = 1000;
+    private let PRICE_COOKED_FISH = 1000;
+    private let PRICE_COOKED_PORKCHOP = 1000;
+    private let PRICE_MUSHROOM_STEW = 1000;
+    private let PRICE_HAT = 1000;
+    private let PRICE_LEATHER_BOOTS = 1000;
+    private let PRICE_LEATHER_PANTS = 1000;
+    private let PRICE_LEATHER_CHESTPLATE = 1000;
+    private let PRICE_LEATHER_HELMET = 1000;
+    private let PRICE_COAT = 1000;
+    private let PRICE_IRON_PICKAXE = 1000;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,6 +88,22 @@ class CrewViewController: UIViewController {
         let tapGesture3 = UITapGestureRecognizer(target: self, action: Selector("handleTap3:"))
         let tapGesture4 = UITapGestureRecognizer(target: self, action: Selector("handleTap4:"))
         
+        // tap gestures for items
+        let tapGesture5 = UITapGestureRecognizer(target: self, action: Selector("beetroot_soup:"))
+        let tapGesture6 = UITapGestureRecognizer(target: self, action: Selector("bread:"))
+        let tapGesture7 = UITapGestureRecognizer(target: self, action: Selector("fish:"))
+        let tapGesture8 = UITapGestureRecognizer(target: self, action: Selector("cooked_chicken:"))
+        let tapGesture9 = UITapGestureRecognizer(target: self, action: Selector("cooked_fish:"))
+        let tapGesture10 = UITapGestureRecognizer(target: self, action: Selector("cooked_porkchop:"))
+        let tapGesture11 = UITapGestureRecognizer(target: self, action: Selector("mushroom_stew:"))
+        let tapGesture12 = UITapGestureRecognizer(target: self, action: Selector("hat:"))
+        let tapGesture13 = UITapGestureRecognizer(target: self, action: Selector("leather_boots:"))
+        let tapGesture14 = UITapGestureRecognizer(target: self, action: Selector("leather_pants:"))
+        let tapGesture15 = UITapGestureRecognizer(target: self, action: Selector("leather_chestplate:"))
+        let tapGesture16 = UITapGestureRecognizer(target: self, action: Selector("leather_helmet:"))
+        let tapGesture17 = UITapGestureRecognizer(target: self, action: Selector("coat:"))
+        let tapGesture18 = UITapGestureRecognizer(target: self, action: Selector("iron_pickaxe:"))
+        
         // add gesture handlers to each crew member stack view
         crewMember1.userInteractionEnabled=true
         crewMember1.addGestureRecognizer(tapGesture1)
@@ -65,6 +117,102 @@ class CrewViewController: UIViewController {
         crewMember4.userInteractionEnabled=true
         crewMember4.addGestureRecognizer(tapGesture4)
         
+        // add gesture handlers to each item
+        beetroot_soup.userInteractionEnabled = true
+        beetroot_soup.addGestureRecognizer(tapGesture5)
+        
+        bread.userInteractionEnabled = true
+        bread.addGestureRecognizer(tapGesture6)
+        
+        fish.userInteractionEnabled = true
+        fish.addGestureRecognizer(tapGesture7)
+        
+        cooked_chicken.userInteractionEnabled = true
+        cooked_chicken.addGestureRecognizer(tapGesture8)
+        
+        cooked_fish.userInteractionEnabled = true
+        cooked_fish.addGestureRecognizer(tapGesture9)
+    
+        cooked_porkchop.userInteractionEnabled = true
+        cooked_porkchop.addGestureRecognizer(tapGesture10)
+        
+        mushroom_stew.userInteractionEnabled = true
+        mushroom_stew.addGestureRecognizer(tapGesture11)
+        
+        hat.userInteractionEnabled = true
+        hat.addGestureRecognizer(tapGesture12)
+        
+        leather_boots.userInteractionEnabled = true
+        leather_boots.addGestureRecognizer(tapGesture13)
+        
+        leather_pants.userInteractionEnabled = true
+        leather_pants.addGestureRecognizer(tapGesture14)
+        
+        leather_chestplate.userInteractionEnabled = true
+        leather_chestplate.addGestureRecognizer(tapGesture15)
+        
+        leather_helmet.userInteractionEnabled = true
+        leather_helmet.addGestureRecognizer(tapGesture16)
+        
+        coat.userInteractionEnabled = true
+        coat.addGestureRecognizer(tapGesture17)
+        
+        iron_pickaxe.userInteractionEnabled = true
+        iron_pickaxe.addGestureRecognizer(tapGesture18)
+        
+        // Add initial money amount
+        self.money = 2500;
+        self.bank.text = "$" + self.money.description;
+        
+    }
+    
+    private func buyItem(price: Int) {
+        if (Int(self.money) >= price) {
+            self.showBuyMenu(price)
+        } else {
+            self.showPriceError(price)
+        }
+    }
+    
+    private func showBuyMenu(price: Int) {
+        let controller = UIAlertController(title: "Price: $" + price.description, message: "Choose a crew member to purchase the item for.", preferredStyle: .Alert)
+        
+        let crewMember1 = UIAlertAction(title: "Jerald", style: .Default) { (UIAlertAction) -> Void in
+            self.removeMoney(price)
+        }
+        let crewMember2 = UIAlertAction(title: "Rory", style: .Default) { (UIAlertAction) -> Void in
+            self.removeMoney(price)
+        }
+        let crewMember3 = UIAlertAction(title: "Rwanda", style: .Default) { (UIAlertAction) -> Void in
+            self.removeMoney(price)
+        }
+        let crewMember4 = UIAlertAction(title: "Ripper", style: .Default) { (UIAlertAction) -> Void in
+            self.removeMoney(price)
+        }
+        let dismiss = UIAlertAction(title: "Cancel", style: .Destructive, handler: nil)
+        
+        controller.addAction(crewMember1)
+        controller.addAction(crewMember2)
+        controller.addAction(crewMember3)
+        controller.addAction(crewMember4)
+        controller.addAction(dismiss)
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    private func showPriceError(price: Int) {
+        let controller = UIAlertController(title: "You don't have enough money.", message: "This item costs $" + price.description, preferredStyle: .Alert)
+        
+        let dismiss = UIAlertAction(title: "Cancel", style: .Destructive, handler: nil)
+        
+        controller.addAction(dismiss)
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    private func removeMoney(price: Int) {
+        self.money -= price;
+        self.bank.text = "$" + self.money.description
     }
     
     override func didReceiveMemoryWarning() {
@@ -94,6 +242,63 @@ class CrewViewController: UIViewController {
     func handleTap4(sender:UITapGestureRecognizer){
         //go to segue
         self.performSegueWithIdentifier("showDetail4", sender: self)
+    }
+    
+    // handle tappings of items
+    func beetroot_soup(sender:UITapGestureRecognizer) {
+        self.buyItem(PRICE_BEETROOT_SOUP)
+    }
+    
+    func bread(sender:UITapGestureRecognizer) {
+        self.buyItem(PRICE_BREAD)
+    }
+    
+    func fish(sender:UITapGestureRecognizer) {
+        self.buyItem(PRICE_FISH)
+    }
+    
+    func cooked_chicken(sender:UITapGestureRecognizer) {
+        self.buyItem(PRICE_COOKED_CHICKEN)
+    }
+    
+    func cooked_fish(sender:UITapGestureRecognizer) {
+        self.buyItem(PRICE_COOKED_FISH)
+    }
+    
+    func cooked_porkchop(sender:UITapGestureRecognizer) {
+        self.buyItem(PRICE_COOKED_PORKCHOP)
+    }
+    
+    func mushroom_stew(sender:UITapGestureRecognizer) {
+        self.buyItem(PRICE_MUSHROOM_STEW)
+    }
+    
+    func hat(sender:UITapGestureRecognizer) {
+        self.buyItem(PRICE_HAT)
+    }
+    
+    func leather_boots(sender:UITapGestureRecognizer) {
+        self.buyItem(PRICE_LEATHER_BOOTS)
+    }
+    
+    func leather_pants(sender:UITapGestureRecognizer) {
+        self.buyItem(PRICE_LEATHER_PANTS)
+    }
+    
+    func leather_chestplate(sender:UITapGestureRecognizer) {
+        self.buyItem(PRICE_LEATHER_CHESTPLATE)
+    }
+    
+    func leather_helmet(sender:UITapGestureRecognizer) {
+        self.buyItem(PRICE_LEATHER_HELMET)
+    }
+    
+    func coat(sender:UITapGestureRecognizer) {
+        self.buyItem(PRICE_COAT)
+    }
+    
+    func iron_pickaxe(sender:UITapGestureRecognizer) {
+        self.buyItem(PRICE_IRON_PICKAXE)
     }
     
     //send appropriate data to crew detail view
