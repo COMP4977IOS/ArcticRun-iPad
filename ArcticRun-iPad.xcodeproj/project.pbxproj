@@ -17,6 +17,7 @@
 		2B78BB231C8A615700E33B41 /* 1297063_orig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B78BB201C8A615700E33B41 /* 1297063_orig.jpg */; };
 		2B78BB241C8A615700E33B41 /* 6180089_orig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B78BB211C8A615700E33B41 /* 6180089_orig.jpg */; };
 		2B78BB251C8A615700E33B41 /* 9143924_orig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B78BB221C8A615700E33B41 /* 9143924_orig.jpg */; };
+		6E5D1F981CAAE4A50096A0CA /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5D1F971CAAE4A50096A0CA /* Goal.swift */; };
 		8191F59B1C75C08200879C3F /* WorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8191F59A1C75C08100879C3F /* WorldViewController.swift */; };
 		8191F59D1C75C3B000879C3F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8191F59C1C75C3B000879C3F /* GameScene.swift */; };
 		8191F59F1C75C5E100879C3F /* BearImages.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8191F59E1C75C5E100879C3F /* BearImages.atlas */; };
@@ -92,6 +93,7 @@
 		2B78BB201C8A615700E33B41 /* 1297063_orig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1297063_orig.jpg; path = Images.xcassets/1297063_orig.jpg; sourceTree = "<group>"; };
 		2B78BB211C8A615700E33B41 /* 6180089_orig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 6180089_orig.jpg; path = Images.xcassets/6180089_orig.jpg; sourceTree = "<group>"; };
 		2B78BB221C8A615700E33B41 /* 9143924_orig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 9143924_orig.jpg; path = Images.xcassets/9143924_orig.jpg; sourceTree = "<group>"; };
+		6E5D1F971CAAE4A50096A0CA /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		7E1B555208D4D7796507ECF0 /* Pods_ArcticRun_iPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArcticRun_iPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8191F59A1C75C08100879C3F /* WorldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldViewController.swift; sourceTree = "<group>"; };
 		8191F59C1C75C3B000879C3F /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				8ACC74701C72ABD3008F96AF /* MenuController.swift */,
 				8ACC74741C72B904008F96AF /* SettingsViewController.swift */,
 				8AA981951C927EC00017F615 /* CrewDetailViewController.swift */,
+				6E5D1F971CAAE4A50096A0CA /* Goal.swift */,
 			);
 			path = "ArcticRun-iPad";
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				8B5993EC1C8965E0006E7AA2 /* CrewViewController.swift in Sources */,
 				EE47C4051C8F400900734675 /* UserProtocol.swift in Sources */,
 				8ACC74751C72B904008F96AF /* SettingsViewController.swift in Sources */,
+				6E5D1F981CAAE4A50096A0CA /* Goal.swift in Sources */,
 				EE020F4C1C6E8AFB00F5F74A /* TaskListsViewController.swift in Sources */,
 				8B5993EE1C8965F4006E7AA2 /* AchievementViewController.swift in Sources */,
 				8503FB891C640A1600531D5F /* SecondViewController.swift in Sources */,
