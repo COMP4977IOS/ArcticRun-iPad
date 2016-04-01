@@ -11,8 +11,8 @@ import UIKit
 
 class Goal: NSObject {
     var recordID: CKRecordID!
-    var calories: Double!
-    var distance: Double!
-    var minutes: Double!
-    var steps: Double!
+    var calories: Int!
+    var distance: Int!
+    var minutes: Int!
+    var steps: Int!
 }

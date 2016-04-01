@@ -13,30 +13,31 @@ import CloudKit
 
 class OverviewViewController: UIViewController, GKGameCenterControllerDelegate {
     static var dirty = true
-    var goals = [Goal]()
+    var goals = [Goal]?()
+    var circles = [KDCircularProgress]()
     
     @IBOutlet weak var stepCount: UILabel!
-    var progress: KDCircularProgress!
+    
+    @IBOutlet weak var caloriesCount: UILabel!
+    
+    @IBOutlet weak var distanceCount: UILabel!
+    
+    @IBOutlet weak var minutesCount: UILabel!
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    @IBOutlet weak var circlestackview: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+        loadProgressCircles(Int(circlestackview.frame.maxX), y: Int(circlestackview.frame.minY + 35))
         
-        progress = KDCircularProgress(frame: CGRect(x:0,y:0, width:200, height:200))
-        progress.startAngle = -90
-        progress.progressThickness = 0.2
-        progress.trackThickness = 0.6
-        progress.clockwise = true
-        progress.center = view.center
-        progress.gradientRotateSpeed = 2
-        progress.roundedCorners = true
-        progress.glowMode = .NoGlow
-        progress.angle = 1
-        progress.setColors(UIColor.cyanColor())
+        loadProgressCircles(Int(circlestackview.frame.maxX), y: Int(circlestackview.frame.minY + 135))
         
-        view.addSubview(progress)
+        loadProgressCircles(Int(circlestackview.frame.maxX), y: Int(circlestackview.frame.minY + 235))
+        
+        loadProgressCircles(Int(circlestackview.frame.maxX), y: Int(circlestackview.frame.minY + 335))
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -62,7 +63,6 @@ class OverviewViewController: UIViewController, GKGameCenterControllerDelegate {
         
         if OverviewViewController.dirty {
             grabCloudKitData()
-            print("grabbing cloud kit goals")
         }
     }
     
@@ -73,53 +73,110 @@ class OverviewViewController: UIViewController, GKGameCenterControllerDelegate {
         gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    func loadProgressCircles(x:Int, y:Int)
+    {
+        var progress: KDCircularProgress!
+        progress = KDCircularProgress(frame: CGRect(x: x,y: y, width: 100, height: 100))
+        progress.startAngle = -90
+        progress.progressThickness = 0.2
+        progress.trackThickness = 0.6
+        progress.clockwise = true
+        progress.gradientRotateSpeed = 2
+        progress.roundedCorners = true
+        progress.glowMode = .NoGlow
+        progress.angle = 1
+        progress.setColors(UIColor.cyanColor())
+        
+        circles.append(progress)
+        view.addSubview(progress)
+    }
+    
     //Button to animate progress bar
     @IBAction func showProgress(sender: UIButton) {
-        let value:Int! = Int(stepCount.text!)
-        progress.animateFromAngle(0, toAngle:value, duration:5){ completed in
-            if completed {
-                print("animation stopped, completed")
-            } else {
-                print("animation stopped, was interrupted")
+        if let goal = goals?[0] //grab first one for now
+        {
+            self.caloriesCount.text = String(goal.calories);
+            
+            circles[0].animateFromAngle(0, toAngle:goal.calories, duration:5){ completed in
+                if completed {
+                    print("animation stopped, completed")
+                } else {
+                    print("animation stopped, was interrupted")
+                }
             }
+            
+            self.distanceCount.text = String(goal.distance);
+            circles[1].animateFromAngle(0, toAngle:goal.distance, duration:5){ completed in
+                if completed {
+                    print("animation stopped, completed")
+                } else {
+                    print("animation stopped, was interrupted")
+                }
+            }
+            
+            self.minutesCount.text = String(goal.minutes);
+            circles[2].animateFromAngle(0, toAngle:goal.minutes, duration:5){ completed in
+                if completed {
+                    print("animation stopped, completed")
+                } else {
+                    print("animation stopped, was interrupted")
+                }
+            }
+            
+            self.stepCount.text = String(goal.steps);
+            circles[3].animateFromAngle(0, toAngle:goal.steps, duration:5){ completed in
+                if completed {
+                    print("animation stopped, completed")
+                } else {
+                    print("animation stopped, was interrupted")
+                }
+            }
+        }
+        else {
+            print("goals empty")
         }
     }
     
     func grabCloudKitData() {
-        let pred = NSPredicate(value: true)
-        let sort = NSSortDescriptor(key: "creationDate", ascending: false)
-        let query = CKQuery(recordType: "Goal", predicate: pred)
-        query.sortDescriptors = [sort]
-        
-        let operation = CKQueryOperation(query: query)
-        operation.desiredKeys = ["caloriesBurnedDaily", "distanceKilometersDaily", "minutesDaily", "stepsDaily"]
-        operation.resultsLimit = 50
-        
-        var newGoals = [Goal]()
-        
-        operation.recordFetchedBlock = { (record) in
-            let goal = Goal()
-            goal.recordID = record.recordID
-            goal.calories = record["caloriesBurnedDaily"] as! Double
-            goal.distance = record["distanceKilometersDaily"] as! Double
-            goal.minutes = record["minutesDaily"] as! Double
-            goal.steps = record["stepsDaily"] as! Double
-            newGoals.append(goal)
-        }
-        
-        operation.queryCompletionBlock = { [unowned self] (cursor, error) in
-            dispatch_async(dispatch_get_main_queue()) {
-                if error == nil {
-                    OverviewViewController.dirty = false
-                    self.goals = newGoals
-                } else {
-                    let ac = UIAlertController(title: "Fetch failed", message: "There was a problem fetching the data from cloudkit; please try again: \(error!.localizedDescription)", preferredStyle: .Alert)
-                    ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                    self.presentViewController(ac, animated: true, completion: nil)
+        CKContainer.defaultContainer().accountStatusWithCompletionHandler()
+        {
+            (status: CKAccountStatus, error: NSError?) in
+                let pred = NSPredicate(value: true)
+                let sort = NSSortDescriptor(key: "creationDate", ascending: false)
+                let query = CKQuery(recordType: "Goal", predicate: pred)
+                query.sortDescriptors = [sort]
+                
+                let operation = CKQueryOperation(query: query)
+                operation.desiredKeys = ["caloriesBurnedDaily", "distanceKilometersDaily", "minutesDaily", "stepsDaily"]
+                operation.resultsLimit = 50
+                
+                var newGoals = [Goal]()
+                
+                operation.recordFetchedBlock = { (record) in
+                    let goal = Goal()
+                    goal.recordID = record.recordID
+                    goal.calories = record["caloriesBurnedDaily"] as! Int
+                    goal.distance = record["distanceKilometersDaily"] as! Int
+                    goal.minutes = record["minutesDaily"] as! Int
+                    goal.steps = record["stepsDaily"] as! Int
+                    newGoals.append(goal)
                 }
-            }
+                
+                operation.queryCompletionBlock = { [unowned self] (cursor, error) in
+                    dispatch_async(dispatch_get_main_queue()) {
+                        if error == nil {
+                            OverviewViewController.dirty = false
+                            self.goals = newGoals
+                        } else {
+                            let ac = UIAlertController(title: "Fetch failed", message: "There was a problem fetching the data from cloudkit; please try again: \(error!.localizedDescription)", preferredStyle: .Alert)
+                            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                            self.presentViewController(ac, animated: true, completion: nil)
+                        }
+                    }
+                }
+                CKContainer.defaultContainer().publicCloudDatabase.addOperation(operation)
         }
-        CKContainer.defaultContainer().publicCloudDatabase.addOperation(operation)
+        
     }
     
     override func didReceiveMemoryWarning() {
