@@ -10,18 +10,25 @@ import UIKit
 import GameKit
 
 class SocialViewController: UIViewController, GKGameCenterControllerDelegate {
-
+    
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    @IBOutlet weak var test: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
-        //toggle the menu bar
         if self.revealViewController() != nil {
-            self.revealViewController().revealToggleAnimated(true)
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let unit = userDefaults.valueForKey("settingsDistanceUnit")
+        test.text = unit as? String
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

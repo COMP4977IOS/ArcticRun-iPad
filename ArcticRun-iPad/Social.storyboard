@@ -24,6 +24,12 @@
                                     <action selector="authenticateLocalPlayer:" destination="ROZ-im-OUa" eventType="touchUpInside" id="Lrs-U9-as6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDZ-Sf-9PB">
+                                <rect key="frame" x="244" y="164" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -31,7 +37,13 @@
                             <constraint firstItem="c2I-o2-ckF" firstAttribute="centerX" secondItem="ld7-Yz-Cmc" secondAttribute="centerX" id="fl0-b9-nnf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Social" id="hav-bu-f5l" userLabel="Social"/>
+                    <navigationItem key="navigationItem" title="Social" id="hav-bu-f5l" userLabel="Social">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="OB8-Ls-Rgl"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="OB8-Ls-Rgl" id="WAd-x4-f6F"/>
+                        <outlet property="test" destination="jDZ-Sf-9PB" id="95w-EX-y9s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mqp-9z-bIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,5 +72,6 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="menu" width="22" height="22"/>
     </resources>
 </document>
