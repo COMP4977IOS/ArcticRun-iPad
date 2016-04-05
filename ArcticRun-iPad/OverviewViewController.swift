@@ -31,13 +31,13 @@ class OverviewViewController: UIViewController, GKGameCenterControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        loadProgressCircles(Int(circlestackview.frame.maxX), y: Int(circlestackview.frame.minY + 35))
-        
-        loadProgressCircles(Int(circlestackview.frame.maxX), y: Int(circlestackview.frame.minY + 135))
-        
-        loadProgressCircles(Int(circlestackview.frame.maxX), y: Int(circlestackview.frame.minY + 235))
-        
-        loadProgressCircles(Int(circlestackview.frame.maxX), y: Int(circlestackview.frame.minY + 335))
+//        loadProgressCircles(Int(circlestackview.frame.maxX), y: Int(circlestackview.frame.minY + 35))
+//        
+//        loadProgressCircles(Int(circlestackview.frame.maxX), y: Int(circlestackview.frame.minY + 135))
+//        
+//        loadProgressCircles(Int(circlestackview.frame.maxX), y: Int(circlestackview.frame.minY + 235))
+//        
+//        loadProgressCircles(Int(circlestackview.frame.maxX), y: Int(circlestackview.frame.minY + 335))
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
