@@ -40,6 +40,13 @@ class CrewViewController: UIViewController {
     @IBOutlet weak var crewProg4: UIProgressView!
     @IBOutlet weak var crewStatus4: UILabel!
     
+    //UI components for Crew Member 5
+    @IBOutlet weak var crewMember5: UIStackView!
+    @IBOutlet weak var crewName5: UILabel!
+    @IBOutlet weak var crewImg5: UIImageView!
+    @IBOutlet weak var crewProg5: UIProgressView!
+    @IBOutlet weak var crewStatus5: UILabel!
+    
     // UI components for items
     @IBOutlet weak var beetroot_soup: UIImageView!
     @IBOutlet weak var bread: UIImageView!
@@ -195,6 +202,10 @@ class CrewViewController: UIViewController {
                 self.crewName4.text = members[3].getFirstName()! + " " + members[3].getLastName()!
                 self.crewProg4.progress = members[3].getHealth()! / 100.00
                 self.crewStatus4.text = "Status: " + members[3].getStatus()!
+                
+                self.crewName5.text = members[4].getFirstName()! + " " + members[4].getLastName()!
+                self.crewProg5.progress = members[4].getHealth()! / 100.00
+                self.crewStatus5.text = "Status: " + members[4].getStatus()!
             }
         }
     }
@@ -222,12 +233,17 @@ class CrewViewController: UIViewController {
         let crewMember4 = UIAlertAction(title: crewName4.text, style: .Default) { (UIAlertAction) -> Void in
             self.removeMoney(price)
         }
+        let crewMember5 = UIAlertAction(title: crewName5.text, style: .Default) { (UIAlertAction) -> Void in
+            self.removeMoney(price)
+        }
+        
         let dismiss = UIAlertAction(title: "Cancel", style: .Destructive, handler: nil)
         
         controller.addAction(crewMember1)
         controller.addAction(crewMember2)
         controller.addAction(crewMember3)
         controller.addAction(crewMember4)
+        controller.addAction(crewMember5)
         controller.addAction(dismiss)
         
         self.presentViewController(controller, animated: true, completion: nil)
