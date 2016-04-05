@@ -17,27 +17,19 @@ class OverviewViewController: UIViewController, GKGameCenterControllerDelegate {
     var circles = [KDCircularProgress]()
     
     @IBOutlet weak var stepCount: UILabel!
-    
     @IBOutlet weak var caloriesCount: UILabel!
-    
     @IBOutlet weak var distanceCount: UILabel!
-    
     @IBOutlet weak var minutesCount: UILabel!
-    
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    
     @IBOutlet weak var circlestackview: UIStackView!
+    
+    @IBOutlet weak var CaloriesCircle: KDCircularProgress!
+    @IBOutlet weak var StepsCircle: KDCircularProgress!
+    @IBOutlet weak var DistanceCircle: KDCircularProgress!
+    @IBOutlet weak var MilesCircle: KDCircularProgress!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-//        loadProgressCircles(Int(circlestackview.frame.maxX), y: Int(circlestackview.frame.minY + 35))
-//        
-//        loadProgressCircles(Int(circlestackview.frame.maxX), y: Int(circlestackview.frame.minY + 135))
-//        
-//        loadProgressCircles(Int(circlestackview.frame.maxX), y: Int(circlestackview.frame.minY + 235))
-//        
-//        loadProgressCircles(Int(circlestackview.frame.maxX), y: Int(circlestackview.frame.minY + 335))
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -73,31 +65,13 @@ class OverviewViewController: UIViewController, GKGameCenterControllerDelegate {
         gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func loadProgressCircles(x:Int, y:Int)
-    {
-        var progress: KDCircularProgress!
-        progress = KDCircularProgress(frame: CGRect(x: x,y: y, width: 100, height: 100))
-        progress.startAngle = -90
-        progress.progressThickness = 0.2
-        progress.trackThickness = 0.6
-        progress.clockwise = true
-        progress.gradientRotateSpeed = 2
-        progress.roundedCorners = true
-        progress.glowMode = .NoGlow
-        progress.angle = 1
-        progress.setColors(UIColor.cyanColor())
-        
-        circles.append(progress)
-        view.addSubview(progress)
-    }
-    
     //Button to animate progress bar
     @IBAction func showProgress(sender: UIButton) {
         if let goal = goals?[0] //grab first one for now
         {
             self.caloriesCount.text = String(goal.calories);
             
-            circles[0].animateFromAngle(0, toAngle:goal.calories, duration:5){ completed in
+            CaloriesCircle.animateFromAngle(0, toAngle:goal.calories, duration:5){ completed in
                 if completed {
                     print("animation stopped, completed")
                 } else {
@@ -106,7 +80,7 @@ class OverviewViewController: UIViewController, GKGameCenterControllerDelegate {
             }
             
             self.distanceCount.text = String(goal.distance);
-            circles[1].animateFromAngle(0, toAngle:goal.distance, duration:5){ completed in
+            DistanceCircle.animateFromAngle(0, toAngle:goal.distance, duration:5){ completed in
                 if completed {
                     print("animation stopped, completed")
                 } else {
@@ -115,7 +89,7 @@ class OverviewViewController: UIViewController, GKGameCenterControllerDelegate {
             }
             
             self.minutesCount.text = String(goal.minutes);
-            circles[2].animateFromAngle(0, toAngle:goal.minutes, duration:5){ completed in
+            MilesCircle.animateFromAngle(0, toAngle:goal.minutes, duration:5){ completed in
                 if completed {
                     print("animation stopped, completed")
                 } else {
@@ -124,7 +98,7 @@ class OverviewViewController: UIViewController, GKGameCenterControllerDelegate {
             }
             
             self.stepCount.text = String(goal.steps);
-            circles[3].animateFromAngle(0, toAngle:goal.steps, duration:5){ completed in
+            StepsCircle.animateFromAngle(0, toAngle:goal.steps, duration:5){ completed in
                 if completed {
                     print("animation stopped, completed")
                 } else {
