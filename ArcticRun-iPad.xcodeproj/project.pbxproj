@@ -58,6 +58,11 @@
 		923F5F191C77879E0015A13B /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F171C77879E0015A13B /* HomeScreen.storyboard */; };
 		923F5F1B1C7787F60015A13B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F5F1A1C7787F60015A13B /* Settings.storyboard */; };
 		92C50F081C894A7D000AB12A /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C50F071C894A7D000AB12A /* Crew.swift */; };
+		9906506E1CB3343E0030B1EC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9906506D1CB3343E0030B1EC /* MapViewController.swift */; };
+		990650701CB334D50030B1EC /* gamemap.png in Resources */ = {isa = PBXBuildFile; fileRef = 9906506F1CB334D50030B1EC /* gamemap.png */; };
+		990650721CB339BC0030B1EC /* MissionStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990650711CB339BC0030B1EC /* MissionStartViewController.swift */; };
+		990650741CB33EE70030B1EC /* CAGradientLayer+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990650731CB33EE70030B1EC /* CAGradientLayer+Convenience.swift */; };
+		990650761CB33F360030B1EC /* CustomPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990650751CB33F360030B1EC /* CustomPresentAnimationController.swift */; };
 		EE020F4A1C6E8AD300F5F74A /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE020F491C6E8AD300F5F74A /* TaskViewController.swift */; };
 		EE020F4C1C6E8AFB00F5F74A /* TaskListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */; };
 		EE47C4051C8F400900734675 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47C4041C8F400900734675 /* UserProtocol.swift */; };
@@ -144,6 +149,11 @@
 		923F5F181C77879E0015A13B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeScreen.storyboard; sourceTree = "<group>"; };
 		923F5F1A1C7787F60015A13B /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		92C50F071C894A7D000AB12A /* Crew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Crew.swift; path = DataFramework/Models/Crew.swift; sourceTree = "<group>"; };
+		9906506D1CB3343E0030B1EC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9906506F1CB334D50030B1EC /* gamemap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamemap.png; sourceTree = "<group>"; };
+		990650711CB339BC0030B1EC /* MissionStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionStartViewController.swift; sourceTree = "<group>"; };
+		990650731CB33EE70030B1EC /* CAGradientLayer+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CAGradientLayer+Convenience.swift"; path = "../CAGradientLayer+Convenience.swift"; sourceTree = "<group>"; };
+		990650751CB33F360030B1EC /* CustomPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentAnimationController.swift; sourceTree = "<group>"; };
 		C6BC932190728787B19815AF /* Pods-ArcticRun-iPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcticRun-iPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArcticRun-iPad/Pods-ArcticRun-iPad.debug.xcconfig"; sourceTree = "<group>"; };
 		EE020F491C6E8AD300F5F74A /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListsViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +217,8 @@
 		8503FB831C640A1600531D5F /* ArcticRun-iPad */ = {
 			isa = PBXGroup;
 			children = (
+				990650731CB33EE70030B1EC /* CAGradientLayer+Convenience.swift */,
+				9906506F1CB334D50030B1EC /* gamemap.png */,
 				EE47C4081C8F412200734675 /* Protocols */,
 				92C50F031C894A5A000AB12A /* DataFramework */,
 				923F5F091C7784FE0015A13B /* Storyboards */,
@@ -236,8 +248,11 @@
 				EE020F4B1C6E8AFB00F5F74A /* TaskListsViewController.swift */,
 				8ACC74701C72ABD3008F96AF /* MenuController.swift */,
 				8ACC74741C72B904008F96AF /* SettingsViewController.swift */,
+				990650711CB339BC0030B1EC /* MissionStartViewController.swift */,
 				8AA981951C927EC00017F615 /* CrewDetailViewController.swift */,
 				6E5D1F971CAAE4A50096A0CA /* Goal.swift */,
+				9906506D1CB3343E0030B1EC /* MapViewController.swift */,
+				990650751CB33F360030B1EC /* CustomPresentAnimationController.swift */,
 			);
 			path = "ArcticRun-iPad";
 			sourceTree = "<group>";
@@ -492,6 +507,7 @@
 				2B12DC131C8A49F700F0E64B /* crew_member1.jpg in Resources */,
 				8B5993F71C896856006E7AA2 /* Crew.storyboard in Resources */,
 				2B78BB251C8A615700E33B41 /* 9143924_orig.jpg in Resources */,
+				990650701CB334D50030B1EC /* gamemap.png in Resources */,
 				923F5F0C1C77853A0015A13B /* World.storyboard in Resources */,
 				923F5F191C77879E0015A13B /* HomeScreen.storyboard in Resources */,
 				923F5F0F1C77859B0015A13B /* Cloud.storyboard in Resources */,
@@ -588,16 +604,20 @@
 				EE47C40C1C8F424800734675 /* StatsProtocol.swift in Sources */,
 				8191F59D1C75C3B000879C3F /* GameScene.swift in Sources */,
 				9224A5001C89502C0041B39B /* Diary.swift in Sources */,
+				990650721CB339BC0030B1EC /* MissionStartViewController.swift in Sources */,
 				9224A50C1C895D1F0041B39B /* Character.swift in Sources */,
 				EE020F4A1C6E8AD300F5F74A /* TaskViewController.swift in Sources */,
+				9906506E1CB3343E0030B1EC /* MapViewController.swift in Sources */,
 				85684F611C6DA4B00006282F /* ThirdViewController.swift in Sources */,
 				9224A50A1C895B970041B39B /* Stat.swift in Sources */,
 				8AA981961C927EC00017F615 /* CrewDetailViewController.swift in Sources */,
 				9224A5021C8957330041B39B /* Member.swift in Sources */,
 				923C4B2A1C8A3A610000B8C8 /* Workout.swift in Sources */,
 				9224A5041C8958A20041B39B /* Item.swift in Sources */,
+				990650741CB33EE70030B1EC /* CAGradientLayer+Convenience.swift in Sources */,
 				8503FB871C640A1600531D5F /* OverviewViewController.swift in Sources */,
 				923C4B2C1C8A3D640000B8C8 /* Selfie.swift in Sources */,
+				990650761CB33F360030B1EC /* CustomPresentAnimationController.swift in Sources */,
 				065ACAA41C76D53900A4E358 /* PersonalGoalsController.swift in Sources */,
 				8191F59B1C75C08200879C3F /* WorldViewController.swift in Sources */,
 			);
