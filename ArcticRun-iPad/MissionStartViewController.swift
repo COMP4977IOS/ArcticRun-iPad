@@ -13,6 +13,7 @@ class MissionStartViewController : UIViewController, UIViewControllerTransitioni
     
     var toPass : String!
     
+    @IBOutlet weak var menuBar: UINavigationItem!
     @IBOutlet weak var missionText: UILabel!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var missionPic: UIImageView!
@@ -20,7 +21,7 @@ class MissionStartViewController : UIViewController, UIViewControllerTransitioni
     
     override func viewDidLoad() {
         
-            super.viewDidLoad()
+        super.viewDidLoad()
         
         loadMission()
         loadBG()
@@ -48,16 +49,40 @@ class MissionStartViewController : UIViewController, UIViewControllerTransitioni
         
         
         if(toPass == "Scott Hut") {
-            
+            menuBar.title = "Scott Hut"
             missionPic.image = UIImage(named: "Reconnaissance")
             missionSynop.text = "Yourself, Joyce, and Richards have been tasked to travel to Scott Hut and assess its potential as a base of operations. After being confined to the ship for weeks, this will be a welcome change."
             missionSynop.font = UIFont(name: "Noteworthy", size: 28)
             
             
         }else if(toPass == "The Ship") {
-            
+            menuBar.title = "The Ship"
             missionPic.image = UIImage(named: "OldWoodenShip")
             missionSynop.text = "After discovering Scott Hut in good condtion, travel back to the ship and inform the expedtion of your findings."
+            missionSynop.font = UIFont(name: "Noteworthy", size: 28)
+            
+        }else if(toPass == "Hut Point") {
+            menuBar.title = "Hut Point"
+            //missionPic.image = UIImage(named: "OldWoodenShip")
+            //missionSynop.text = "After discovering Scott Hut in good condtion, travel back to the ship and inform the expedtion of your findings."
+            missionSynop.font = UIFont(name: "Noteworthy", size: 28)
+            
+        }else if(toPass == "Safety Camp") {
+            menuBar.title = "Safety Camp"
+            //missionPic.image = UIImage(named: "OldWoodenShip")
+            //missionSynop.text = "After discovering Scott Hut in good condtion, travel back to the ship and inform the expedtion of your findings."
+            missionSynop.font = UIFont(name: "Noteworthy", size: 28)
+            
+        }else if(toPass == "Corner Camp") {
+            menuBar.title = "Corner Camp"
+            //missionPic.image = UIImage(named: "OldWoodenShip")
+            //missionSynop.text = "After discovering Scott Hut in good condtion, travel back to the ship and inform the expedtion of your findings."
+            missionSynop.font = UIFont(name: "Noteworthy", size: 28)
+            
+        }else if(toPass == "Minna Bluff Depot") {
+            menuBar.title = "Minna Bluff Depot"
+            //missionPic.image = UIImage(named: "OldWoodenShip")
+            //missionSynop.text = "After discovering Scott Hut in good condtion, travel back to the ship and inform the expedtion of your findings."
             missionSynop.font = UIFont(name: "Noteworthy", size: 28)
             
         }else{}
@@ -73,5 +98,8 @@ class MissionStartViewController : UIViewController, UIViewControllerTransitioni
         
     }
 
+    //@IBAction func backButton(sender: AnyObject) {
+    //    [self.navigationController?.popViewControllerAnimated(true)]
+    //}
     
 }

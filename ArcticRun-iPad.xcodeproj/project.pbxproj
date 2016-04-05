@@ -10,8 +10,6 @@
 		065ACAA21C76D52800A4E358 /* PersonalGoals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 065ACAA11C76D52800A4E358 /* PersonalGoals.storyboard */; };
 		065ACAA41C76D53900A4E358 /* PersonalGoalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065ACAA31C76D53900A4E358 /* PersonalGoalsController.swift */; };
 		065ACAA61C76D75300A4E358 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065ACAA51C76D75300A4E358 /* GameKit.framework */; };
-		066D82851C76D87B00E44996 /* Social.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 066D82841C76D87B00E44996 /* Social.storyboard */; };
-		066D82871C76D88100E44996 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066D82861C76D88100E44996 /* SocialViewController.swift */; };
 		219A3034497EB533C5D89923 /* Pods_ArcticRun_iPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1B555208D4D7796507ECF0 /* Pods_ArcticRun_iPad.framework */; };
 		2B12DC131C8A49F700F0E64B /* crew_member1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B12DC121C8A49F700F0E64B /* crew_member1.jpg */; };
 		2B78BB231C8A615700E33B41 /* 1297063_orig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B78BB201C8A615700E33B41 /* 1297063_orig.jpg */; };
@@ -92,8 +90,6 @@
 		065ACAA11C76D52800A4E358 /* PersonalGoals.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PersonalGoals.storyboard; sourceTree = "<group>"; };
 		065ACAA31C76D53900A4E358 /* PersonalGoalsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalGoalsController.swift; sourceTree = "<group>"; };
 		065ACAA51C76D75300A4E358 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		066D82841C76D87B00E44996 /* Social.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Social.storyboard; sourceTree = "<group>"; };
-		066D82861C76D88100E44996 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		2B12DC121C8A49F700F0E64B /* crew_member1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = crew_member1.jpg; path = Images.xcassets/crew_member1.jpg; sourceTree = "<group>"; };
 		2B78BB201C8A615700E33B41 /* 1297063_orig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1297063_orig.jpg; path = Images.xcassets/1297063_orig.jpg; sourceTree = "<group>"; };
 		2B78BB211C8A615700E33B41 /* 6180089_orig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 6180089_orig.jpg; path = Images.xcassets/6180089_orig.jpg; sourceTree = "<group>"; };
@@ -231,7 +227,6 @@
 				8B5993ED1C8965F4006E7AA2 /* AchievementViewController.swift */,
 				8191F59C1C75C3B000879C3F /* GameScene.swift */,
 				8503FB841C640A1600531D5F /* AppDelegate.swift */,
-				066D82861C76D88100E44996 /* SocialViewController.swift */,
 				8503FB861C640A1600531D5F /* OverviewViewController.swift */,
 				8503FB881C640A1600531D5F /* SecondViewController.swift */,
 				85684F601C6DA4B00006282F /* ThirdViewController.swift */,
@@ -292,7 +287,6 @@
 				923F5F0A1C77853A0015A13B /* World.storyboard */,
 				8B5993F61C896856006E7AA2 /* Crew.storyboard */,
 				923F5F131C7786390015A13B /* Fitness.storyboard */,
-				066D82841C76D87B00E44996 /* Social.storyboard */,
 				8B5993F41C896809006E7AA2 /* Achievements.storyboard */,
 				923F5F1A1C7787F60015A13B /* Settings.storyboard */,
 			);
@@ -495,7 +489,6 @@
 				8B5993F51C896809006E7AA2 /* Achievements.storyboard in Resources */,
 				2B78BB241C8A615700E33B41 /* 6180089_orig.jpg in Resources */,
 				8503FB911C640A1600531D5F /* LaunchScreen.storyboard in Resources */,
-				066D82851C76D87B00E44996 /* Social.storyboard in Resources */,
 				923F5F121C7785E40015A13B /* TableView.storyboard in Resources */,
 				065ACAA21C76D52800A4E358 /* PersonalGoals.storyboard in Resources */,
 				8ACC74731C72B017008F96AF /* Images.xcassets in Resources */,
@@ -584,7 +577,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				066D82871C76D88100E44996 /* SocialViewController.swift in Sources */,
 				EE47C4071C8F40BE00734675 /* WorkoutProtocol.swift in Sources */,
 				8ACC74711C72ABD3008F96AF /* MenuController.swift in Sources */,
 				8503FBEF1C642BA900531D5F /* Download.swift in Sources */,
