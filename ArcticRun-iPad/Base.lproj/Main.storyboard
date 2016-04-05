@@ -231,14 +231,6 @@
             </objects>
             <point key="canvasLocation" x="-314" y="-955"/>
         </scene>
-        <!--HomeScreen-->
-        <scene sceneID="Bhe-HY-e1Y">
-            <objects>
-                <viewControllerPlaceholder storyboardName="HomeScreen" id="jBm-UO-nly" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Yc-yB-xTa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-297" y="-611"/>
-        </scene>
         <!--Achievements-->
         <scene sceneID="9ff-I0-ngO">
             <objects>
