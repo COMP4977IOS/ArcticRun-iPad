@@ -33,6 +33,7 @@ class SecondViewController: UIViewController, ChartViewDelegate {
     
     var xaxis:[String] = []
     var caloriesList:[Double] = []
+    var userDefaults: NSUserDefaults!
     
     override func viewDidLoad() {
         
@@ -95,9 +96,18 @@ class SecondViewController: UIViewController, ChartViewDelegate {
             }
             
             dispatch_async(dispatch_get_main_queue()){
-                self.lbl_totalCal.text = "Total Calories Burned: " + String(totalCalories)
-                self.lbl_totalDist.text = "Total Distance Run: " + String(totalDistance) + "m"
-                self.lbl_totalSteps.text = "Total Steps Taken: " + String(totalSteps)
+                self.lbl_totalCal.text = "Calories Burned: " + String(totalCalories)
+                
+                self.userDefaults = NSUserDefaults.standardUserDefaults()
+                totalDistance = totalDistance / 1000
+                
+                if self.userDefaults.valueForKey("settingsDistanceUnit") as? String == "M" {
+                    self.lbl_totalDist.text = "Distance Run: " + String(format: "%.3f", totalDistance * 0.621371) + "Miles"
+                } else {
+                    self.lbl_totalDist.text = "Distance Run: " + String(format: "%.3f", totalDistance) + "km"
+                }
+                
+                self.lbl_totalSteps.text = "Steps Taken: " + String(totalSteps)
                 //self.updatelabels(totalCalories, dist: totalDistance)
                 self.lineChartView.data = self.getChartData(self.xaxis, yData: self.caloriesList)
             }
