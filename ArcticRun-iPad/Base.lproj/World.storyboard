@@ -44,20 +44,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EeU-fP-yee">
-                                <rect key="frame" x="20" y="72" width="560" height="168"/>
+                                <rect key="frame" x="20" y="72" width="560" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="DrI-4c-3p4"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCH-T6-0VQ">
-                                <rect key="frame" x="20" y="248" width="42" height="21"/>
+                                <rect key="frame" x="20" y="391" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxe-O4-v55">
-                                <rect key="frame" x="20" y="277" width="560" height="128"/>
+                                <rect key="frame" x="20" y="427" width="560" height="26"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="gdM-Bk-hD6"/>
-                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -65,21 +65,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TCH-T6-0VQ" firstAttribute="leading" secondItem="lUC-Vv-M1a" secondAttribute="leadingMargin" id="21F-OP-yP1"/>
-                            <constraint firstItem="Jxe-O4-v55" firstAttribute="leading" secondItem="TCH-T6-0VQ" secondAttribute="leading" id="GO3-3v-O0d"/>
-                            <constraint firstItem="TCH-T6-0VQ" firstAttribute="top" secondItem="EeU-fP-yee" secondAttribute="bottom" constant="8" id="IVp-iP-1TH"/>
-                            <constraint firstItem="32E-bX-FPt" firstAttribute="top" secondItem="Jxe-O4-v55" secondAttribute="bottom" constant="195" id="Jp0-lX-M0r"/>
-                            <constraint firstItem="Jxe-O4-v55" firstAttribute="top" secondItem="TCH-T6-0VQ" secondAttribute="bottom" constant="8" symbolic="YES" id="alv-ch-29g"/>
-                            <constraint firstItem="Jxe-O4-v55" firstAttribute="trailing" secondItem="EeU-fP-yee" secondAttribute="trailing" id="fmC-NQ-5Zs"/>
-                            <constraint firstItem="Jxe-O4-v55" firstAttribute="trailing" secondItem="lUC-Vv-M1a" secondAttribute="trailingMargin" id="lbi-Lm-Dtk"/>
-                            <constraint firstItem="EeU-fP-yee" firstAttribute="top" secondItem="byF-ss-LvC" secondAttribute="bottom" constant="8" id="rfl-QM-EJN"/>
-                            <constraint firstItem="Jxe-O4-v55" firstAttribute="leading" secondItem="EeU-fP-yee" secondAttribute="leading" id="w1r-xQ-aek"/>
+                            <constraint firstItem="32E-bX-FPt" firstAttribute="top" secondItem="Jxe-O4-v55" secondAttribute="bottom" constant="147" id="73X-Pp-ZzR"/>
+                            <constraint firstItem="EeU-fP-yee" firstAttribute="leading" secondItem="Jxe-O4-v55" secondAttribute="leading" id="7Iu-JK-8Du"/>
+                            <constraint firstItem="EeU-fP-yee" firstAttribute="trailing" secondItem="lUC-Vv-M1a" secondAttribute="trailingMargin" id="Agb-mp-b7i"/>
+                            <constraint firstItem="TCH-T6-0VQ" firstAttribute="top" secondItem="EeU-fP-yee" secondAttribute="bottom" constant="19" id="EY0-lP-f9a"/>
+                            <constraint firstItem="EeU-fP-yee" firstAttribute="leading" secondItem="TCH-T6-0VQ" secondAttribute="leading" id="EyF-6w-U8K"/>
+                            <constraint firstItem="TCH-T6-0VQ" firstAttribute="leading" secondItem="lUC-Vv-M1a" secondAttribute="leadingMargin" id="FQH-M8-4O1"/>
+                            <constraint firstItem="EeU-fP-yee" firstAttribute="top" secondItem="byF-ss-LvC" secondAttribute="bottom" constant="8" id="G8y-qg-ufb"/>
+                            <constraint firstItem="TCH-T6-0VQ" firstAttribute="top" secondItem="EeU-fP-yee" secondAttribute="bottom" constant="19" id="JSK-K5-rQO"/>
+                            <constraint firstItem="Jxe-O4-v55" firstAttribute="top" secondItem="TCH-T6-0VQ" secondAttribute="bottom" constant="15" id="MBZ-eZ-3WC"/>
+                            <constraint firstItem="Jxe-O4-v55" firstAttribute="top" secondItem="TCH-T6-0VQ" secondAttribute="bottom" constant="15" id="d6G-6X-bJB"/>
+                            <constraint firstItem="Jxe-O4-v55" firstAttribute="leading" secondItem="lUC-Vv-M1a" secondAttribute="leadingMargin" id="g7a-BE-9N9"/>
+                            <constraint firstItem="EeU-fP-yee" firstAttribute="trailing" secondItem="Jxe-O4-v55" secondAttribute="trailing" id="hOY-bJ-JEV"/>
+                            <constraint firstItem="EeU-fP-yee" firstAttribute="leading" secondItem="lUC-Vv-M1a" secondAttribute="leadingMargin" id="n7g-75-KeH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JfL-cs-0Sx">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="uFb-x0-SBE"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="menuBar" destination="JfL-cs-0Sx" id="fzK-Da-lum"/>
                         <outlet property="menuButton" destination="uFb-x0-SBE" id="x8f-95-Lxt"/>
                         <outlet property="missionPic" destination="EeU-fP-yee" id="N1H-eP-zLt"/>
                         <outlet property="missionSynop" destination="Jxe-O4-v55" id="9dF-iq-drh"/>
