@@ -40,8 +40,8 @@ class SecondViewController: UIViewController, ChartViewDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         //get database
         
-        db = CKContainer(identifier: "iCloud.com.terratap.arcticrun").publicCloudDatabase
-        self.loadCloudData()
+        
+        self.db = CKContainer(identifier: "iCloud.com.terratap.arcticrun").publicCloudDatabase
         
         // Configure look and feel of graph view
         self.lineChartView.delegate = self
@@ -59,7 +59,7 @@ class SecondViewController: UIViewController, ChartViewDelegate {
         var rec:Int = 0
         var totalCalories:Double = 0
         var totalDistance:Double = 0
-        //var totalSteps:Double = 0
+        var totalSteps:Double = 0
         
         //create records variable with query.
         db.performQuery(query, inZoneWithID: nil) { (records:[CKRecord]?, error:NSError?) -> Void in
@@ -76,11 +76,15 @@ class SecondViewController: UIViewController, ChartViewDelegate {
                 let date:NSDate = record.objectForKey("startDate") as! NSDate
                 let calories:Double = record.objectForKey("caloriesBurned") as! Double
                 let distance:Double = record.objectForKey("distance") as! Double
-                //let steps:Double = record.objectForKey("steps") as! Double
+                var steps:Double = 0
+                
+                if record.objectForKey("steps") != nil {
+                    steps = record.objectForKey("steps") as! Double
+                }
                 
                 totalCalories += calories
                 totalDistance += distance
-                //totalSteps += steps
+                totalSteps += steps
                 
                 let dateFormatter = NSDateFormatter()
                 dateFormatter.dateStyle = .MediumStyle
@@ -90,12 +94,16 @@ class SecondViewController: UIViewController, ChartViewDelegate {
                 self.caloriesList.append(calories)
             }
             
-            self.lbl_totalCal.text = "Total Calories Burned: " + String(totalCalories)
-            self.lbl_totalDist.text = "Total Distance Run: " + String(totalDistance) + "m"
-            self.lbl_totalSteps.text = "Total Steps Taken: "
-            //self.updatelabels(totalCalories, dist: totalDistance)
+            dispatch_async(dispatch_get_main_queue()){
+                self.lbl_totalCal.text = "Total Calories Burned: " + String(totalCalories)
+                self.lbl_totalDist.text = "Total Distance Run: " + String(totalDistance) + "m"
+                self.lbl_totalSteps.text = "Total Steps Taken: " + String(totalSteps)
+                //self.updatelabels(totalCalories, dist: totalDistance)
+                self.lineChartView.data = self.getChartData(self.xaxis, yData: self.caloriesList)
+            }
             
-            self.lineChartView.data = self.getChartData(self.xaxis, yData: self.caloriesList)
+            
+            
         }
         
         //toggle the menu bar
@@ -144,8 +152,6 @@ class SecondViewController: UIViewController, ChartViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func loadCloudData(){
-    }
 
 }
 
