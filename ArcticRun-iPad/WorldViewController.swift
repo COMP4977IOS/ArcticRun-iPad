@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-class SpriteViewController: UIViewController {
+class WorldViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -24,7 +24,6 @@ class SpriteViewController: UIViewController {
         scene.scaleMode = .ResizeFill
         skView.presentScene(scene)
         
-        //toggle the menu bar
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
