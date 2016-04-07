@@ -94,6 +94,25 @@ public class Member {
         self.record?.setObject(health, forKey: "health")
     }
     
+    func addHealth(health:Float) -> Void{
+        let current = self.record?.objectForKey("health") as? Float
+        
+        if (current! + health > 100) {
+            self.record?.setObject(100, forKey: "health")
+        } else {
+            self.record?.setObject(current! + health, forKey: "health")
+        }
+        
+    }
+    
+    func save() -> Void{
+        Member.publicDB.saveRecord(self.record!) { (record: CKRecord?, error:NSError?) -> Void in
+            if error == nil {
+                print("record saved")
+            }
+        }
+    }
+    
     static func getMembers(crewRecord: CKRecord, onComplete: ([Member]) -> Void) -> Void {
         let predicate:NSPredicate = NSPredicate(format: "user == %@", crewRecord)
         let query:CKQuery = CKQuery(recordType: "Member", predicate: predicate)
