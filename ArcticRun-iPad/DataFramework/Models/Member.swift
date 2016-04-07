@@ -49,6 +49,7 @@ public class Member {
     func getFirstName() -> String? {
         return self.record?.objectForKey("firstName") as? String
     }
+    
     func setFirstName(firstName:String) -> Void{
         self.record?.setObject(firstName, forKey: "firstName")
     }
@@ -83,6 +84,14 @@ public class Member {
     
     func setStatus(status: String) -> Void {
         self.record?.setObject(status, forKey: "status")
+    }
+    
+    func getHealth() -> Float? {
+        return self.record?.objectForKey("health") as? Float
+    }
+    
+    func setHealth(health:Float) -> Void{
+        self.record?.setObject(health, forKey: "health")
     }
     
     static func getMembers(crewRecord: CKRecord, onComplete: ([Member]) -> Void) -> Void {

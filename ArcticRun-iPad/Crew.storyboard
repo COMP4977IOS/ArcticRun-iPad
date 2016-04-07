@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sew-At-l8Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sew-At-l8Y">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -29,16 +29,16 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="970" height="336"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iFM-ny-5Hr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="460" height="336"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="290" height="336"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Jerald" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9E-6z-TdE">
-                                                                <rect key="frame" x="0.0" y="0.0" width="460" height="15"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9E-6z-TdE">
+                                                                <rect key="frame" x="0.0" y="0.0" width="290" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="crew_member1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jKK-jR-ZXk">
-                                                                <rect key="frame" x="0.0" y="20" width="460" height="296"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Spencer-Smith" translatesAutoresizingMaskIntoConstraints="NO" id="jKK-jR-ZXk">
+                                                                <rect key="frame" x="0.0" y="26" width="290" height="251"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="jKK-jR-ZXk" secondAttribute="height" multiplier="1:1" id="95i-PN-FCl"/>
                                                                     <constraint firstAttribute="width" constant="352" id="d2W-ox-c79"/>
@@ -52,81 +52,132 @@
                                                                     </mask>
                                                                 </variation>
                                                             </imageView>
-                                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="YvV-y0-cTK">
-                                                                <rect key="frame" x="0.0" y="321" width="460" height="15"/>
+                                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YvV-y0-cTK">
+                                                                <rect key="frame" x="0.0" y="285" width="290" height="15"/>
                                                                 <color key="tintColor" red="1" green="0.020100812986999284" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="15" id="FDy-6E-duJ"/>
                                                                 </constraints>
                                                             </progressView>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fHk-7m-4zI">
-                                                        <rect key="frame" x="510" y="0.0" width="460" height="336"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEd-xK-SmN">
-                                                                <rect key="frame" x="0.0" y="0.0" width="460" height="15"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zl8-ra-G7a">
+                                                                <rect key="frame" x="0.0" y="315" width="290" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1297063_orig.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vyR-JP-dd3">
-                                                                <rect key="frame" x="0.0" y="20" width="460" height="296"/>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fHk-7m-4zI">
+                                                        <rect key="frame" x="340" y="0.0" width="290" height="336"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEd-xK-SmN">
+                                                                <rect key="frame" x="0.0" y="0.0" width="290" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Dick-Richards" translatesAutoresizingMaskIntoConstraints="NO" id="vyR-JP-dd3">
+                                                                <rect key="frame" x="0.0" y="26" width="290" height="251"/>
                                                             </imageView>
-                                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.89999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="vii-m5-iJn">
-                                                                <rect key="frame" x="0.0" y="321" width="460" height="15"/>
+                                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vii-m5-iJn">
+                                                                <rect key="frame" x="0.0" y="285" width="290" height="15"/>
                                                                 <color key="tintColor" red="1" green="0.020100812990000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="15" id="wlu-0G-aCp"/>
                                                                 </constraints>
                                                             </progressView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyq-sA-eiC">
+                                                                <rect key="frame" x="0.0" y="315" width="290" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YSF-N2-vNr">
+                                                        <rect key="frame" x="680" y="0.0" width="290" height="336"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pl-4S-laN">
+                                                                <rect key="frame" x="0.0" y="0.0" width="290" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="John-Stenhouse" translatesAutoresizingMaskIntoConstraints="NO" id="9Gf-1j-hZa">
+                                                                <rect key="frame" x="0.0" y="26" width="290" height="250"/>
+                                                            </imageView>
+                                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zya-3r-xNi">
+                                                                <rect key="frame" x="0.0" y="284" width="290" height="15"/>
+                                                                <color key="tintColor" red="1" green="0.020100812990000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="15" id="y4X-eN-GkO"/>
+                                                                </constraints>
+                                                            </progressView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swV-hI-ZGW">
+                                                                <rect key="frame" x="0.0" y="315" width="290" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="3Nv-p2-TuD">
-                                                <rect key="frame" x="0.0" y="386" width="970" height="335"/>
+                                                <rect key="frame" x="0.0" y="386" width="970" height="336"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Jtm-uZ-jzD">
-                                                        <rect key="frame" x="0.0" y="1" width="460" height="335"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="460" height="336"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rwanda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vJ-S4-9hZ">
-                                                                <rect key="frame" x="0.0" y="1" width="460" height="15"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vJ-S4-9hZ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="460" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="6180089_orig.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hkR-h6-zTw">
-                                                                <rect key="frame" x="0.0" y="21" width="460" height="295"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Ernest-Joyce" translatesAutoresizingMaskIntoConstraints="NO" id="hkR-h6-zTw">
+                                                                <rect key="frame" x="0.0" y="26" width="460" height="250"/>
                                                             </imageView>
-                                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="2Mf-tl-ajg">
-                                                                <rect key="frame" x="0.0" y="321" width="460" height="15"/>
+                                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Mf-tl-ajg">
+                                                                <rect key="frame" x="0.0" y="283" width="460" height="15"/>
                                                                 <color key="tintColor" red="1" green="0.020100812990000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="15" id="LJb-Vt-eNq"/>
                                                                 </constraints>
                                                             </progressView>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="80a-2p-jRz">
-                                                        <rect key="frame" x="510" y="1" width="460" height="335"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ripper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TH2-KN-6Ah">
-                                                                <rect key="frame" x="0.0" y="1" width="460" height="15"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Yn-iS-x9B">
+                                                                <rect key="frame" x="0.0" y="315" width="460" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="9143924_orig.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bij-6P-aAc">
-                                                                <rect key="frame" x="0.0" y="21" width="460" height="295"/>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="80a-2p-jRz">
+                                                        <rect key="frame" x="510" y="0.0" width="460" height="336"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TH2-KN-6Ah">
+                                                                <rect key="frame" x="0.0" y="0.0" width="460" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Aeneas-Mackintosh" translatesAutoresizingMaskIntoConstraints="NO" id="bij-6P-aAc">
+                                                                <rect key="frame" x="0.0" y="26" width="460" height="249"/>
                                                             </imageView>
-                                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="JET-UR-x5O">
-                                                                <rect key="frame" x="0.0" y="321" width="460" height="15"/>
+                                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JET-UR-x5O">
+                                                                <rect key="frame" x="0.0" y="282" width="460" height="15"/>
                                                                 <color key="tintColor" red="1" green="0.020100812990000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="15" id="L9R-9y-c63"/>
                                                                 </constraints>
                                                             </progressView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbN-Ff-NE6">
+                                                                <rect key="frame" x="0.0" y="315" width="460" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -251,18 +302,27 @@
                         <outlet property="crewImg2" destination="vyR-JP-dd3" id="B4E-9o-9sd"/>
                         <outlet property="crewImg3" destination="hkR-h6-zTw" id="Aae-YB-Q2T"/>
                         <outlet property="crewImg4" destination="bij-6P-aAc" id="9Ne-z4-IzQ"/>
+                        <outlet property="crewImg5" destination="9Gf-1j-hZa" id="3Dg-7s-fZw"/>
                         <outlet property="crewMember1" destination="iFM-ny-5Hr" id="MlV-Hi-oRs"/>
                         <outlet property="crewMember2" destination="fHk-7m-4zI" id="vJo-Qi-L1G"/>
                         <outlet property="crewMember3" destination="Jtm-uZ-jzD" id="icW-OO-kdO"/>
                         <outlet property="crewMember4" destination="80a-2p-jRz" id="koT-IH-cqr"/>
+                        <outlet property="crewMember5" destination="YSF-N2-vNr" id="MON-Gb-tBP"/>
                         <outlet property="crewName1" destination="g9E-6z-TdE" id="5qn-4G-EhK"/>
                         <outlet property="crewName2" destination="sEd-xK-SmN" id="dgw-aN-bC9"/>
                         <outlet property="crewName3" destination="2vJ-S4-9hZ" id="69k-T3-Y7B"/>
                         <outlet property="crewName4" destination="TH2-KN-6Ah" id="oOT-y6-sVO"/>
+                        <outlet property="crewName5" destination="4Pl-4S-laN" id="Un4-A2-rnk"/>
                         <outlet property="crewProg1" destination="YvV-y0-cTK" id="pn6-K0-wp3"/>
                         <outlet property="crewProg2" destination="vii-m5-iJn" id="aGM-kw-rp0"/>
                         <outlet property="crewProg3" destination="2Mf-tl-ajg" id="Z4U-2L-Ny2"/>
                         <outlet property="crewProg4" destination="JET-UR-x5O" id="X3r-Ol-lKS"/>
+                        <outlet property="crewProg5" destination="zya-3r-xNi" id="QQy-TQ-GjF"/>
+                        <outlet property="crewStatus1" destination="zl8-ra-G7a" id="LKl-qD-ZB6"/>
+                        <outlet property="crewStatus2" destination="nyq-sA-eiC" id="JTq-td-4WI"/>
+                        <outlet property="crewStatus3" destination="9Yn-iS-x9B" id="qJh-Nk-mHA"/>
+                        <outlet property="crewStatus4" destination="jbN-Ff-NE6" id="qor-Bu-HXa"/>
+                        <outlet property="crewStatus5" destination="swV-hI-ZGW" id="ARY-J5-IQO"/>
                         <outlet property="fish" destination="Jea-2x-GA4" id="2re-db-qz9"/>
                         <outlet property="hat" destination="URP-Km-LUt" id="5kZ-SJ-AAy"/>
                         <outlet property="iron_pickaxe" destination="LFw-1k-nd3" id="fcp-rf-pCT"/>
@@ -294,51 +354,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="acF-Sf-xWW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="acF-Sf-xWW">
                                 <rect key="frame" x="483" y="185" width="401" height="457"/>
                             </imageView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bd4-lx-Nqx">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bd4-lx-Nqx">
                                 <rect key="frame" x="584" y="661" width="198" height="2"/>
                                 <color key="tintColor" red="1" green="0.017636596171801577" blue="0.030231392934202628" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="p9A-ON-r9N"/>
+                                </constraints>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Crew Member Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIh-js-RKd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Crew Member Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIh-js-RKd">
                                 <rect key="frame" x="516" y="145" width="334" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Strength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8u-UO-cIr">
-                                <rect key="frame" x="493" y="706" width="112" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stamina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZQ-4P-7U7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Stamina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZQ-4P-7U7">
                                 <rect key="frame" x="493" y="754" width="112" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thirst" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zId-jR-84a">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Thirst" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zId-jR-84a">
                                 <rect key="frame" x="493" y="851" width="112" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Morale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xey-ks-DPH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Morale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xey-ks-DPH">
                                 <rect key="frame" x="493" y="900" width="112" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hunger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTU-cL-SAo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Hunger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTU-cL-SAo">
                                 <rect key="frame" x="493" y="803" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Strength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8u-UO-cIr">
+                                <rect key="frame" x="493" y="706" width="112" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lZQ-4P-7U7" firstAttribute="top" secondItem="r8u-UO-cIr" secondAttribute="bottom" constant="27" id="ExQ-hb-MKn"/>
+                            <constraint firstItem="ZIh-js-RKd" firstAttribute="centerX" secondItem="3jh-cT-cwc" secondAttribute="centerX" id="HDh-rs-27R"/>
+                            <constraint firstItem="Xey-ks-DPH" firstAttribute="top" secondItem="zId-jR-84a" secondAttribute="bottom" constant="28" id="HUH-2T-ths"/>
+                            <constraint firstItem="Bd4-lx-Nqx" firstAttribute="centerX" secondItem="3jh-cT-cwc" secondAttribute="centerX" id="S4j-aq-ORf"/>
+                            <constraint firstItem="acF-Sf-xWW" firstAttribute="top" secondItem="ZIh-js-RKd" secondAttribute="bottom" constant="19" id="a27-dT-yyB"/>
+                            <constraint firstItem="r8u-UO-cIr" firstAttribute="top" secondItem="Bd4-lx-Nqx" secondAttribute="bottom" constant="43" id="dgb-S7-X7A"/>
+                            <constraint firstItem="Bd4-lx-Nqx" firstAttribute="top" secondItem="acF-Sf-xWW" secondAttribute="bottom" constant="19" id="faT-Xc-ozW"/>
+                            <constraint firstItem="acF-Sf-xWW" firstAttribute="centerX" secondItem="3jh-cT-cwc" secondAttribute="centerX" id="noT-eQ-PI7"/>
+                            <constraint firstItem="yTU-cL-SAo" firstAttribute="top" secondItem="lZQ-4P-7U7" secondAttribute="bottom" constant="28" id="rNe-Yj-1O0"/>
+                            <constraint firstItem="zId-jR-84a" firstAttribute="top" secondItem="yTU-cL-SAo" secondAttribute="bottom" constant="27" id="spO-dG-s4m"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Z3L-03-usf">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="mWN-A4-VZp">
@@ -395,24 +470,25 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1297063_orig.jpg" width="500" height="500"/>
-        <image name="6180089_orig.jpg" width="500" height="500"/>
-        <image name="9143924_orig.jpg" width="500" height="500"/>
+        <image name="Aeneas-Mackintosh" width="250" height="249"/>
         <image name="Beetroot_Soup" width="150" height="150"/>
         <image name="Bread" width="150" height="150"/>
         <image name="Coat" width="2400" height="2057"/>
         <image name="Cooked_Chicken" width="150" height="150"/>
         <image name="Cooked_Fish" width="120" height="120"/>
         <image name="Cooked_Porkchop" width="150" height="150"/>
+        <image name="Dick-Richards" width="250" height="251"/>
+        <image name="Ernest-Joyce" width="250" height="250"/>
         <image name="Fish" width="150" height="150"/>
         <image name="Hat" width="2400" height="1680"/>
         <image name="Iron_Pickaxe" width="150" height="150"/>
+        <image name="John-Stenhouse" width="250" height="250"/>
         <image name="Leather_Boots" width="150" height="150"/>
         <image name="Leather_Pants" width="150" height="150"/>
         <image name="Leather_chestplate" width="120" height="120"/>
         <image name="Leather_helmet" width="128" height="128"/>
         <image name="Mushroom_Stew" width="150" height="150"/>
-        <image name="crew_member1.jpg" width="500" height="500"/>
+        <image name="Spencer-Smith" width="250" height="251"/>
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
