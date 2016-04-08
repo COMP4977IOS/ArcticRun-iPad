@@ -68,20 +68,35 @@ class CrewViewController: UIViewController {
     private var money: Int = 0;
     
     // item prices
-    private let PRICE_BEETROOT_SOUP = 1000;
-    private let PRICE_BREAD = 1000;
-    private let PRICE_FISH = 1000;
-    private let PRICE_COOKED_CHICKEN = 1000;
-    private let PRICE_COOKED_FISH = 1000;
-    private let PRICE_COOKED_PORKCHOP = 1000;
-    private let PRICE_MUSHROOM_STEW = 1000;
-    private let PRICE_HAT = 1000;
-    private let PRICE_LEATHER_BOOTS = 1000;
-    private let PRICE_LEATHER_PANTS = 1000;
-    private let PRICE_LEATHER_CHESTPLATE = 1000;
-    private let PRICE_LEATHER_HELMET = 1000;
-    private let PRICE_COAT = 1000;
-    private let PRICE_IRON_PICKAXE = 1000;
+    private let PRICE_BEETROOT_SOUP = 6;
+    private let PRICE_BREAD = 3;
+    private let PRICE_FISH = 5;
+    private let PRICE_COOKED_CHICKEN = 20;
+    private let PRICE_COOKED_FISH = 15;
+    private let PRICE_COOKED_PORKCHOP = 30;
+    private let PRICE_MUSHROOM_STEW = 6;
+    private let PRICE_HAT = 20;
+    private let PRICE_LEATHER_BOOTS = 20;
+    private let PRICE_LEATHER_PANTS = 30;
+    private let PRICE_LEATHER_CHESTPLATE = 50;
+    private let PRICE_LEATHER_HELMET = 25;
+    private let PRICE_COAT = 50;
+    private let PRICE_IRON_PICKAXE = 100;
+    
+    private let HEALTH_BEETROOT_SOUP = 10;
+    private let HEALTH_BREAD = 5;
+    private let HEALTH_FISH = 6;
+    private let HEALTH_COOKED_CHICKEN = 40;
+    private let HEALTH_COOKED_FISH = 25;
+    private let HEALTH_COOKED_PORKCHOP = 60;
+    private let HEALTH_MUSHROOM_STEW = 10;
+    private let HEALTH_HAT = 40;
+    private let HEALTH_LEATHER_BOOTS = 40;
+    private let HEALTH_LEATHER_PANTS = 60;
+    private let HEALTH_LEATHER_CHESTPLATE = 100;
+    private let HEALTH_LEATHER_HELMET = 60;
+    private let HEALTH_COAT = 100;
+    private let HEALTH_IRON_PICKAXE = 100;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -210,40 +225,81 @@ class CrewViewController: UIViewController {
         }
     }
     
-    private func buyItem(price: Int) {
+    private func buyItem(price: Int, health: Int) {
         if (self.money >= price) {
-            self.showBuyMenu(price)
+            self.showBuyMenu(price, health: health)
         } else {
             self.showPriceError(price)
         }
     }
     
-    private func showBuyMenu(price: Int) {
+    private func showBuyMenu(price: Int, health: Int) {
         let controller = UIAlertController(title: "Price: $" + price.description, message: "Choose a crew member to purchase the item for.", preferredStyle: .Alert)
         
         let crewMember1 = UIAlertAction(title: crewName1.text, style: .Default) { (UIAlertAction) -> Void in
             self.removeMoney(price)
+            
+            Member.getAllMembers { (members: [Member]) -> Void in
+                dispatch_async(dispatch_get_main_queue()) {
+                    members[0].addHealth(Float(health))
+                    members[0].save()
+                    self.crewProg1.progress = members[0].getHealth()! / 100.00
+                }
+            }
+
         }
         let crewMember2 = UIAlertAction(title: crewName2.text, style: .Default) { (UIAlertAction) -> Void in
             self.removeMoney(price)
+            
+            Member.getAllMembers { (members: [Member]) -> Void in
+                dispatch_async(dispatch_get_main_queue()) {
+                    members[1].addHealth(Float(health))
+                    members[1].save()
+                    self.crewProg2.progress = members[1].getHealth()! / 100.00
+                }
+            }
         }
         let crewMember3 = UIAlertAction(title: crewName3.text, style: .Default) { (UIAlertAction) -> Void in
             self.removeMoney(price)
+            
+            Member.getAllMembers { (members: [Member]) -> Void in
+                dispatch_async(dispatch_get_main_queue()) {
+                    members[2].addHealth(Float(health))
+                    members[2].save()
+                    self.crewProg3.progress = members[2].getHealth()! / 100.00
+                }
+            }
         }
         let crewMember4 = UIAlertAction(title: crewName4.text, style: .Default) { (UIAlertAction) -> Void in
             self.removeMoney(price)
+            
+            Member.getAllMembers { (members: [Member]) -> Void in
+                dispatch_async(dispatch_get_main_queue()) {
+                    members[3].addHealth(Float(health))
+                    members[3].save()
+                    self.crewProg4.progress = members[3].getHealth()! / 100.00
+                }
+            }
         }
         let crewMember5 = UIAlertAction(title: crewName5.text, style: .Default) { (UIAlertAction) -> Void in
             self.removeMoney(price)
+            
+            Member.getAllMembers { (members: [Member]) -> Void in
+                dispatch_async(dispatch_get_main_queue()) {
+                    members[4].addHealth(Float(health))
+                    members[4].save()
+                    self.crewProg5.progress = members[4].getHealth()! / 100.00
+                }
+            }
         }
         
         let dismiss = UIAlertAction(title: "Cancel", style: .Destructive, handler: nil)
         
         controller.addAction(crewMember1)
         controller.addAction(crewMember2)
+        controller.addAction(crewMember5)
         controller.addAction(crewMember3)
         controller.addAction(crewMember4)
-        controller.addAction(crewMember5)
         controller.addAction(dismiss)
         
         self.presentViewController(controller, animated: true, completion: nil)
@@ -304,59 +360,59 @@ class CrewViewController: UIViewController {
     
     // handle tappings of items
     func beetroot_soup(sender:UITapGestureRecognizer) {
-        self.buyItem(PRICE_BEETROOT_SOUP)
+        self.buyItem(PRICE_BEETROOT_SOUP, health: HEALTH_BEETROOT_SOUP)
     }
     
     func bread(sender:UITapGestureRecognizer) {
-        self.buyItem(PRICE_BREAD)
+        self.buyItem(PRICE_BREAD, health: HEALTH_BREAD)
     }
     
     func fish(sender:UITapGestureRecognizer) {
-        self.buyItem(PRICE_FISH)
+        self.buyItem(PRICE_FISH, health: HEALTH_FISH)
     }
     
     func cooked_chicken(sender:UITapGestureRecognizer) {
-        self.buyItem(PRICE_COOKED_CHICKEN)
+        self.buyItem(PRICE_COOKED_CHICKEN, health: HEALTH_COOKED_CHICKEN)
     }
     
     func cooked_fish(sender:UITapGestureRecognizer) {
-        self.buyItem(PRICE_COOKED_FISH)
+        self.buyItem(PRICE_COOKED_FISH, health: HEALTH_COOKED_FISH)
     }
     
     func cooked_porkchop(sender:UITapGestureRecognizer) {
-        self.buyItem(PRICE_COOKED_PORKCHOP)
+        self.buyItem(PRICE_COOKED_PORKCHOP, health: HEALTH_COOKED_PORKCHOP)
     }
     
     func mushroom_stew(sender:UITapGestureRecognizer) {
-        self.buyItem(PRICE_MUSHROOM_STEW)
+        self.buyItem(PRICE_MUSHROOM_STEW, health: HEALTH_MUSHROOM_STEW)
     }
     
     func hat(sender:UITapGestureRecognizer) {
-        self.buyItem(PRICE_HAT)
+        self.buyItem(PRICE_HAT, health: HEALTH_HAT)
     }
     
     func leather_boots(sender:UITapGestureRecognizer) {
-        self.buyItem(PRICE_LEATHER_BOOTS)
+        self.buyItem(PRICE_LEATHER_BOOTS, health: HEALTH_LEATHER_BOOTS)
     }
     
     func leather_pants(sender:UITapGestureRecognizer) {
-        self.buyItem(PRICE_LEATHER_PANTS)
+        self.buyItem(PRICE_LEATHER_PANTS, health: HEALTH_LEATHER_PANTS)
     }
     
     func leather_chestplate(sender:UITapGestureRecognizer) {
-        self.buyItem(PRICE_LEATHER_CHESTPLATE)
+        self.buyItem(PRICE_LEATHER_CHESTPLATE, health: HEALTH_LEATHER_CHESTPLATE)
     }
     
     func leather_helmet(sender:UITapGestureRecognizer) {
-        self.buyItem(PRICE_LEATHER_HELMET)
+        self.buyItem(PRICE_LEATHER_HELMET, health: HEALTH_LEATHER_HELMET)
     }
     
     func coat(sender:UITapGestureRecognizer) {
-        self.buyItem(PRICE_COAT)
+        self.buyItem(PRICE_COAT, health: HEALTH_COAT)
     }
     
     func iron_pickaxe(sender:UITapGestureRecognizer) {
-        self.buyItem(PRICE_IRON_PICKAXE)
+        self.buyItem(PRICE_IRON_PICKAXE, health: HEALTH_IRON_PICKAXE)
     }
     
     //send appropriate data to crew detail view
